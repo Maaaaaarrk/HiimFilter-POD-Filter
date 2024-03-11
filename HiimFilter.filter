@@ -1,7 +1,7 @@
 ﻿//Attributes
 Attribute[Author]: Maark Backed by Macks Filter
 Attribute[Name]: HiimFilter
-Attribute[Version]: 0.01 BETA
+Attribute[Version]: 0.02 BETA
 Attribute[Date]: March 11 2024
 Option[IgnoreMissingSounds]: True
 
@@ -1653,16 +1653,38 @@ ItemDisplay[ETH SET !ID]: %GRAY%[eth] %GREEN%%NAME%%CONTINUE%
 
 
 //-----------------------------------------------------------------------------------
-//Unique filtering
+// Unique filtering
 //-----------------------------------------------------------------------------------
 ItemDisplay[!ID UNI]: %NAME%<<GG>>%CONTINUE%
 
 //low level remove on  filterlevel=3 (mapping)
 ItemDisplay[!ID UNI (dir OR kri OR mst OR mac OR clb OR fla OR hax OR axe OR 2ax OR scy OR scp OR brn OR tri OR scm OR flc OR ssd OR sbr OR ywn OR stu OR scl OR mbl OR vbt OR mbt OR skp OR fhl OR lrg OR kit OR spk OR tow OR bsh OR (!ETH lbl) OR (!ETH qui) OR (!ETH lbt) OR (!ETH lgl) OR (!ETH cap) OR (!ETH buc)) FILTERLVL=3]:
 
-
 //-----------------------------------------------------------------------------------
 
+
+
+
+
+//-----------------------------------------------------------------------------------
+// Custom line filtering
+//-----------------------------------------------------------------------------------
+
+//Orb +PLAGUE SK62 HYDRA, SK59 BLI, SK 58 ES
+// hydra, bliz, ES, Discharge, nova lite, cold nova, chain light, charge bolt, freezing pulse
+ItemDisplay[(ob5 OR oba OR obf) !RW NMAG !ETH (SK62>2 OR SK59>2 OR SK58>2 OR SK57>2 OR SK48>2 OR SK44>2 OR SK54>2 OR SK38>2 OR SKILL("Freezing Pulse")>2) (SOCK=0 OR SOCK=3)]: %NL%%WHITE%%NAME% %ORANGE%[Plague Base]{%NAME%}%CONTINUE%
+ItemDisplay[(ob5 OR oba OR obf) !RW NMAG !ETH (SK62>2) (SOCK=0 OR SOCK=3)]: %GREEN%+3 Hydra %NAME%{%NAME%}%CONTINUE%
+ItemDisplay[(ob5 OR oba OR obf) !RW NMAG !ETH (SK59>2) (SOCK=0 OR SOCK=3)]: %GREEN%+3 Blizz %NAME%{%NAME%}%CONTINUE%
+ItemDisplay[(ob5 OR oba OR obf) !RW NMAG !ETH (SK58>2) (SOCK=0 OR SOCK=3)]: %GREEN%+3 ES %NAME%{%NAME%}%CONTINUE%
+ItemDisplay[(ob5 OR oba OR obf) !RW NMAG !ETH (SK57>2) (SOCK=0 OR SOCK=3)]: %GREEN%+3 Discharge %NAME%{%NAME%}%CONTINUE%
+ItemDisplay[(ob5 OR oba OR obf) !RW NMAG !ETH (SK48>2) (SOCK=0 OR SOCK=3)]: %GREEN%+3 Nova %NAME%{%NAME%}%CONTINUE%
+ItemDisplay[(ob5 OR oba OR obf) !RW NMAG !ETH (SK44>2) (SOCK=0 OR SOCK=3)]: %GREEN%+3 FrstNova %NAME%{%NAME%}%CONTINUE%
+ItemDisplay[(ob5 OR oba OR obf) !RW NMAG !ETH (SK54>2) (SOCK=0 OR SOCK=3)]: %GREEN%+3 ChLight %NAME%{%NAME%}%CONTINUE%
+ItemDisplay[(ob5 OR oba OR obf) !RW NMAG !ETH (SK38>2) (SOCK=0 OR SOCK=3)]: %GREEN%+3 ChBolt %NAME%{%NAME%}%CONTINUE%
+ItemDisplay[(ob5 OR oba OR obf) !RW NMAG !ETH (SKILL("Freezing Pulse")>2) (SOCK=0 OR SOCK=3)]: %NAME% %GREEN%+3 FrePulse{%NAME%}%CONTINUE%
+ItemDisplay[(ob5 OR oba OR obf) !RW NMAG !ETH (SK62>2 OR SK59>2 OR SK58>2 OR SK57>2 OR SK48>2 OR SK44>2 OR SK54>2 OR SK38>2 OR SKILL("Freezing Pulse")>2) (SOCK=0 OR SOCK=3)]: %NL%%NAME%{%NAME%}%NL%<<BASICHIGH1>>
+
+//-----------------------------------------------------------------------------------
 
 
 //-----------------------------------------------------------------------------------
