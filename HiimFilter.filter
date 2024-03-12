@@ -1,7 +1,7 @@
 ﻿//Attributes
 Attribute[Author]: Maark Backed by Macks Filter
 Attribute[Name]: HiimFilter
-Attribute[Version]: 0.07 BETA
+Attribute[Version]: 0.08 BETA
 Attribute[Date]: March 12 2024
 Option[IgnoreMissingSounds]: True
 
@@ -257,7 +257,7 @@ ItemDisplay[glg FILTERLVL=3]: %ORANGE%[%GREEN%@%ORANGE%]<<BASIC>>
 ItemDisplay[glr FILTERLVL=3]: %ORANGE%[%RED%@%ORANGE%]<<BASIC>>
 ItemDisplay[glb FILTERLVL=3]: %ORANGE%[%BLUE%@%ORANGE%]<<BASIC>>
 ItemDisplay[gly FILTERLVL=3]: %ORANGE%[%YELLOW%@%ORANGE%]<<BASIC>>
-ItemDisplay[skl FILTERLVL=3]: %NAME%%ORANGE%[%LIGHT_GRAY%@%ORANGE%]%NL%%SPACE%<<BASIC>>
+ItemDisplay[skl FILTERLVL=3]: %NAME%%ORANGE%[%LIGHT_GRAY%@%ORANGE%]%NL%%SPACE%<<SKULL>>
 ItemDisplay[(gzv OR glw OR glg OR glr OR glb OR gly)]: %NAME%<<BASIC>>
 ItemDisplay[skl]: %NL%%ORANGE%F. Skull %ORANGE%[%LIGHT_GRAY%@%ORANGE%]%NL%%SPACE%<<SKULL>>
 //Gems Perfect
@@ -267,7 +267,7 @@ ItemDisplay[gpg FILTERLVL=3]: %ORANGE%[%GREEN%P @%ORANGE%]<<BASIC>>
 ItemDisplay[gpr FILTERLVL=3]: %ORANGE%[%RED%P @%ORANGE%]<<BASIC>>
 ItemDisplay[gpb FILTERLVL=3]: %ORANGE%[%BLUE%P @%ORANGE%]<<BASIC>>
 ItemDisplay[gpy FILTERLVL=3]: %ORANGE%[%YELLOW%P @%ORANGE%]<<BASIC>>
-ItemDisplay[skz FILTERLVL=3]: %ORANGE%Pskull %ORANGE%[%LIGHT_GRAY%P @%ORANGE%]%NL%%SPACE%<<BASIC>>
+ItemDisplay[skz FILTERLVL=3]: %ORANGE%Pskull %ORANGE%[%LIGHT_GRAY%P @%ORANGE%]%NL%%SPACE%<<SKULL>>
 ItemDisplay[(gpv OR gpw OR gpg OR gpr OR gpb OR gpy)]: %NAME%<<BASIC>>
 ItemDisplay[skz]: %NL%%ORANGE%PERFECT SKULL %ORANGE%[%LIGHT_GRAY%@%ORANGE%]%NL%%SPACE%<<SKULL>>
 
