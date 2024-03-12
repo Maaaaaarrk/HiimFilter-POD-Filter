@@ -1,7 +1,7 @@
 ﻿//Attributes
 Attribute[Author]: Maark Backed by Macks Filter
 Attribute[Name]: HiimFilter
-Attribute[Version]: 0.09 BETA
+Attribute[Version]: 0.10 BETA
 Attribute[Date]: March 12 2024
 Option[IgnoreMissingSounds]: True
 
@@ -32,6 +32,7 @@ ItemStyle[UBERL]: MapIcon = 47, BorderColor = 132, BorderSize = 2, NotificationC
 ItemStyle[KEYS]: MapIcon = 47, BorderColor = 132, BorderSize = 2, NotificationColor = ITEM, BackgroundColor = 59, NotificationPriority = HIGH
 ItemStyle[BASEUNIQUE]: MapIcon = 26, BorderColor = 155, BorderSize = 2, NotificationColor = ITEM, BackgroundColor = 35, NotificationPriority = HIGH
 ItemStyle[GG]: MapIcon = 26, BorderColor = 155, BorderSize = 2, NotificationColor = ITEM, BackgroundColor = 35, NotificationPriority = HIGH, NotificationSoundPriority = LOW, NotificationSound = "@global\sfx\monster\moo\death4"
+ItemStyle[SYNTH]: MapIcon = 23, BorderColor = 155, BorderSize = 15, NotificationColor = ITEM, BackgroundColor = 35, NotificationPriority = HIGH, NotificationSoundPriority = HIGH, NotificationSound = "@global\sfx\monster\diablo\lazer"
 
 
 /////////////////////////////////////////////////////////////////////////////////////////////////
@@ -96,9 +97,9 @@ ItemDisplay[key]: %GOLD%+%WHITE%%NAME%{%NAME%}
 
 
 // TP / ID books and scrolls
-ItemDisplay[isc IDSCROLLS<15]:
+ItemDisplay[isc IDSCROLLS>20]:
 ItemDisplay[isc]: %RED%+%WHITE%ID
-ItemDisplay[tsc TPSCROLLS<15]:
+ItemDisplay[tsc TPSCROLLS>19]:
 ItemDisplay[tsc]: %BLUE%+%WHITE%TP
 ItemDisplay[(tbk OR ibk) QTY<6]: %RED%LOW QTY %NAME%%CONTINUE%
 ItemDisplay[ibk]: %RED%+%WHITE%ID Tome
@@ -208,7 +209,7 @@ ItemDisplay[dhn]: %NAME% %WHITE%[Lilith]%CONTINUE%
 ItemDisplay[mbr OR bey OR dhn]: %NL%%!CARROTSL!% %NAME%%!CARROTSR!%%NL%%SPACE%<<BOSS>>
 
 //TODO
-ItemDisplay[SYNTH]: %SPACE%%NL%%NAME%%!STARS!%%NL%%SPACE%<<GG>>
+ItemDisplay[SYNTH]: %SPACE%%NL%%SPACE%%NL%%!STARS2!%%GOLD%   %NAME%   %!STARS2!%%NL%%SPACE%%NL%%SPACE%<<SYNTH>>
 //TODO
 
 
@@ -614,9 +615,11 @@ ItemDisplay[MAG (cm1 OR cm3) !ID FILTERLVL=3]: %NL%%YELLOW%X%BLUE% %NAME% %YELLO
 ItemDisplay[MAG (cm1 OR cm3) !ID]: %NL%%YELLOW%XX%BLUE%     %NAME%     %YELLOW%XX%NL%%SPACE%<<BASICHIGH1>>
 
 // Unique Charms - UNID
-ItemDisplay[cm2 UNI !ID]: %NL% > >  UNID Hellfire Torch  < <
-ItemDisplay[cm1 UNI !ID]: %BORDER-9B%> >  UNID Annihilus  < <
-ItemDisplay[cm3 UNI !ID]: %BORDER-9B%> >  UNID Gheeds Fortune  < <
+ItemDisplay[cm2 UNI !ID]: UNID Hellfire Torch%CONTINUE%
+ItemDisplay[cm1 UNI !ID]: UNID Annihilus%CONTINUE%
+ItemDisplay[cm3 UNI !ID]: UNID Gheeds Fortune%CONTINUE%
+ItemDisplay[(cm1 OR cm2 OR cm3) UNI !ID]: %NL%%!CARROTSL!%   %NAME%   %!CARROTSR!%%NL%%SPACE%<<GG>>
+
 
 // Charm Stat Tags - REROLL tag for 40-45 HP GC or plains
 ItemDisplay[cm3 !UNI ILVL<61 ILVL>49 ID]: %YELLOW%[REROLL]%BLUE%%NAME%%CONTINUE%
