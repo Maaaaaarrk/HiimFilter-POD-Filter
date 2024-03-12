@@ -1,7 +1,7 @@
 ﻿//Attributes
 Attribute[Author]: Maark Backed by Macks Filter
 Attribute[Name]: HiimFilter
-Attribute[Version]: 0.08 BETA
+Attribute[Version]: 0.09 BETA
 Attribute[Date]: March 12 2024
 Option[IgnoreMissingSounds]: True
 
@@ -96,9 +96,9 @@ ItemDisplay[key]: %GOLD%+%WHITE%%NAME%{%NAME%}
 
 
 // TP / ID books and scrolls
-ItemDisplay[isc IDSCROLLS<20]:
+ItemDisplay[isc IDSCROLLS<15]:
 ItemDisplay[isc]: %RED%+%WHITE%ID
-ItemDisplay[tsc TPSCROLLS<20]:
+ItemDisplay[tsc TPSCROLLS<15]:
 ItemDisplay[tsc]: %BLUE%+%WHITE%TP
 ItemDisplay[(tbk OR ibk) QTY<6]: %RED%LOW QTY %NAME%%CONTINUE%
 ItemDisplay[ibk]: %RED%+%WHITE%ID Tome
@@ -386,19 +386,19 @@ ItemDisplay[jew STAT17>0]: %GREEN%%STAT(17,0)%%ED %NAME%%CONTINUE%
 ItemDisplay[jew STAT24>0 !(STAT23>0)]: %RED%%STAT(24,0)% MaxDMG %NAME%%CONTINUE%
 
 // Min Dmg
-ItemDisplay[jew STAT23>0 !(STAT24>0)]: %BLUE%%STAT23% MinDMG %NAME%%CONTINUE%
+ItemDisplay[jew STAT23>0 !(STAT24>0)]: %BLUE%%STAT(23,0)% MinDMG %NAME%%CONTINUE%
 
 // Dmg Range
-ItemDisplay[jew STAT23>0 STAT24>0]: %RED%+(%STAT23%-%STAT24%)DMG %NAME%%CONTINUE%
+ItemDisplay[jew STAT23>0 STAT24>0]: %RED%+(%STAT(23,0)%-%STAT(24,0)%)DMG %NAME%%CONTINUE%
 
 // FHR
 ItemDisplay[jew FHR>0]: %GOLD%FHR %NAME%%CONTINUE%
 
 // Life After Kill
-ItemDisplay[jew !UNI !SET STAT86>0]: %RED%%STAT86% LAEK %NAME%%CONTINUE%
+ItemDisplay[jew !UNI !SET STAT86>0]: %RED%%STAT(86,0)% LAEK %NAME%%CONTINUE%
 
 // Mana After Kill
-ItemDisplay[jew !UNI !SET STAT138>0]: %BLUE%%STAT138% MAEK %NAME%%CONTINUE%
+ItemDisplay[jew !UNI !SET STAT138>0]: %BLUE%%STAT(138,0)% MAEK %NAME%%CONTINUE%
 
 // All RES
 ItemDisplay[jew !UNI !SET RES>0]: %PURPLE%%RES%% ALL Res %NAME%%CONTINUE%
