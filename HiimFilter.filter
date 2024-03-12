@@ -1,7 +1,7 @@
 ﻿//Attributes
 Attribute[Author]: Maark Backed by Macks Filter
 Attribute[Name]: HiimFilter
-Attribute[Version]: 0.05 BETA
+Attribute[Version]: 0.06 BETA
 Attribute[Date]: March 11 2024
 Option[IgnoreMissingSounds]: True
 
@@ -16,7 +16,7 @@ Option[DefaultNotifyLevel]: LOW
 TextMacro[ALLRES]: %PURPLE%%RES%% Allres
 TextMacro[MAP]: %PURPLE%###%LIGHT_GRAY% [L%ILVL%]
 
-TextMacro[STARS]: %YELLOW%*%RED%*%BLUE%*%GREEN%*%PURPLE%*%SAGE%*
+TextMacro[STARS]: %PURPLE%<> <> <> <> <>
 TextMacro[STARS1]: %PURPLE%<> <> <> <> <>
 TextMacro[STARS2]: %PURPLE%<> <> <> <> <> <> <>
 
@@ -708,7 +708,7 @@ ItemDisplay[(cm1 OR cm2) UNI ALLSK=2]: %PURPLE%2 Skill %GOLD%%NAME%%CONTINUE%
 ItemDisplay[cm2 UNI CLSK0>0]: %TAN%Amazon %GOLD%%NAME%%CONTINUE%
 ItemDisplay[cm2 UNI CLSK1>0]: %TAN%Sorc %GOLD%%NAME%%CONTINUE%
 ItemDisplay[cm2 UNI CLSK2>0]: %TAN%Necro %GOLD%%NAME%%CONTINUE%
-ItemDisplay[cm2 UNI CLSK3>0]: %TAN%Paladin %GOLD%%NAME%%CONTINUE%7 h
+ItemDisplay[cm2 UNI CLSK3>0]: %TAN%Paladin %GOLD%%NAME%%CONTINUE%
 ItemDisplay[cm2 UNI CLSK4>0]: %TAN%Barb %GOLD%%NAME%%CONTINUE%
 ItemDisplay[cm2 UNI CLSK5>0]: %TAN%Druid %GOLD%%NAME%%CONTINUE%
 ItemDisplay[cm2 UNI CLSK6>0]: %TAN%Assassin %GOLD%%NAME%%CONTINUE%
@@ -743,15 +743,16 @@ ItemDisplay[cm3 ID]: %NAME%{%NAME%}
 ItemDisplay[EQ7 RARE !ID]: %NL%X X X X X %NAME% X X X X X%NL%%SPACE%<<RAREHIGH>>
 
 // Weapon Rares
-ItemDisplay[(7cr OR 9cr OR crs OR 7gl OR 9gl OR glv OR 7p7 OR 9p9 OR pik OR 7gm OR 9gm OR gma OR 7wa OR 9wa OR wax OR 7m7 OR 9m9 OR mau OR 7gd OR 9gd OR gsd OR 7fb OR 9fb OR flb OR 7gi OR 9gi OR gix OR 7wh OR 9wh OR whm OR 7pi OR 9pi OR pil OR 7s7 OR 9s9 OR ssp OR 7ts OR 9ts OR tsp) RARE (ILVL>84) !ID]: * * %NAME% * *<<BASIC>>
+ItemDisplay[FILTERLVL<3 (7cr OR 9cr OR crs OR 7gl OR 9gl OR glv OR 7p7 OR 9p9 OR pik OR 7gm OR 9gm OR gma OR 7wa OR 9wa OR wax OR 7m7 OR 9m9 OR mau OR 7gd OR 9gd OR gsd OR 7fb OR 9fb OR flb OR 7gi OR 9gi OR gix OR 7wh OR 9wh OR whm OR 7pi OR 9pi OR pil OR 7s7 OR 9s9 OR ssp OR 7ts OR 9ts OR tsp) RARE (ILVL>84) !ID]: * * %NAME% * *<<BASIC>>
 
 // High Ilvl Rares
 ItemDisplay[RARE !WEAPON (ILVL>91) !ID FILTERLVL<3]: * %NAME% *<<BASIC>>
-ItemDisplay[(GLOVES OR BOOTS OR BELT) RARE (ILVL>84) !ID]: %NAME%<<BASIC>>
+ItemDisplay[(GLOVES OR BOOTS OR BELT) RARE (ILVL>84) !ID FILTERLVL<3]: %NAME%<<BASIC>>
+ItemDisplay[BOOTS RARE (ILVL>84) !ID]: %NAME%<<BASIC>>
 ItemDisplay[RARE (CLVL<80) !ID]: %NAME%<<BASIC>>
 
 //TODO for map ItemDisplay[RARE !ID FILTERLVL>2]:
-ItemDisplay[RARE !ID]: %NAME%<<BASIC>>
+//ItemDisplay[RARE !ID]: %NAME%<<BASIC>>
 //-----------------------------------------------------------------------------------
 
 
