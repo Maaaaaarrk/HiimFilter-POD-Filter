@@ -1,8 +1,8 @@
 ﻿//Attributes
 Attribute[Author]: Maark Backed by Macks Filter
 Attribute[Name]: HiimFilter
-Attribute[Version]: 0.06 BETA
-Attribute[Date]: March 11 2024
+Attribute[Version]: 0.07 BETA
+Attribute[Date]: March 12 2024
 Option[IgnoreMissingSounds]: True
 
 //Filter levels
@@ -24,14 +24,14 @@ ItemStyle[BASIC]: BorderColor = 4, BorderSize = 2, BackgroundColor = 172
 ItemStyle[BASICHIGH]: NotificationPriority = HIGH, NotificationColor = ITEM, BorderColor = 4, BorderSize = 2, BackgroundColor = 15
 ItemStyle[BASIC1]: BorderColor = 4, BorderSize = 2, BackgroundColor = 138
 ItemStyle[BASICNOT]: NotificationPriority = HIGH, NotificationColor = ITEM, BorderColor = 4, BorderSize = 2, BackgroundColor = 138
-ItemStyle[MAP1W]: MapIcon = 14, BorderColor = 32, BorderSize = 2, NotificationColor = ITEM, BackgroundColor = 19, NotificationPriority = HIGH, NotificationSoundPriority = LOW, NotificationSound = "@global\sfx\object\shrine\shrineofenirhs"
-ItemStyle[MAP2Y]: MapIcon = 15, BorderColor = 168, BorderSize = 2, NotificationColor = ITEM, BackgroundColor = 16, NotificationPriority = HIGH, NotificationSoundPriority = LOW, NotificationSound = "@global\sfx\object\shrine\shrineofenirhs"
-ItemStyle[MAP3R]: MapIcon = 13, BorderColor = 98, BorderSize = 2, NotificationColor = ITEM, BackgroundColor = 41, NotificationPriority = HIGH, NotificationSoundPriority = LOW, NotificationSound = "@global\sfx\object\shrine\shrineofenirhs"
+ItemStyle[MAP1W]: MapIcon = 14, BorderColor = 32, BorderSize = 2, NotificationColor = ITEM, BackgroundColor = 19, NotificationPriority = HIGH, NotificationSoundPriority = LOW, NotificationSound = "@global\sfx\monster\moo\attack1"
+ItemStyle[MAP2Y]: MapIcon = 15, BorderColor = 168, BorderSize = 2, NotificationColor = ITEM, BackgroundColor = 16, NotificationPriority = HIGH, NotificationSoundPriority = LOW, NotificationSound = "@global\sfx\monster\moo\attack1"
+ItemStyle[MAP3R]: MapIcon = 13, BorderColor = 98, BorderSize = 2, NotificationColor = ITEM, BackgroundColor = 41, NotificationPriority = HIGH, NotificationSoundPriority = LOW, NotificationSound = "@global\sfx\monster\moo\attack1"
 ItemStyle[UBERD]: MapIcon = 47, BorderColor = 132, BorderSize = 2, NotificationColor = ITEM, BackgroundColor = 59, NotificationPriority = HIGH
 ItemStyle[UBERL]: MapIcon = 47, BorderColor = 132, BorderSize = 2, NotificationColor = ITEM, BackgroundColor = 59, NotificationPriority = HIGH
 ItemStyle[KEYS]: MapIcon = 47, BorderColor = 132, BorderSize = 2, NotificationColor = ITEM, BackgroundColor = 59, NotificationPriority = HIGH
 ItemStyle[BASEUNIQUE]: MapIcon = 26, BorderColor = 155, BorderSize = 2, NotificationColor = ITEM, BackgroundColor = 35, NotificationPriority = HIGH
-ItemStyle[GG]: MapIcon = 26, BorderColor = 155, BorderSize = 2, NotificationColor = ITEM, BackgroundColor = 35, NotificationPriority = HIGH, NotificationSoundPriority = LOW, NotificationSound = "@global\sfx\combat\player\sorceress\death1"
+ItemStyle[GG]: MapIcon = 26, BorderColor = 155, BorderSize = 2, NotificationColor = ITEM, BackgroundColor = 35, NotificationPriority = HIGH, NotificationSoundPriority = LOW, NotificationSound = "@global\sfx\monster\moo\death4"
 
 
 /////////////////////////////////////////////////////////////////////////////////////////////////
@@ -48,18 +48,19 @@ ItemStyle[MAGIC]: MapIcon = 2, MapIconColor = 0, BorderColor = 0, BorderSize = 1
 
 
 
-ItemStyle[OOC]: MapIcon = 36, BorderColor = 132, BorderSize = 2, NotificationColor = ITEM, BackgroundColor = 59, NotificationPriority = HIGH, NotificationSoundPriority = LOW, NotificationSound = "@global\sfx\combat\player\amazon\death1"
+ItemStyle[OOC]: MapIcon = 36, BorderColor = 132, BorderSize = 2, NotificationColor = ITEM, BackgroundColor = 59, NotificationPriority = HIGH, NotificationSoundPriority = LOW, NotificationSound = "@global\sfx\monster\moo\attack1"
 ItemStyle[QUEST]: MapIcon = 4, MapIconColor = 0, BorderColor = 0, BorderSize = 10, BackgroundColor = 0, NotificationPriority = HIGH, NotificationColor = ITEM
-ItemStyle[BOSS]: MapIcon = 47, BorderColor = 132, BorderSize = 2, NotificationColor = ITEM, BackgroundColor = 59, NotificationPriority = HIGH
+ItemStyle[BOSS]: MapIcon = 3, BorderColor = 132, BorderSize = 2, NotificationColor = ITEM, BackgroundColor = 59, NotificationPriority = HIGH, NotificationSoundPriority = LOW, NotificationSound = "@global\sfx\monster\moo\attack5"
 
 ItemStyle[BASICLOW]: NotificationPriority = LOW, NotificationColor = ITEM, BorderColor = 4, BorderSize = 2, BackgroundColor = 15
 ItemStyle[BASICMED]: NotificationPriority = MEDIUM, NotificationColor = ITEM, BorderColor = 4, BorderSize = 2, BackgroundColor = 15
 ItemStyle[BASICHIGH1]: MapIcon = 3, MapIconColor = 0, NotificationColor = ITEM, NotificationPriority = HIGH, BorderColor = 4, BorderSize = 2, BackgroundColor = 15
 ItemStyle[MAGHIGH]: MapIcon = 11, MapIconColor = 0, NotificationColor = ITEM, NotificationPriority = HIGH, BorderColor = 4, BorderSize = 0, BackgroundColor = 15
-ItemStyle[RAREHIGH]: MapIcon = 5, MapIconColor = 0, NotificationColor = ITEM, NotificationPriority = HIGH, BorderColor = 4, BorderSize = 0, BackgroundColor = 15, NotificationSoundPriority = LOW, NotificationSound = "@global\sfx\combat\player\sorceress\hard3"
-ItemStyle[LOWRUNE]: NotificationPriority = LOW, NotificationColor = ITEM, BorderColor = 4, BorderSize = 2, BackgroundColor = 15, NotificationSoundPriority = LOW, NotificationSound = "@global\sfx\combat\player\sorceress\soft5"
-ItemStyle[MIDRUNE]: MapIcon = 3, MapIconColor = 3, BorderColor = 4, BorderSize = 2, BackgroundColor = 15, NotificationPriority = HIGH, NotificationColor = ITEM, NotificationSoundPriority = LOW, NotificationSound = "@global\sfx\combat\player\amazon\soft4"
-ItemStyle[HR]: MapIcon = 2, MapIconColor = 0, BorderColor = 32, BorderSize = 2, BackgroundColor = 138, NotificationPriority = HIGH, NotificationColor = ITEM, NotificationSoundPriority = LOW, NotificationSound = "@global\sfx\combat\player\sorceress\death1"
+ItemStyle[RAREHIGH]: MapIcon = 5, MapIconColor = 0, NotificationColor = ITEM, NotificationPriority = HIGH, BorderColor = 4, BorderSize = 0, BackgroundColor = 15, NotificationSoundPriority = LOW, NotificationSound = "@global\sfx\monster\moo\attack2"
+ItemStyle[LOWRUNE]: NotificationPriority = LOW, NotificationColor = ITEM, BorderColor = 4, BorderSize = 2, BackgroundColor = 15, NotificationSoundPriority = LOW, NotificationSound = "@global\sfx\monster\moo\attack6"
+ItemStyle[SKULL]: MapIcon = 93, MapIconColor = 3, BorderColor = 4, BorderSize = 2, BackgroundColor = 15, NotificationPriority = HIGH, NotificationColor = ITEM, NotificationSoundPriority = LOW, NotificationSound = "@global\sfx\item\skull"
+ItemStyle[MIDRUNE]: MapIcon = 3, MapIconColor = 3, BorderColor = 4, BorderSize = 2, BackgroundColor = 15, NotificationPriority = HIGH, NotificationColor = ITEM, NotificationSoundPriority = LOW, NotificationSound = "@global\sfx\monster\moo\neutral1"
+ItemStyle[HR]: MapIcon = 2, MapIconColor = 0, BorderColor = 32, BorderSize = 2, BackgroundColor = 138, NotificationPriority = HIGH, NotificationColor = ITEM, NotificationSoundPriority = LOW, NotificationSound = "@global\sfx\monster\moo\neutral2"
 
 TextMacro[CARROTSL]: %ORANGE%> > >%SPACE%
 TextMacro[CARROTSR]: %ORANGE% < < <
@@ -93,9 +94,11 @@ ItemDisplay[GOLD>4999]: %NAME%
 ItemDisplay[key FILTERLVL>1]: {%NAME%}
 ItemDisplay[key]: %GOLD%+%WHITE%%NAME%{%NAME%}
 
+
 // TP / ID books and scrolls
-ItemDisplay[(isc OR tsc) FILTERLVL>1]:
+ItemDisplay[isc IDSCROLLS<20]:
 ItemDisplay[isc]: %RED%+%WHITE%ID
+ItemDisplay[tsc TPSCROLLS<20]:
 ItemDisplay[tsc]: %BLUE%+%WHITE%TP
 ItemDisplay[(tbk OR ibk) QTY<6]: %RED%LOW QTY %NAME%%CONTINUE%
 ItemDisplay[ibk]: %RED%+%WHITE%ID Tome
@@ -104,14 +107,12 @@ ItemDisplay[tbk]: %BLUE%+%WHITE%TP Tome
 // Juvs
 ItemDisplay[rvl FILTERLVL<3]: %NL%%PURPLE%*  %WHITE%Rejuv %TAN%70%  %PURPLE%*%NL%%SPACE%
 ItemDisplay[rvs FILTERLVL<3]: %PURPLE%*%WHITE%Rejuv %TAN%35%%WHITE%
-ItemDisplay[rvl]: %PURPLE%*       %WHITE%Rejuv %TAN%65%%PURPLE%       *
+ItemDisplay[rvl]: %PURPLE%*       %WHITE%Rejuv %TAN%70%%PURPLE%       *
 ItemDisplay[rvs]: %PURPLE%* %WHITE%Rejuv %TAN%35% %PURPLE%*
 
 // Hide pots when appropriate based on filter level
-ItemDisplay[(hp1 OR hp2 OR hp3 OR hp4) FILTERLVL>2]:
-ItemDisplay[(mp1 OR mp2 OR mp3 OR mp4) FILTERLVL>2]:
-ItemDisplay[hp5 (FILTERLVL=4 OR FILTERLVL=6 OR FILTERLVL=7 OR FILTERLVL=8)]:
-ItemDisplay[mp5 (FILTERLVL=4 OR FILTERLVL=6 OR FILTERLVL=7 OR FILTERLVL=8)]:
+ItemDisplay[(hp1 OR hp2 OR hp3 OR hp4) FILTERLVL>1]:
+ItemDisplay[(mp1 OR mp2 OR mp3 OR mp4) FILTERLVL>1]:
 
 // Hide pots when appropriate based on gameplay
 ItemDisplay[(hp1 OR hp2) (DIFFICULTY>0 OR CLVL>79)]:
@@ -124,7 +125,7 @@ ItemDisplay[hp1 DIFFICULTY<1 CLVL<80]: %RED%+ %WHITE%HP1 %RED%+
 ItemDisplay[hp2 DIFFICULTY<1 CLVL<80]: %RED%+ %WHITE%HP2 %RED%+
 ItemDisplay[hp3 DIFFICULTY<2 CLVL<80]: %RED%+ %WHITE%HP3 %RED%+
 ItemDisplay[hp4 DIFFICULTY<2 CLVL<80]: %RED%+ %WHITE%HP4 %RED%+
-ItemDisplay[hp5 FILTERLVL<3]: %RED%+ %WHITE%HP5 %RED%+
+ItemDisplay[hp5 FILTERLVL<2]: %RED%+ %WHITE%HP5 %RED%+
 ItemDisplay[hp5]: %RED%+%WHITE%HP5
 
 // Show MP Pots
@@ -132,7 +133,7 @@ ItemDisplay[mp1 DIFFICULTY<1 CLVL<80]: %BLUE%+ %WHITE%MP1 %BLUE%+
 ItemDisplay[mp2 DIFFICULTY<1 CLVL<80]: %BLUE%+ %WHITE%MP2 %BLUE%+
 ItemDisplay[mp3 DIFFICULTY<2 CLVL<80]: %BLUE%+ %WHITE%MP3 %BLUE%+
 ItemDisplay[mp4 DIFFICULTY<2 CLVL<80]: %BLUE%+ %WHITE%MP4 %BLUE%+
-ItemDisplay[mp5 FILTERLVL<3]: %BLUE%+ %WHITE%MP5 %BLUE%+
+ItemDisplay[mp5 FILTERLVL<2]: %BLUE%+ %WHITE%MP5 %BLUE%+
 ItemDisplay[mp5]: %BLUE%+%WHITE%MP5
 
 // Other Potion Tooltips
@@ -258,7 +259,7 @@ ItemDisplay[glb FILTERLVL=3]: %ORANGE%[%BLUE%@%ORANGE%]<<BASIC>>
 ItemDisplay[gly FILTERLVL=3]: %ORANGE%[%YELLOW%@%ORANGE%]<<BASIC>>
 ItemDisplay[skl FILTERLVL=3]: %NAME%%ORANGE%[%LIGHT_GRAY%@%ORANGE%]%NL%%SPACE%<<BASIC>>
 ItemDisplay[(gzv OR glw OR glg OR glr OR glb OR gly)]: %NAME%<<BASIC>>
-ItemDisplay[skl]: %NL%%ORANGE%F. Skull %ORANGE%[%LIGHT_GRAY%@%ORANGE%]%NL%%SPACE%<<BASIC>>
+ItemDisplay[skl]: %NL%%ORANGE%F. Skull %ORANGE%[%LIGHT_GRAY%@%ORANGE%]%NL%%SPACE%<<SKULL>>
 //Gems Perfect
 ItemDisplay[gpv FILTERLVL=3]: %ORANGE%[%PURPLE%P @%ORANGE%]<<BASIC>>
 ItemDisplay[gpw FILTERLVL=3]: %ORANGE%[%WHITE%P @%ORANGE%]<<BASIC>>
@@ -268,7 +269,7 @@ ItemDisplay[gpb FILTERLVL=3]: %ORANGE%[%BLUE%P @%ORANGE%]<<BASIC>>
 ItemDisplay[gpy FILTERLVL=3]: %ORANGE%[%YELLOW%P @%ORANGE%]<<BASIC>>
 ItemDisplay[skz FILTERLVL=3]: %ORANGE%Pskull %ORANGE%[%LIGHT_GRAY%P @%ORANGE%]%NL%%SPACE%<<BASIC>>
 ItemDisplay[(gpv OR gpw OR gpg OR gpr OR gpb OR gpy)]: %NAME%<<BASIC>>
-ItemDisplay[skz]: %NL%%ORANGE%PERFECT SKULL %ORANGE%[%LIGHT_GRAY%@%ORANGE%]%NL%%SPACE%<<BASIC>>
+ItemDisplay[skz]: %NL%%ORANGE%PERFECT SKULL %ORANGE%[%LIGHT_GRAY%@%ORANGE%]%NL%%SPACE%<<SKULL>>
 
 
 //-----------------------------------------------------------------------------------
@@ -349,7 +350,8 @@ ItemDisplay[(RARE OR MAG) !ID]: %NAME% ?%CONTINUE%
 // Quivers & Bolts
 //-----------------------------------------------------------------------------------
 ItemDisplay[aq2 MAG ILVL>20]:
-ItemDisplay[aq2 RARE ILVL>60]: %NL%* %NAME% *<<BASIC>>
+ItemDisplay[aq2 RARE ILVL>60 !ID]: %NL%* %NAME% *<<BASICHIGH>>
+ItemDisplay[aq2 RARE ILVL>60]: %NAME%<<BASIC>>
 ItemDisplay[aq2 UNI ILVL>60]: %NAME%<<BASIC>>
 ItemDisplay[aq2 SET ILVL>60]: %NAME%<<BASIC>>
 ItemDisplay[cq2 MAG ILVL>60]:
@@ -595,10 +597,10 @@ ItemDisplay[(rin OR amu) ID]:%NAME%{%NAME%}
 ItemDisplay[MAG (rin OR amu) !ID FILTERLVL>2]:
 ItemDisplay[MAG rin !ID FILTERLVL>1]:
 ItemDisplay[MAG (rin OR amu) !ID]: %YELLOW%X%BLUE%     %NAME%     %YELLOW%X<<BASICMED>>
-ItemDisplay[MAG (jew) !ID FILTERLVL>2]: %YELLOW%XX%BLUE%     %NAME%     %YELLOW%XX<<BASICMED>>
+ItemDisplay[MAG (jew) !ID FILTERLVL>2]: %YELLOW%XX%BLUE% %NAME% %YELLOW%XX<<BASICMED>>
 ItemDisplay[MAG (jew) !ID]: %YELLOW%XX%BLUE%     %NAME%     %YELLOW%XX<<MAGHIGH>>
 ItemDisplay[RARE (jew OR rin OR amu) !ID FILTERLVL<3]: %NL%%ORANGE%X X%YELLOW%     %NAME%     %ORANGE%X X%NL%%SPACE%<<RAREHIGH>>
-ItemDisplay[RARE (jew OR rin OR amu) !ID]: %NL%%ORANGE%X X%YELLOW%     %NAME%     %ORANGE%X X<<RAREHIGH>>
+ItemDisplay[RARE (jew OR rin OR amu) !ID]: %NL%%ORANGE%X X%YELLOW% %NAME% %ORANGE%X X<<RAREHIGH>>
 //-----------------------------------------------------------------------------------
 
 
@@ -743,14 +745,14 @@ ItemDisplay[cm3 ID]: %NAME%{%NAME%}
 ItemDisplay[EQ7 RARE !ID]: %NL%X X X X X %NAME% X X X X X%NL%%SPACE%<<RAREHIGH>>
 
 // Weapon Rares
-ItemDisplay[FILTERLVL<3 (7cr OR 9cr OR crs OR 7gl OR 9gl OR glv OR 7p7 OR 9p9 OR pik OR 7gm OR 9gm OR gma OR 7wa OR 9wa OR wax OR 7m7 OR 9m9 OR mau OR 7gd OR 9gd OR gsd OR 7fb OR 9fb OR flb OR 7gi OR 9gi OR gix OR 7wh OR 9wh OR whm OR 7pi OR 9pi OR pil OR 7s7 OR 9s9 OR ssp OR 7ts OR 9ts OR tsp) RARE (ILVL>84) !ID]: * * %NAME% * *<<BASIC>>
+ItemDisplay[FILTERLVL<2 (7cr OR 9cr OR crs OR 7gl OR 9gl OR glv OR 7p7 OR 9p9 OR pik OR 7gm OR 9gm OR gma OR 7wa OR 9wa OR wax OR 7m7 OR 9m9 OR mau OR 7gd OR 9gd OR gsd OR 7fb OR 9fb OR flb OR 7gi OR 9gi OR gix OR 7wh OR 9wh OR whm OR 7pi OR 9pi OR pil OR 7s7 OR 9s9 OR ssp OR 7ts OR 9ts OR tsp) RARE (ILVL>84) !ID]: * * %NAME% * *<<BASIC>>
 
 // High Ilvl Rares
-ItemDisplay[RARE !WEAPON (ILVL>91) !ID FILTERLVL<3]: * %NAME% *<<BASIC>>
-ItemDisplay[(GLOVES OR BOOTS OR BELT) RARE (ILVL>84) !ID FILTERLVL<3]: %NAME%<<BASIC>>
+ItemDisplay[RARE !WEAPON (ILVL>91) !ID FILTERLVL<2]: * %NAME% *<<BASIC>>
+ItemDisplay[(GLOVES OR BOOTS OR BELT) RARE (ILVL>84) !ID FILTERLVL<2]: %NAME%<<BASIC>>
 ItemDisplay[BOOTS RARE (ILVL>84) !ID]: %NAME%<<BASIC>>
 ItemDisplay[RARE (CLVL<80) !ID]: %NAME%<<BASIC>>
-
+ItemDisplay[RARE !ID FILTERLVL=1]: %NAME%<<BASIC>>
 //TODO for map ItemDisplay[RARE !ID FILTERLVL>2]:
 //ItemDisplay[RARE !ID]: %NAME%<<BASIC>>
 //-----------------------------------------------------------------------------------
@@ -1675,18 +1677,22 @@ ItemDisplay[!ID UNI (dir OR kri OR mst OR mac OR clb OR fla OR hax OR axe OR 2ax
 
 //Orb +PLAGUE SK62 HYDRA, SK59 BLI, SK 58 ES
 // hydra, bliz, ES, Discharge, nova lite, cold nova, chain light, charge bolt, freezing pulse
-ItemDisplay[(ob5 OR oba OR obf) !RW NMAG !ETH (SK62>2 OR SK59>2 OR SK58>2 OR SK57>2 OR SK48>2 OR SK44>2 OR SK54>2 OR SK38>2 OR SKILL("Freezing Pulse")>2) (SOCK=0 OR SOCK=3)]: %NL%%WHITE%%NAME% %ORANGE%[Plague Base]{%NAME%}%CONTINUE%
-ItemDisplay[(ob5 OR oba OR obf) !RW NMAG !ETH (SK62>2) (SOCK=0 OR SOCK=3)]: %GREEN%+3 Hydra %NAME%{%NAME%}%CONTINUE%
-ItemDisplay[(ob5 OR oba OR obf) !RW NMAG !ETH (SK59>2) (SOCK=0 OR SOCK=3)]: %GREEN%+3 Blizz %NAME%{%NAME%}%CONTINUE%
-ItemDisplay[(ob5 OR oba OR obf) !RW NMAG !ETH (SK58>2) (SOCK=0 OR SOCK=3)]: %GREEN%+3 ES %NAME%{%NAME%}%CONTINUE%
-ItemDisplay[(ob5 OR oba OR obf) !RW NMAG !ETH (SK57>2) (SOCK=0 OR SOCK=3)]: %GREEN%+3 Discharge %NAME%{%NAME%}%CONTINUE%
-ItemDisplay[(ob5 OR oba OR obf) !RW NMAG !ETH (SK48>2) (SOCK=0 OR SOCK=3)]: %GREEN%+3 Nova %NAME%{%NAME%}%CONTINUE%
-ItemDisplay[(ob5 OR oba OR obf) !RW NMAG !ETH (SK44>2) (SOCK=0 OR SOCK=3)]: %GREEN%+3 FrstNova %NAME%{%NAME%}%CONTINUE%
-ItemDisplay[(ob5 OR oba OR obf) !RW NMAG !ETH (SK54>2) (SOCK=0 OR SOCK=3)]: %GREEN%+3 ChLight %NAME%{%NAME%}%CONTINUE%
-ItemDisplay[(ob5 OR oba OR obf) !RW NMAG !ETH (SK38>2) (SOCK=0 OR SOCK=3)]: %GREEN%+3 ChBolt %NAME%{%NAME%}%CONTINUE%
-ItemDisplay[(ob5 OR oba OR obf) !RW NMAG !ETH (SKILL("Freezing Pulse")>2) (SOCK=0 OR SOCK=3)]: %NAME% %GREEN%+3 FrePulse{%NAME%}%CONTINUE%
-ItemDisplay[(ob5 OR oba OR obf) !RW NMAG !ETH (SK62>2 OR SK59>2 OR SK58>2 OR SK57>2 OR SK48>2 OR SK44>2 OR SK54>2 OR SK38>2 OR SKILL("Freezing Pulse")>2) (SOCK=0 OR SOCK=3)]: %NL%%NAME%{%NAME%}%NL%<<BASICHIGH1>>
+ItemDisplay[(ob5 OR oba OR obf) !RW NMAG (SK62>2 OR SK59>2 OR SK58>2 OR SK57>2 OR SK48>2 OR SK44>2 OR SK54>2 OR SK38>2 OR SKILL("Freezing Pulse")>2) (SOCK=0 OR SOCK=3)]: %NL%%WHITE%%NAME% %ORANGE%[Plague Base]{%NAME%}%CONTINUE%
+ItemDisplay[(ob5 OR oba OR obf) !RW NMAG (SK62>2) (SOCK=0 OR SOCK=3)]: %GREEN%+3 Hydra %NAME%{%NAME%}%CONTINUE%
+ItemDisplay[(ob5 OR oba OR obf) !RW NMAG (SK59>2) (SOCK=0 OR SOCK=3)]: %GREEN%+3 Blizz %NAME%{%NAME%}%CONTINUE%
+ItemDisplay[(ob5 OR oba OR obf) !RW NMAG (SK58>2) (SOCK=0 OR SOCK=3)]: %GREEN%+3 ES %NAME%{%NAME%}%CONTINUE%
+ItemDisplay[(ob5 OR oba OR obf) !RW NMAG (SK57>2) (SOCK=0 OR SOCK=3)]: %GREEN%+3 Discharge %NAME%{%NAME%}%CONTINUE%
+ItemDisplay[(ob5 OR oba OR obf) !RW NMAG (SK48>2) (SOCK=0 OR SOCK=3)]: %GREEN%+3 Nova %NAME%{%NAME%}%CONTINUE%
+ItemDisplay[(ob5 OR oba OR obf) !RW NMAG (SK44>2) (SOCK=0 OR SOCK=3)]: %GREEN%+3 FrstNova %NAME%{%NAME%}%CONTINUE%
+ItemDisplay[(ob5 OR oba OR obf) !RW NMAG (SK54>2) (SOCK=0 OR SOCK=3)]: %GREEN%+3 ChLight %NAME%{%NAME%}%CONTINUE%
+ItemDisplay[(ob5 OR oba OR obf) !RW NMAG (SK38>2) (SOCK=0 OR SOCK=3)]: %GREEN%+3 ChBolt %NAME%{%NAME%}%CONTINUE%
+ItemDisplay[(ob5 OR oba OR obf) !RW NMAG (SKILL("Freezing Pulse")>2) (SOCK=0 OR SOCK=3)]: %NAME% %GREEN%+3 FrePulse{%NAME%}%CONTINUE%
+ItemDisplay[(ob5 OR oba OR obf) !RW NMAG (SK62>2 OR SK59>2 OR SK58>2 OR SK57>2 OR SK48>2 OR SK44>2 OR SK54>2 OR SK38>2 OR SKILL("Freezing Pulse")>2) (SOCK=0 OR SOCK=3)]: %NL%%NAME%{%NAME%}%NL%<<BASICHIGH1>>
 
+// FOH
+ItemDisplay[WP13 !RW NMAG SK121>2 (SOCK=0 OR SOCK=3)]: %NL%%WHITE%%NAME% %ORANGE%[Plague Base]{%NAME%}%CONTINUE%
+ItemDisplay[WP13 !RW NMAG SK121>2 (SOCK=0 OR SOCK=3)]: %GREEN%+3 FOH %NAME%{%NAME%}%CONTINUE%
+ItemDisplay[WP13 !RW NMAG SK121>2 (SOCK=0 OR SOCK=3)]: %NL%%NAME%{%NAME%}%NL%<<BASICHIGH1>>
 //-----------------------------------------------------------------------------------
 
 
@@ -2278,8 +2284,8 @@ ItemDisplay[SET ID rin STAT96>8]: %NAME% {%ORANGE%FRW%WHITE%}<:GG: NotificationP
 ItemDisplay[UNI ID amu ALLSK>2]: %NAME% {%ORANGE%3 ALLSKILL%WHITE%}<<GG>>
 ItemDisplay[UNI ID amu ALLSK>1 IAS>19]: %NAME% {%ORANGE%2 ALLSKILL%WHITE%}<<GG>>
 ItemDisplay[UNI ID amu ALLSK>0 IAS>19 STAT96>19]:  %NAME% {%ORANGE%1 ALLSKILL%WHITE%}<<GG>>
-ItemDisplay[SET !ID amu]: %ORANGE% % %GREEN%%NAME% %ORANGE% %<:GG: NotificationColor = GREEN>
-ItemDisplay[SET !ID rin]: %ORANGE% % %GREEN%%NAME% %ORANGE% %<:GG: NotificationPriority = LOW, NotificationColor = GREEN>
+ItemDisplay[SET !ID amu]: %ORANGE% % %GREEN%%NAME% %ORANGE% %<<SET>>
+ItemDisplay[SET !ID rin]: %ORANGE% % %GREEN%%NAME% %ORANGE% %<<SET>>
 ItemDisplay[SET ID rin]: %ORANGE% % %GREEN%%NAME% %ORANGE% %<:GG: NotificationPriority = LOW, NotificationColor = GREEN>
 ItemDisplay[UNI !ID jew]: %NL%       %GREEN% %%%%%% %PURPLE%%NAME% %GREEN% %%%%%%        %NL%%GOLD%<<GG>>
 ItemDisplay[UNI !ID cm3]: %NL%       %RED% %%% %GOLD%%NAME% %RED% %%%        %NL%%GOLD%<<GG>>
