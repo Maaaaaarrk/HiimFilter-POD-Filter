@@ -1,7 +1,7 @@
 ﻿//Attributes
 Attribute[Author]: Maark Backed by Macks Filter
 Attribute[Name]: HiimFilter
-Attribute[Version]: 0.03 BETA
+Attribute[Version]: 0.05 BETA
 Attribute[Date]: March 11 2024
 Option[IgnoreMissingSounds]: True
 
@@ -24,9 +24,9 @@ ItemStyle[BASIC]: BorderColor = 4, BorderSize = 2, BackgroundColor = 172
 ItemStyle[BASICHIGH]: NotificationPriority = HIGH, NotificationColor = ITEM, BorderColor = 4, BorderSize = 2, BackgroundColor = 15
 ItemStyle[BASIC1]: BorderColor = 4, BorderSize = 2, BackgroundColor = 138
 ItemStyle[BASICNOT]: NotificationPriority = HIGH, NotificationColor = ITEM, BorderColor = 4, BorderSize = 2, BackgroundColor = 138
-ItemStyle[MAP1W]: MapIcon = 14, BorderColor = 32, BorderSize = 2, NotificationColor = ITEM, BackgroundColor = 19, NotificationPriority = HIGH
-ItemStyle[MAP2Y]: MapIcon = 15, BorderColor = 168, BorderSize = 2, NotificationColor = ITEM, BackgroundColor = 16, NotificationPriority = HIGH
-ItemStyle[MAP3R]: MapIcon = 13, BorderColor = 98, BorderSize = 2, NotificationColor = ITEM, BackgroundColor = 41, NotificationPriority = HIGH
+ItemStyle[MAP1W]: MapIcon = 14, BorderColor = 32, BorderSize = 2, NotificationColor = ITEM, BackgroundColor = 19, NotificationPriority = HIGH, NotificationSoundPriority = LOW, NotificationSound = "@global\sfx\object\shrine\shrineofenirhs"
+ItemStyle[MAP2Y]: MapIcon = 15, BorderColor = 168, BorderSize = 2, NotificationColor = ITEM, BackgroundColor = 16, NotificationPriority = HIGH, NotificationSoundPriority = LOW, NotificationSound = "@global\sfx\object\shrine\shrineofenirhs"
+ItemStyle[MAP3R]: MapIcon = 13, BorderColor = 98, BorderSize = 2, NotificationColor = ITEM, BackgroundColor = 41, NotificationPriority = HIGH, NotificationSoundPriority = LOW, NotificationSound = "@global\sfx\object\shrine\shrineofenirhs"
 ItemStyle[UBERD]: MapIcon = 47, BorderColor = 132, BorderSize = 2, NotificationColor = ITEM, BackgroundColor = 59, NotificationPriority = HIGH
 ItemStyle[UBERL]: MapIcon = 47, BorderColor = 132, BorderSize = 2, NotificationColor = ITEM, BackgroundColor = 59, NotificationPriority = HIGH
 ItemStyle[KEYS]: MapIcon = 47, BorderColor = 132, BorderSize = 2, NotificationColor = ITEM, BackgroundColor = 59, NotificationPriority = HIGH
@@ -157,6 +157,7 @@ ItemDisplay[tes]: %NAME% %BLUE%[Andariel]%CONTINUE%
 ItemDisplay[ceh]: %NAME% %YELLOW%[Mephisto]%CONTINUE%
 ItemDisplay[bet]: %NAME% %RED%[Diablo]%CONTINUE%
 ItemDisplay[fed]: %NAME% %GREEN%[Baal]%CONTINUE%
+ItemDisplay[toa]: %NAME%<<BOSS>>
 ItemDisplay[tes OR ceh OR bet OR fed]: %NL%%!CARROTSL!% %NAME%%!CARROTSR!%%NL%%SPACE%<<BOSS>>
 //-----------------------------------------------------------------------------------
 
