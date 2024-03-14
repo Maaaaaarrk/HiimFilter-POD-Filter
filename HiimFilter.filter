@@ -1,7 +1,7 @@
 ﻿//Attributes
 Attribute[Author]: Maark Backed by Macks Filter
 Attribute[Name]: HiimFilter
-Attribute[Version]: 0.12 BETA
+Attribute[Version]: 0.13 BETA
 Attribute[Date]: March 13 2024
 Option[IgnoreMissingSounds]: True
 
@@ -70,7 +70,7 @@ TextMacro[PURPLES]: %PURPLE%<> <> <> <> <>
 TextMacro[PURPLESMED]: %PURPLE%O O O O
 TextMacro[PURPLESSMALL]: %PURPLE%* * *
 TextMacro[ORANGES]: %ORANGE%O O O O
-TextMacro[ORANGEDOT]: %ORANGE%* * *
+TextMacro[ORANGEDOT]: %ORANGE%*
 TextMacro[REDS]: %RED%X X X X
 TextMacro[GREENS]: %GREEN%O O O
 
@@ -1704,7 +1704,6 @@ ItemDisplay[ETH UNI !ID (ci3 OR uap OR urn OR usk OR xh9 OR baa OR dra OR ulm OR
 //Ravenlore dre 
 //Valkyrie Wing xhm
 //Kiras ci2
-//Duriel's Shell xrs
 //Skullders xpl
 //Que-hegan xtp
 //Arkaines valor upl
@@ -1712,37 +1711,24 @@ ItemDisplay[ETH UNI !ID (ci3 OR uap OR urn OR usk OR xh9 OR baa OR dra OR ulm OR
 //Gbane utu
 //Dracul's Grasp uvg
 //Steelrend uhg
-//Bloodfist vgl
 //Chancies mgl
 //Magefist tgl
 //Frosties hgl
-//Soul Drainers umg
-//Ghoulhide xmg
 //Verdungo's Hearty Cord umc
 //String of Ears zlb
 //Razortail zvb
 //Thundergod's Vigor zhb
 //Goldwrap tbl
 //Sandstorm Trek uvb
-//Marrowwalk umb
 //Infernostrides xlb
-//Waterwalk xvb
 //Silkweave xmb
 //Gore Rider xhb
 //Shadow Dancer uhb
-//Tearhaunch hbt
 //Occy oba
 //Reaper's Toll 7s8
 //Lacerator 7b8
 //Azurewrath  Azure\Lightsabre 7cr
-//Tombreaver 7pa
 //Thunderstroke amf
-//Doomslinger rxb
-//Gull dgr
-//Alibaba 9fc
-//Demon Limb 7sp
-//Bonesnap mau
-//Bloodtree Stump 9m9
 //Hexfire 9sb
 //Warshrike 7bk
 //Fleshripper 7kr
@@ -1751,28 +1737,48 @@ ItemDisplay[ETH UNI !ID (ci3 OR uap OR urn OR usk OR xh9 OR baa OR dra OR ulm OR
 //Headstriker 9bs
 //Mang songs 6ws
 //Hand of blessed light 9ws
-//Fleshrender 9sp
-//Executioners Justice 7gi
 //Cranium basher 7gm
 //Astreons 7ws
-//Cranebeak   7mp
-//Wizard Spike 7dg
-//Suicide Branch 9wn
 //Grandfather 7gd
 //Homunculus nea
 //Darkforce Spawn nef
 //Medusa's Gaze uow
 //Hone Sundan 9st
-//Buriza 8hx
-//Stormlash/horizons tornado 7fl
 //Ribcracker 8ls
 //Warlord's Trust 9la
 //Alma Negra pac
 //Lidless Wall xsh
 //Radament's Sphere xts
 
-ItemDisplay[!ETH UNI !ID (dre OR xhm OR ci2 OR xrs OR xpl OR xtp OR upl OR uld OR utu OR uvg OR uhg OR vgl OR mgl OR tgl OR hgl OR umg OR xmg OR umc OR zlb OR zvb OR zhb OR tbl OR uvb OR umb OR xlb OR xvb OR xmb OR xhb OR uhb OR hbt OR oba OR 7s8 OR 7b8 OR 7cr OR 7pa OR amf OR rxb OR dgr OR 9fc OR 7sp OR mau OR 9m9 OR 9sb OR 7bk OR 7kr OR 9ls OR 9gw OR 9bs OR 6ws OR 9ws OR 9sp OR 7gi OR 7gm OR 7ws OR 7mp OR 7dg OR 9wn OR 7gd OR nea OR nef OR uow OR 9st OR 8hx OR 7fl OR 8ls OR 9la OR pac OR xsh OR xts)]: %!ORANGES!% %NAME% %!ORANGES!%<<UNIQUE>>
-ItemDisplay[ETH UNI !ID (dre OR xhm OR ci2 OR xrs OR xpl OR xtp OR upl OR uld OR utu OR uvg OR uhg OR vgl OR mgl OR tgl OR hgl OR umg OR xmg OR umc OR zlb OR zvb OR zhb OR tbl OR uvb OR umb OR xlb OR xvb OR xmb OR xhb OR uhb OR hbt OR oba OR 7s8 OR 7b8 OR 7cr OR 7pa OR amf OR rxb OR dgr OR 9fc OR 7sp OR mau OR 9m9 OR 9sb OR 7bk OR 7kr OR 9ls OR 9gw OR 9bs OR 6ws OR 9ws OR 9sp OR 7gi OR 7gm OR 7ws OR 7mp OR 7dg OR 9wn OR 7gd OR nea OR nef OR uow OR 9st OR 8hx OR 7fl OR 8ls OR 9la OR pac OR xsh OR xts)]: %!ORANGES!% %NAME% %!ORANGES!%<<UNIQUEETH>>
+ItemDisplay[!ETH UNI !ID (dre OR xhm OR ci2 OR xpl OR xtp OR upl OR uld OR utu OR uvg OR uhg OR mgl OR tgl OR hgl OR umc OR zlb OR zvb OR zhb OR tbl OR uvb OR xlb OR xmb OR xhb OR uhb OR oba OR 7s8 OR 7b8 OR 7cr OR amf OR 9sb OR 7bk OR 7kr OR 9ls OR 9gw OR 9bs OR 6ws OR 9ws OR 7gm OR 7ws OR 7gd OR nea OR nef OR uow OR 9st OR 8ls OR 9la OR pac OR xsh OR xts)]: %!ORANGES!% %NAME% %!ORANGES!%<<UNIQUE>>
+ItemDisplay[ETH UNI !ID (dre OR xhm OR ci2 OR xpl OR xtp OR upl OR uld OR utu OR uvg OR uhg OR mgl OR tgl OR hgl OR umc OR zlb OR zvb OR zhb OR tbl OR uvb OR xlb OR xmb OR xhb OR uhb OR oba OR 7s8 OR 7b8 OR 7cr OR amf OR 9sb OR 7bk OR 7kr OR 9ls OR 9gw OR 9bs OR 6ws OR 9ws OR 7gm OR 7ws OR 7gd OR nea OR nef OR uow OR 9st OR 8ls OR 9la OR pac OR xsh OR xts)]: %!ORANGES!% %NAME% %!ORANGES!%<<UNIQUEETH>>
+
+
+
+//Duriel's Shell xrs
+//Bloodfist vgl
+//Soul Drainers umg
+//Ghoulhide xmg
+//Marrowwalk umb
+//Waterwalk xvb
+//Tearhaunch hbt
+//Tombreaver 7pa
+//Doomslinger rxb
+//Gull dgr
+//Alibaba 9fc
+//Demon Limb 7sp
+//Bonesnap mau
+//Bloodtree Stump 9m9
+//Fleshrender 9sp
+//Executioners Justice 7gi
+//Cranebeak   7mp
+//Wizard Spike 7dg
+//Suicide Branch 9wn
+//Buriza 8hx
+//Stormlash/horizons tornado 7fl
+
+ItemDisplay[!ETH UNI !ID (xrs OR vgl OR umg OR xmg OR umb OR xvb OR hbt OR 7pa OR rxb OR dgr OR 9fc OR 7sp OR mau OR 9m9 OR 9sp OR 7gi OR 7mp OR 7dg OR 9wn OR 8hx OR 7fl)]: %!ORANGEDOT!% %NAME% %!ORANGEDOT!%<<UNIQUE>>
+ItemDisplay[ETH UNI !ID (xrs OR vgl OR umg OR xmg OR umb OR xvb OR hbt OR 7pa OR rxb OR dgr OR 9fc OR 7sp OR mau OR 9m9 OR 9sp OR 7gi OR 7mp OR 7dg OR 9wn OR 8hx OR 7fl)]: %!ORANGEDOT!% %NAME% %!ORANGEDOT!%<<UNIQUEETH>>
 
 
 // SET
