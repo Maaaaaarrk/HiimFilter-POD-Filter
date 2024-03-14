@@ -1,7 +1,7 @@
 ﻿//Attributes
 Attribute[Author]: Maark Backed by Macks Filter
 Attribute[Name]: HiimFilter
-Attribute[Version]: 0.16  BETA
+Attribute[Version]: 0.17  BETA
 Attribute[Date]: March 13 2024
 Option[IgnoreMissingSounds]: True
 
@@ -79,7 +79,7 @@ TextMacro[GREENS]: %GREEN%O O O
 // HIDE JUNK RULES
 //-----------------------------------------------------------------------------------
 // Gamba circs
-ItemDisplay[EQ7 INF !ID]: %NL%%NAME%%NL%<<GG>>
+ItemDisplay[EQ7 INF !ID]: %NL%%NAME%%NL%<:GG: NotificationSound = "@global\sfx\item\rare">
 ItemDisplay[(ARMOR OR WEAPON) INF !RW !leg]:// Hide inferior items
 ItemDisplay[ear]:// Hide player ears
 ItemDisplay[NMAG ID (ARMOR OR WEAPON) SOCK=1 !leg CLVL>35]:// Hide junk 1s stuff after 35
