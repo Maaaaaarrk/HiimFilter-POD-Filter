@@ -1,8 +1,8 @@
 ﻿//Attributes
 Attribute[Author]: Maark Backed by Macks Filter
 Attribute[Name]: HiimFilter
-Attribute[Version]: 0.18  BETA
-Attribute[Date]: March 13 2024
+Attribute[Version]: 0.19  BETA
+Attribute[Date]: March 14 2024
 Option[IgnoreMissingSounds]: True
 
 //Filter levels
@@ -85,7 +85,7 @@ ItemDisplay[ear]:// Hide player ears
 ItemDisplay[NMAG ID (ARMOR OR WEAPON) SOCK=1 !leg CLVL>35]:// Hide junk 1s stuff after 35
 
 // Qty
-ItemDisplay[!(ARMOR OR WEAPON OR tbk OR ibk OR key) QTY>1]: %NAME% %TAN%QTY %QTY%%CONTINUE%
+ItemDisplay[!(ARMOR OR WEAPON OR tbk OR ibk OR key OR aq2 OR cq2) QTY>1]: %NAME% %TAN%QTY %QTY%%CONTINUE%
 
 
 ItemDisplay[STAT360>0]: %NAME% %RED%[C]{%NAME%}%CONTINUE%
