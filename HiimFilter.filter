@@ -1,7 +1,7 @@
 ﻿//Attributes
 Attribute[Author]: Maark Backed by Macks Filter
 Attribute[Name]: HiimFilter
-Attribute[Version]: 0.14 BETA
+Attribute[Version]: 0.15  BETA
 Attribute[Date]: March 13 2024
 Option[IgnoreMissingSounds]: True
 
@@ -214,6 +214,7 @@ ItemDisplay[mbr]: %NAME% %WHITE%[Uber Izual]%CONTINUE%
 ItemDisplay[bey]: %NAME% %WHITE%[Uber Duriel]%CONTINUE%
 ItemDisplay[dhn]: %NAME% %WHITE%[Lilith]%CONTINUE%
 ItemDisplay[mbr OR bey OR dhn]: %NL%%!CARROTSL!% %NAME%%!CARROTSR!%%NL%%SPACE%<<BOSS>>
+ItemDisplay[std]: %NAME%<<BOSS>>
 
 //TODO
 ItemDisplay[SYNTH]: %SPACE%%NL%%SPACE%%NL%%!STARS2!%%GOLD%   %NAME%   %!STARS2!%%NL%%SPACE%%NL%%SPACE%<<SYNTH>>
