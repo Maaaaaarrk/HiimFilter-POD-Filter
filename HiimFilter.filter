@@ -1,7 +1,7 @@
 ﻿//Attributes
 Attribute[Author]: Maark Backed by Macks Filter
 Attribute[Name]: HiimFilter
-Attribute[Version]: 0.13 BETA
+Attribute[Version]: 0.14 BETA
 Attribute[Date]: March 13 2024
 Option[IgnoreMissingSounds]: True
 
@@ -84,6 +84,9 @@ ItemDisplay[NMAG ID (ARMOR OR WEAPON) SOCK=1 !leg CLVL>35]:// Hide junk 1s stuff
 
 // Qty
 ItemDisplay[!(ARMOR OR WEAPON OR tbk OR ibk OR key) QTY>1]: %NAME% %TAN%QTY %QTY%%CONTINUE%
+
+
+ItemDisplay[STAT360>0]: %NAME% %RED%[C]{%NAME%}%CONTINUE%
 //-----------------------------------------------------------------------------------
 
 //-----------------------------------------------------------------------------------
@@ -428,16 +431,16 @@ ItemDisplay[jew CRAFT ID (STAT91<0 OR RES>0 OR FHR>0 OR STAT86>0 OR STAT138>0 OR
 
 // Rainbow Facet Type and Value Tags
 // Fire
-ItemDisplay[jew UNI STAT333>0]: %RED%%STAT333%/%STAT329% Fire%GOLD% %NAME%%CONTINUE%
+ItemDisplay[jew UNI STAT333>0]: %RED%%STAT(333,0)%/%STAT(329,0)% Fire%GOLD% %NAME%%CONTINUE%
 
 // Lightning
-ItemDisplay[jew UNI STAT334>0]: %YELLOW%%STAT334%/%STAT330% Light%GOLD% %NAME%%CONTINUE%
+ItemDisplay[jew UNI STAT334>0]: %YELLOW%%STAT(334,0)%/%STAT(330,0)% Light%GOLD% %NAME%%CONTINUE%
 
 // Cold
-ItemDisplay[jew UNI STAT335>0]: %BLUE%%STAT335%/%STAT331% Cold%GOLD% %NAME%%CONTINUE%
+ItemDisplay[jew UNI STAT335>0]: %BLUE%%STAT(335,0)%/%STAT(331,0)% Cold%GOLD% %NAME%%CONTINUE%
 
 // Poison
-ItemDisplay[jew UNI STAT336>0]: %GREEN%%STAT336%/%STAT332% Psn%GOLD% %NAME%%CONTINUE%
+ItemDisplay[jew UNI STAT336>0]: %GREEN%%STAT(336,0)%/%STAT(332,0)% Psn%GOLD% %NAME%%CONTINUE%
 
 // TODO MAGIC phys facet
 
@@ -1944,15 +1947,11 @@ ItemDisplay[!ETH UNI ID UNIQUE("Death's Fathom")]: %WHITE%(%ORANGE%+%BLUE%%STAT(
 //Death's Web dweb
 ItemDisplay[!ETH UNI ID UNIQUE("Death's Web")]: %NAME%%NL%%WHITE%(%ORANGE%-%GREEN%%STAT(336,0)%Psn%WHITE%)<<GG>>
 //Eschuta's
-ItemDisplay[UNI ID obc]: %ORANGE%+%YELLOW%%STAT(330,0)% Light%WHITE%) %CONTINUE%
+ItemDisplay[UNI ID obc]: %ORANGE%+%YELLOW%%STAT(330,0)% Light%WHITE%)%NL%%NAME%%CONTINUE%
 ItemDisplay[UNI ID obc]: %WHITE% , %ORANGE%+%RED%%STAT(329,0)% Fire%WHITE% , %GOLD%%NAME% %CONTINUE%
 ItemDisplay[UNI ID obc CLSK1=1]: %WHITE%(%ORANGE%+1 Skill%GOLD%%NAME% %CONTINUE%
 ItemDisplay[UNI ID obc CLSK1=2]: %WHITE%(%ORANGE%+2 Skill%GOLD%%NAME% %CONTINUE%
 ItemDisplay[UNI ID obc CLSK1=3]: %WHITE%(%ORANGE%+3 Skill%GOLD%%NAME% %CONTINUE%
-ItemDisplay[!ETH UNI ID obc SOCK=0]: %BASENAME%%NL%%NAME%%NL% %GOLD%%ITEMNAME% %CONTINUE% 
-ItemDisplay[!ETH UNI ID obc SOCK>0]: %BASENAME%%NL%%NAME%%NL% %GOLD%%ITEMNAME% %GREEN%[%SOCKETS%] %CONTINUE% 
-ItemDisplay[ETH UNI ID obc SOCK=0]: %ORANGE%ETH %BASENAME%%NL%%NAME%%NL% %GOLD%%ITEMNAME% %CONTINUE% 
-ItemDisplay[ETH UNI ID obc SOCK>0]: %ORANGE%ETH %BASENAME%%NL%%NAME%%NL% %GOLD%%ITEMNAME% %GREEN%[%SOCKETS%] %CONTINUE% 
 ItemDisplay[UNI ID obc]: %NAME% <<GG>>
 
 //Titan's Revenge
@@ -1980,8 +1979,7 @@ ItemDisplay[UNIQUE("Hexfire") ETH UNI ID SOCK>0]:  %ORANGE%ETH %GOLD%%BASENAME%%
 //Bing Sz Wang
 ItemDisplay[UNI !ETH UNIQUE("Bing Sz Wang") ID 9cm SOCK=0]: %BASENAME%%NL%%ORANGE% Bans Big Size Wang %NL%%GOLD%%ITEMNAME%{%PURPLE%Upgrade: %WHITE%Lum %SAGE%+ %LIGHT_GRAY%Pul %SAGE%+ %GREEN%PEmerald}<<GG>>
 ItemDisplay[UNI !ETH UNIQUE("Bing Sz Wang") ID 9cm]: %BASENAME%%NL%%ORANGE% Bans Big Size Wang %NL%%GOLD%%ITEMNAME% %ORANGE%[%SOCKETS%]{%PURPLE%Upgrade: %WHITE%Lum %SAGE%+ %LIGHT_GRAY%Pul %SAGE%+ %GREEN%PEmerald}<<GG>>
-ItemDisplay[UNI !ETH UNIQUE("Bing Sz Wang") ID SOCK=0]: %BASENAME%%NL%%ORANGE% Bans Big Size Wang %NL%%GOLD%%ITEMNAME%<<GG>>
-ItemDisplay[UNI !ETH UNIQUE("Bing Sz Wang") ID]: %BASENAME%%NL%%ORANGE% Bans Big Size Wang %NL%%GOLD%%ITEMNAME% %ORANGE%[%SOCKETS%]<<GG>>
+ItemDisplay[UNI !ETH UNIQUE("Bing Sz Wang") ID SOCK=0]: %NAME%<<GG>>
 
 //Warlord's Trust
 ItemDisplay[!ETH UNI ID UNIQUE("Warlord's Trust") 9la SOCK=0]: %NAME%{%PURPLE%Upgrade: %WHITE%Lum %SAGE%+ %LIGHT_GRAY%Pul %SAGE%+ %GREEN%PEmerald}<<GG>>
@@ -2156,17 +2154,11 @@ ItemDisplay[UNI !ID cm3]: %NL%       %RED% %%% %GOLD%%NAME% %RED% %%%        %NL
 ItemDisplay[MAG !ID jew]: %GREEN%% %BLUE%%NAME% %GREEN%%<<BASIC>>
 //UNIQUE&SET Eth/Socket Catchall
 ItemDisplay[UNI ETH !ID FILTERLVL=3]:
-ItemDisplay[UNI ETH !ID]: %ORANGE%ETH %GOLD%%NAME%<<GG>>
-ItemDisplay[(UNI OR SET) !ID !cm1 !cm2 !cm3 FILTERLVL=3]:
-ItemDisplay[(UNI OR SET) !ID !cm1 !cm2 !cm3]: %NAME%<<BASIC>>
-ItemDisplay[UNI ETH SOCK>0]: %ORANGE%ETH %GOLD%%NAME% %GREEN%[%SOCKETS%]<<BASIC>>
-ItemDisplay[UNI ETH]: %ORANGE%ETH %GOLD%%NAME%<<BASIC>>
+ItemDisplay[UNI ETH]: %NAME%<<UNIQUEETH>>
 ItemDisplay[UNI (EQ1 OR EQ2 OR EQ3 OR EQ7 OR WP1 OR WP2 OR WP3 OR WP4 OR WP7 OR WP8 OR WP9 OR WP10 OR WP11 OR WP12 OR WP13) (!jav OR !9ja OR !7ja OR !pil OR !9pi OR !7pi OR !ssp OR !9s9 OR !7s7 OR !glv OR !9gl OR !7gl OR !tsp OR !9ts OR !7ts OR !am5 OR !ama OR !amf) SOCK=0]: %NAME% <<BASIC>> 
 ItemDisplay[SET (EQ1 OR EQ2 OR EQ3 OR EQ7 OR WP1 OR WP2 OR WP3 OR WP4 OR WP7 OR WP8 OR WP9 OR WP10 OR WP11 OR WP12 OR WP13) (!jav OR !9ja OR !7ja OR !pil OR !9pi OR !7pi OR !ssp OR !9s9 OR !7s7 OR !glv OR !9gl OR !7gl OR !tsp OR !9ts OR !7ts OR !am5 OR !ama OR !amf) SOCK=0]: %NAME% <<BASIC>>
-ItemDisplay[UNI SOCK>0]: %NAME% %GREEN%[%SOCKETS%]<<BASIC>>
-ItemDisplay[SET SOCK>0]: %NAME% %ORANGE%[%SOCKETS%]<<BASIC>>
-ItemDisplay[UNI !cm1 !cm2 !cm3]: %NAME%<<BASIC>>
-ItemDisplay[SET !cm1 !cm2 !cm3]: %NAME%<<BASIC>>
+ItemDisplay[UNI !cm1 !cm2 !cm3]: %NAME%<<UNIQUE>>
+ItemDisplay[SET !cm1 !cm2 !cm3]: %NAME%<<SET>>
 //Remove shield/armor/helm with shit sockets
 ItemDisplay[NMAG EQ3 !RW SOCK=3 DIFFICULTY<1]: %NAME% %GREEN%[%SOCKETS%]{%GRAY%Ancient's Pledge%NL%%PURPLE%Ancestor's Pride: %WHITE%Ral %SAGE%+ %LIGHT_GRAY%Ort %SAGE%+ %WHITE%Tal}<<BASICMED>> 
 ItemDisplay[NMAG EQ3 !RW SOCK=1]:
