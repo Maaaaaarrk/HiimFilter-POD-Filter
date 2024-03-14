@@ -1,7 +1,7 @@
 ﻿//Attributes
 Attribute[Author]: Maark Backed by Macks Filter
 Attribute[Name]: HiimFilter
-Attribute[Version]: 0.11 BETA
+Attribute[Version]: 0.12 BETA
 Attribute[Date]: March 13 2024
 Option[IgnoreMissingSounds]: True
 
@@ -35,15 +35,18 @@ ItemStyle[SYNTH]: MapIcon = 23, BorderColor = 155, BorderSize = 15, Notification
 /////////////////////////////////////////////////////////////////////////////////////////////////
 //                                     Map Icon Text  from pilla                               //
 /////////////////////////////////////////////////////////////////////////////////////////////////
-ItemStyle[UNIQUE]: MapIcon = 26, MapIconColor = 0, BorderColor = 0, BorderSize = 10, BackgroundColor = 0, NotificationPriority = HIGH, NotificationColor = ITEM
 ItemStyle[HIGH]: MapIcon = 24, MapIconColor = 0, BorderColor = 0, BorderSize = 10, BackgroundColor = 0, NotificationPriority = HIGH, NotificationColor = ITEM
-ItemStyle[SET]: MapIcon = 22, MapIconColor = 0, BorderColor = 0, BorderSize = 10, BackgroundColor = 0, NotificationPriority = HIGH, NotificationColor = ITEM
 ItemStyle[SPECIAL]: MapIcon = 84, MapIconColor = 0, BorderColor = 0, BorderSize = 10, BackgroundColor = 0, NotificationPriority = HIGH, NotificationColor = ITEM
 ItemStyle[RARE]: MapIcon = 85, MapIconColor = 0, BorderColor = 0, BorderSize = 10, BackgroundColor = 0, NotificationPriority = HIGH, NotificationColor = ITEM
 ItemStyle[MONEY]: MapIcon = 5, MapIconColor = 0, BorderColor = 0, BorderSize = 10, BackgroundColor = 0, NotificationPriority = HIGH, NotificationColor = ITEM
 ItemStyle[MAGIC]: MapIcon = 2, MapIconColor = 0, BorderColor = 0, BorderSize = 10, BackgroundColor = 0, NotificationPriority = HIGH, NotificationColor = ITEM
 
 
+ItemStyle[GGETH]: MapIcon = 26, BorderColor = 155, BorderSize = 2, NotificationColor = ITEM, BackgroundColor = 35, NotificationPriority = HIGH, NotificationSoundPriority = LOW, NotificationSound = "@local\sfx\common\paladin\pal_oops"
+ItemStyle[UNIQUEETH]: MapIcon = 26, MapIconColor = 0, BorderColor = 0, BorderSize = 10, BackgroundColor = 0, NotificationPriority = HIGH, NotificationColor = ITEM, NotificationSoundPriority = LOW, NotificationSound = "@local\sfx\common\sorceress\sor_oops"
+
+ItemStyle[UNIQUE]: MapIcon = 26, MapIconColor = 0, BorderColor = 0, BorderSize = 10, BackgroundColor = 0, NotificationPriority = HIGH, NotificationColor = ITEM, NotificationSoundPriority = LOW, NotificationSound = "@global\sfx\monster\moo\death4"
+ItemStyle[SET]: MapIcon = 22, MapIconColor = 0, BorderColor = 0, BorderSize = 10, BackgroundColor = 0, NotificationPriority = HIGH, NotificationColor = ITEM, NotificationSoundPriority = LOW, NotificationSound = "@global\sfx\monster\moo\death4"
 
 ItemStyle[MAP]: MapIcon = 13, BorderColor = 98, BorderSize = 2, NotificationColor = ITEM, BackgroundColor = 41, NotificationPriority = HIGH, NotificationSoundPriority = LOW, NotificationSound = "@global\sfx\monster\moo\attack1"
 
@@ -69,6 +72,7 @@ TextMacro[PURPLESSMALL]: %PURPLE%* * *
 TextMacro[ORANGES]: %ORANGE%O O O O
 TextMacro[ORANGEDOT]: %ORANGE%* * *
 TextMacro[REDS]: %RED%X X X X
+TextMacro[GREENS]: %GREEN%O O O
 
 
 //-----------------------------------------------------------------------------------
@@ -172,9 +176,6 @@ ItemDisplay[cx6]: %PURPLE%##%ORANGE%  %NAME%  %PURPLE%##<<BASICHIGH1>>
 ItemDisplay[cx7]: %PURPLE%##%ORANGE%  %NAME%  %PURPLE%##<<BASICHIGH1>>
 ItemDisplay[cx8]: %PURPLE%Orb %ORANGE%of %PURPLE%Enchantment<<BASICNOT>>
 //TODO
-
-
-//ItemDisplay[MAP !ID]: %NAME% %BLUE%[UNID]%CONTINUE%
 
 ItemDisplay[(ma10 OR ma5)]: %WHITE%%NAME% %WHITE%[T1]%CONTINUE% //Icy Cavern or Pleasant Pastures + Frigid Plateau
 ItemDisplay[(ma9 OR ma4 OR ma8)]: %YELLOW%%NAME% %WHITE%[T2]%CONTINUE% //Dim Cellar + Musty Crypt + Desecrated Temple
@@ -1657,6 +1658,8 @@ ItemDisplay[SET !ID xmg]: %CONTINUE%Trang-Ouls Claws - Heavy Bracers
 ItemDisplay[(UNI OR SET) !ID]: %NAME% ?%CONTINUE%
 ItemDisplay[ETH UNI !ID]: %GRAY%[eth] %GOLD%%NAME%%CONTINUE%
 ItemDisplay[ETH SET !ID]: %GRAY%[eth] %GREEN%%NAME%%CONTINUE%
+ItemDisplay[!ETH UNI !ID]: %GOLD%%NAME%%CONTINUE%
+ItemDisplay[!ETH SET !ID]: %GREEN%%NAME%%CONTINUE%
 //-----------------------------------------------------------------------------------
 
 
@@ -1666,6 +1669,145 @@ ItemDisplay[ETH SET !ID]: %GRAY%[eth] %GREEN%%NAME%%CONTINUE%
 //-----------------------------------------------------------------------------------
 // Unique filtering
 //-----------------------------------------------------------------------------------
+
+
+//Griffon's Eye ci3
+//Shako uap
+//Crown of Ages urn
+//Andariel's Visage usk
+//Vampire Gaze xh9
+//Arreat's Face baa
+//Jalal's Mane dra
+//Steelshade ulm
+//Nightwings Veil of steel uhm
+//Wolfhowl bac
+//Shaftstop xhn
+//Tyrael's Might uar
+//Ormus uui
+//Viper Magi xea
+//Arachnid Mesh ulc
+//War Traveler xtb
+//Death Fathom obf
+//Ondals 6cs
+//Death's Web 7gw
+//Eschuta's obc
+//Windforce 6lw
+//Titan's Revenge ama
+//Death Cleaver 7wa
+//Bing Sz Wang 9cm
+//Stormshield uit
+//Herald of Zakarum pa9
+ItemDisplay[!ETH UNI !ID (amu OR rin OR ci3 OR uap OR urn OR usk OR xh9 OR baa OR dra OR ulm OR uhm OR bac OR xhn OR uar OR uui OR xea OR ulc OR xtb OR obf OR 6cs OR 7gw OR obc OR 6lw OR ama OR 7wa OR 9cm OR uit OR pa9)]: %NL%%!STARS2!% %NAME% %!STARS2!%%NL%%SPACE%<<GG>>
+ItemDisplay[ETH UNI !ID (ci3 OR uap OR urn OR usk OR xh9 OR baa OR dra OR ulm OR uhm OR bac OR xhn OR uar OR uui OR xea OR ulc OR xtb OR obf OR 6cs OR 7gw OR obc OR 6lw OR ama OR 7wa OR 9cm OR uit OR pa9)]: %NL% %NAME% %NL%%SPACE%<<GGETH>>
+
+
+//Ravenlore dre 
+//Valkyrie Wing xhm
+//Kiras ci2
+//Duriel's Shell xrs
+//Skullders xpl
+//Que-hegan xtp
+//Arkaines valor upl
+//Leviathan uld
+//Gbane utu
+//Dracul's Grasp uvg
+//Steelrend uhg
+//Bloodfist vgl
+//Chancies mgl
+//Magefist tgl
+//Frosties hgl
+//Soul Drainers umg
+//Ghoulhide xmg
+//Verdungo's Hearty Cord umc
+//String of Ears zlb
+//Razortail zvb
+//Thundergod's Vigor zhb
+//Goldwrap tbl
+//Sandstorm Trek uvb
+//Marrowwalk umb
+//Infernostrides xlb
+//Waterwalk xvb
+//Silkweave xmb
+//Gore Rider xhb
+//Shadow Dancer uhb
+//Tearhaunch hbt
+//Occy oba
+//Reaper's Toll 7s8
+//Lacerator 7b8
+//Azurewrath  Azure\Lightsabre 7cr
+//Tombreaver 7pa
+//Thunderstroke amf
+//Doomslinger rxb
+//Gull dgr
+//Alibaba 9fc
+//Demon Limb 7sp
+//Bonesnap mau
+//Bloodtree Stump 9m9
+//Hexfire 9sb
+//Warshrike 7bk
+//Fleshripper 7kr
+//Plague bearer 9ls
+//Blackhand Key 9gw
+//Headstriker 9bs
+//Mang songs 6ws
+//Hand of blessed light 9ws
+//Fleshrender 9sp
+//Executioners Justice 7gi
+//Cranium basher 7gm
+//Astreons 7ws
+//Cranebeak   7mp
+//Wizard Spike 7dg
+//Suicide Branch 9wn
+//Grandfather 7gd
+//Homunculus nea
+//Darkforce Spawn nef
+//Medusa's Gaze uow
+//Hone Sundan 9st
+//Buriza 8hx
+//Stormlash/horizons tornado 7fl
+//Ribcracker 8ls
+//Warlord's Trust 9la
+//Alma Negra pac
+//Lidless Wall xsh
+//Radament's Sphere xts
+
+ItemDisplay[!ETH UNI !ID (dre OR xhm OR ci2 OR xrs OR xpl OR xtp OR upl OR uld OR utu OR uvg OR uhg OR vgl OR mgl OR tgl OR hgl OR umg OR xmg OR umc OR zlb OR zvb OR zhb OR tbl OR uvb OR umb OR xlb OR xvb OR xmb OR xhb OR uhb OR hbt OR oba OR 7s8 OR 7b8 OR 7cr OR 7pa OR amf OR rxb OR dgr OR 9fc OR 7sp OR mau OR 9m9 OR 9sb OR 7bk OR 7kr OR 9ls OR 9gw OR 9bs OR 6ws OR 9ws OR 9sp OR 7gi OR 7gm OR 7ws OR 7mp OR 7dg OR 9wn OR 7gd OR nea OR nef OR uow OR 9st OR 8hx OR 7fl OR 8ls OR 9la OR pac OR xsh OR xts)]: %!ORANGES!% %NAME% %!ORANGES!%<<UNIQUE>>
+ItemDisplay[ETH UNI !ID (dre OR xhm OR ci2 OR xrs OR xpl OR xtp OR upl OR uld OR utu OR uvg OR uhg OR vgl OR mgl OR tgl OR hgl OR umg OR xmg OR umc OR zlb OR zvb OR zhb OR tbl OR uvb OR umb OR xlb OR xvb OR xmb OR xhb OR uhb OR hbt OR oba OR 7s8 OR 7b8 OR 7cr OR 7pa OR amf OR rxb OR dgr OR 9fc OR 7sp OR mau OR 9m9 OR 9sb OR 7bk OR 7kr OR 9ls OR 9gw OR 9bs OR 6ws OR 9ws OR 9sp OR 7gi OR 7gm OR 7ws OR 7mp OR 7dg OR 9wn OR 7gd OR nea OR nef OR uow OR 9st OR 8hx OR 7fl OR 8ls OR 9la OR pac OR xsh OR xts)]: %!ORANGES!% %NAME% %!ORANGES!%<<UNIQUEETH>>
+
+
+// SET
+//G Face xhm
+//Laying of Hands ulg
+//Griswolds shield paf
+//BK set 7gd
+//BK set 7wd
+//Aldur's boot xtb
+//Natalya's xh9
+//Natalya's 7qr
+//Natalya's xmb
+//Natalya's ucl
+//Tal Rasha uth
+//Tal Rasha oba
+//Tal Rasha zmb
+//Tal Rasha xsk
+//Immortal King uar
+//Immortal King xhb
+//Immortal King 7m7
+//Immortal King xhg
+//Immortal King zhb
+//Immortal King ba5
+//Trang-Oul's xul
+//Trang-Oul's xmg
+//Trang-Oul's ne9
+//Trang-Oul's utc
+//Trang-Oul's uh9
+//M'avinas zvb
+//Ondals Almighty uhm
+//Naj's Set ult
+//Naj's Set 6cs
+ItemDisplay[SET !ID (amu OR rin OR xhm OR ulg OR paf OR 7gd OR 7wd OR xtb OR xh9 OR 7qr OR xmb OR ucl OR uth OR oba OR zmb OR xsk OR uar OR xhb OR 7m7 OR xhg OR zhb OR ba5 OR xul OR xmg OR ne9 OR utc OR uh9 OR zvb OR uhm OR ult OR 6cs)]: %!GREENS!%   %NAME%   %!GREENS!%<<SET>>
+
+
 ItemDisplay[!ID UNI]: %NAME%<<BASEUNIQUE>>%CONTINUE%
 
 //low level remove on  filterlevel=3 (mapping)
@@ -1705,6 +1847,138 @@ ItemDisplay[WP13 !RW NMAG SK121>2 (SOCK=0 OR SOCK=3)]: %NL%%NAME%{%NAME%}%NL%<<B
 // Fallback
 
 ItemDisplay[SPECIAL]: %NL%   %NAME%   %NL%%SPACE%<<BASICNOT>>
+
+
+//-----------------------------------------------------------------------------------
+// UNID Unique Tiers
+//-----------------------------------------------------------------------------------
+
+
+
+
+
+//-----------------------------------------------------------------------------------
+
+//-----------------------------------------------------------------------------------
+// MACKMUSICs filter Item ID'd formatting
+//-----------------------------------------------------------------------------------
+
+// Stat formatting
+
+//Uniques 
+//Helms
+//Griffon's Eye
+ItemDisplay[!ETH UNI ID ci3]: %ORANGE%+%YELLOW%%STAT(330,0)%Light%WHITE%)%NL%%GOLD%%NAME%%CONTINUE%
+ItemDisplay[!ETH UNI ID ci3]: %WHITE%(%ORANGE%-%YELLOW%%STAT(334,0)%Light%WHITE% ,%GOLD%%NAME%%CONTINUE%
+
+//Vampire Gaze
+ItemDisplay[!ETH UNIQUE("Vampire Gaze") ID xh9 SOCK=0]: %WHITE%(%CORAL%Up before slam%WHITE%)%NL%%GOLD%%NAME%  {%PURPLE%Upgrade: %ORANGE%Ko %SAGE%+ %RED%Lem %SAGE%+ %WHITE%PDiamond}<<GG>>
+ItemDisplay[!ETH UNIQUE("Vampire Gaze") ID xh9 SOCK>0]: %WHITE%(%CORAL%Idiot slamed before up%WHITE%)%NL%%GOLD%%NAME% %GREEN%[%SOCKETS%]<<GG>>
+
+//Nightwings Veil of steel 
+ItemDisplay[!ETH UNIQUE("Nightwing's Veil") ID]: %WHITE%(%ORANGE%+%BLUE%%STAT(331,0)%Cold%WHITE%)%NL%%GOLD%%NAME%<<GG>>
+
+//Shaftstop 
+ItemDisplay[UNIQUE("Shaftstop") !ETH ID xhn SOCK=0]: %WHITE%(%CORAL%Up before slam%WHITE%)%NL%%GOLD%%NAME%{%PURPLE%Upgrade: %ORANGE%Ko %SAGE%+ %RED%Lem %SAGE%+ %WHITE%PDiamond}<<GG>>
+ItemDisplay[UNIQUE("Shaftstop") !ETH ID uhn SOCK=0]: %NAME%<<GG>>
+//Guardian Angel
+ItemDisplay[!ETH UNI !ID xlt FILTERLVL<3]: %ORANGE%Guardian Angel%NL%%GOLD%%NAME%<<GG>>
+ItemDisplay[!ETH UNIQUE("Guardian Angel") ID xlt SOCK=0]: %NAME%{%PURPLE%Upgrade (196str): %ORANGE%Ko %SAGE%+ %RED%Lem %SAGE%+ %WHITE%PDiamond}<<GG>>
+ItemDisplay[ETH UNI !ID xlt]: %ORANGE%ETH %GOLD%%NAME% <<BASIC>>
+//Ormus
+ItemDisplay[!ETH UNIQUE("Ormus' Robes") ID uui SK44>1]: %BLUE%FROST NOVA %CONTINUE% %MAPICON(88,21)%
+ItemDisplay[!ETH UNIQUE("Ormus' Robes") ID uui SK48>1]: %YELLOW%NOVA %CONTINUE% %MAPICON(93,21)%
+ItemDisplay[!ETH UNIQUE("Ormus' Robes") ID uui SK46>1]: %RED%IMMOLATE %CONTINUE% %MAPICON(91,21)%
+ItemDisplay[!ETH UNIQUE("Ormus' Robes") ID uui SK52>1]: %RED%ENFLAME %CONTINUE% %MAPICON(91,21)%
+ItemDisplay[!ETH UNIQUE("Ormus' Robes") ID uui SK53>1]: %YELLOW%TELEPORT %CONTINUE% %MAPICON(93,21)%
+ItemDisplay[!ETH UNIQUE("Ormus' Robes") ID uui SK59>1]: %BLUE%BLIZZARD %CONTINUE% %MAPICON(88,21)%
+ItemDisplay[!ETH UNIQUE("Ormus' Robes") ID uui SK56>1]: %RED%METEOR %CONTINUE% %MAPICON(91,21)%
+ItemDisplay[!ETH UNIQUE("Ormus' Robes") ID uui SK40>1]: %BLUE%FRIGERATE %CONTINUE% %MAPICON(88,21)%
+ItemDisplay[!ETH UNIQUE("Ormus' Robes") ID uui SK38>1]: %YELLOW%CHARGED BOLT %CONTINUE% %MAPICON(93,21)%
+ItemDisplay[!ETH UNIQUE("Ormus' Robes") ID uui SK57>1]: %YELLOW%DISCHARGE %CONTINUE% %MAPICON(93,21)%
+ItemDisplay[!ETH UNIQUE("Ormus' Robes") ID uui SK54>1]: %YELLOW%CHAIN LIGHTNING %CONTINUE% %MAPICON(93,21)%
+ItemDisplay[!ETH UNIQUE("Ormus' Robes") ID uui SK49>1]: %YELLOW%LIGHTNING SURGE %CONTINUE% %MAPICON(93,21)%
+ItemDisplay[!ETH UNIQUE("Ormus' Robes") ID uui SK58>1]: %YELLOW%ENERGY SHIELD %CONTINUE% %MAPICON(93,21)%
+ItemDisplay[!ETH UNIQUE("Ormus' Robes") ID uui SK60>1]: %BLUE%CHILLING ARMOR %CONTINUE% %MAPICON(88,21)%
+ItemDisplay[!ETH UNIQUE("Ormus' Robes") ID uui SK50>1]: %BLUE%SHIVER ARMOR %CONTINUE% %MAPICON(88,21)%
+ItemDisplay[!ETH UNIQUE("Ormus' Robes") ID uui SK55>1]: %BLUE%GLACIAL SPIKE %CONTINUE% %MAPICON(88,21)%
+ItemDisplay[!ETH UNIQUE("Ormus' Robes") ID uui SK51>1]: %RED%FIRE WALL %CONTINUE% %MAPICON(91,21)%
+ItemDisplay[!ETH UNIQUE("Ormus' Robes") ID uui SK47>1]: %RED%FIRE BALL %CONTINUE% %MAPICON(91,21)%
+ItemDisplay[!ETH UNIQUE("Ormus' Robes") ID uui SK45>1]: %BLUE%ICE BLAST %CONTINUE% %MAPICON(88,21)%
+ItemDisplay[!ETH UNIQUE("Ormus' Robes") ID uui SK43>1]: %YELLOW%TELEKINESIS %CONTINUE% %MAPICON(93,21)%
+ItemDisplay[!ETH UNIQUE("Ormus' Robes") ID uui SK42>1]: %YELLOW%STATIC FIELD %CONTINUE% %MAPICON(93,21)%
+ItemDisplay[!ETH UNIQUE("Ormus' Robes") ID uui SK41>1]: %RED%BLAZE %CONTINUE% %MAPICON(91,21)%
+ItemDisplay[!ETH UNIQUE("Ormus' Robes") ID uui SK39>1]: %BLUE%ICE BOLT %CONTINUE% %MAPICON(88,21)%
+ItemDisplay[!ETH UNIQUE("Ormus' Robes") ID uui SK37>1]: %RED%WARMTH %CONTINUE% %MAPICON(91,21)%
+ItemDisplay[!ETH UNIQUE("Ormus' Robes") ID uui SK36>1]: %RED%FIRE BOLT %CONTINUE% %MAPICON(91,21)%
+ItemDisplay[!ETH UNIQUE("Ormus' Robes") ID uui: %BASENAME%%NL%%NAME%%NL% %GOLD%%ITEMNAME%<<GG>>
+//Viper Magi
+ItemDisplay[!ETH UNIQUE("Skin of the Vipermagi") ID FCR>39]: %WHITE%(%ORANGE%40 FCR%WHITE% , %PURPLE%%STAT(39,0)% Res%WHITE%)%NL%%GOLD%%NAME%  {%ORANGE%40 FCR}<<GG>>
+ItemDisplay[!ETH UNIQUE("Skin of the Vipermagi") ID SOCK>0]: %WHITE%(%PURPLE%%STAT(39,0)% Res%WHITE%)%NL%%GOLD%%NAME% %GREEN%[%SOCKETS%]<<GG>>
+ItemDisplay[!ETH UNIQUE("Skin of the Vipermagi") ID xea SOCK=0]: %WHITE%(%PURPLE%%STAT(39,0)% Res%WHITE% , %CORAL%Up before slam%WHITE%)%NL%%GOLD%%NAME%  {%PURPLE%Upgrade: %ORANGE%Ko %SAGE%+ %RED%Lem %SAGE%+ %WHITE%PDiamond}<<GG>>
+ItemDisplay[!ETH UNIQUE("Skin of the Vipermagi") ID xea SOCK>0]: %WHITE%(%PURPLE%%STAT(39,0)% Res%WHITE% , %CORAL%Idiot slamed before up%WHITE%)%NL%%GOLD%%NAME% %GREEN%[%SOCKETS%]<<GG>>
+ItemDisplay[!ETH UNIQUE("Skin of the Vipermagi") ID uea SOCK=0]: %WHITE%(%PURPLE%%STAT(39,0)% Res%WHITE%)%NL%%GOLD%%NAME% <<GG>>
+//Que-hegan
+ItemDisplay[!ETH UNIQUE("Que-Hegan's Wisdom") ID FCR>29]: %NAME% {%ORANGE%30 FCR%WHITE%}<<GG>>
+ItemDisplay[!ETH UNIQUE("Que-Hegan's Wisdom") ID xtp SOCK=0]: %NAME% {%PURPLE%Upgrade: %ORANGE%Ko %SAGE%+ %RED%Lem %SAGE%+ %WHITE%PDiamond}<<GG>>
+//Arkaines valor
+ItemDisplay[!ETH UNIQUE("Arkaine's Valor") ID]:  %WHITE%(%ORANGE%+%PURPLE%%STAT(127,0)% Skills%WHITE%)%NL%%GOLD%Balrog Skin%NL%%GOLD%Arkaine's Valor  <<GG>>
+
+//Gloves
+ItemDisplay[!ETH UNIQUE("Razortail") ID STAT156=41]: %BASENAME%%NL%%ORANGE%41 %LIGHT_GRAY%Pierce%NL%%GOLD%%ITEMNAME% {%ORANGE%41 %LIGHT_GRAY%Pierce}<<GG>>
+//Thundergod's Vigor 
+ItemDisplay[UNIQUE("Thundergod's Vigor") STAT42=12]: %NAME% {%ORANGE%12 %YELLOW%Max Light Res}<<GG>>
+ItemDisplay[UNIQUE("Thundergod's Vigor") STAT156=8]: %BASENAME%%NL%%ORANGE%8 %LIGHT_GRAY%Pierce%NL%%GOLD%%ITEMNAME% {%ORANGE%8 %LIGHT_GRAY%Pierce}<<GG>>
+
+//Unique Weapons
+//Ondals
+ItemDisplay[!ETH UNI ID UNIQUE("Ondal's Wisdom")]: %GOLD%%BASENAME%%NL%%WHITE%(%ORANGE%+%PURPLE%%STAT(127,0)%Skills%WHITE%)%NL%%GOLD%%ITEMNAME% <<GG>>
+//Death Fathom
+ItemDisplay[!ETH UNI ID UNIQUE("Death's Fathom")]: %WHITE%(%ORANGE%+%BLUE%%STAT(331,0)%Cold%WHITE%)%NL%%GOLD%%NAME% <<GG>>
+//Death's Web dweb
+ItemDisplay[!ETH UNI ID UNIQUE("Death's Web")]: %NAME%%NL%%WHITE%(%ORANGE%-%GREEN%%STAT(336,0)%Psn%WHITE%)<<GG>>
+//Eschuta's
+ItemDisplay[UNI ID obc]: %ORANGE%+%YELLOW%%STAT(330,0)% Light%WHITE%) %CONTINUE%
+ItemDisplay[UNI ID obc]: %WHITE% , %ORANGE%+%RED%%STAT(329,0)% Fire%WHITE% , %GOLD%%NAME% %CONTINUE%
+ItemDisplay[UNI ID obc CLSK1=1]: %WHITE%(%ORANGE%+1 Skill%GOLD%%NAME% %CONTINUE%
+ItemDisplay[UNI ID obc CLSK1=2]: %WHITE%(%ORANGE%+2 Skill%GOLD%%NAME% %CONTINUE%
+ItemDisplay[UNI ID obc CLSK1=3]: %WHITE%(%ORANGE%+3 Skill%GOLD%%NAME% %CONTINUE%
+ItemDisplay[!ETH UNI ID obc SOCK=0]: %BASENAME%%NL%%NAME%%NL% %GOLD%%ITEMNAME% %CONTINUE% 
+ItemDisplay[!ETH UNI ID obc SOCK>0]: %BASENAME%%NL%%NAME%%NL% %GOLD%%ITEMNAME% %GREEN%[%SOCKETS%] %CONTINUE% 
+ItemDisplay[ETH UNI ID obc SOCK=0]: %ORANGE%ETH %BASENAME%%NL%%NAME%%NL% %GOLD%%ITEMNAME% %CONTINUE% 
+ItemDisplay[ETH UNI ID obc SOCK>0]: %ORANGE%ETH %BASENAME%%NL%%NAME%%NL% %GOLD%%ITEMNAME% %GREEN%[%SOCKETS%] %CONTINUE% 
+ItemDisplay[UNI ID obc]: %NAME% <<GG>>
+
+//Titan's Revenge
+ItemDisplay[ETH UNIQUE("Titan's Revenge") ID]: %GOLD%%BASENAME%%NL%%ORANGE%ETH %GOLD%%ITEMNAME% <:GG: NotificationPriority = MEDIUM>
+ItemDisplay[!ETH UNIQUE("Titan's Revenge") ID]: %GOLD%%BASENAME%%NL%%GOLD%%ITEMNAME% <:GG: NotificationPriority = MEDIUM>
+ItemDisplay[UNIQUE("Titan's Revenge") ID IAS>9]: %GOLD%%BASENAME%%NL%%WHITE%(%ORANGE%+%STAT(68,0)% IAS%WHITE%)%NL%%GOLD%%ITEMNAME% {%ORANGE%+%STAT(68,0)% IAS%WHITE%}<<GG>>
+//Thunderstroke
+ItemDisplay[!ETH UNI ID UNIQUE("Thunderstroke") TABSK2=4]: %GOLD%%BASENAME%%NL%%YELLOW%+4 Skills%NL%%GOLD%%ITEMNAME%<:GG: NotificationPriority = MEDIUM>
+ItemDisplay[ETH UNI ID UNIQUE("Thunderstroke") TABSK2=4]: %GOLD%%BASENAME%%NL%%YELLOW%+4 Skills%NL%%ORANGE%ETH %GOLD%%ITEMNAME%<<BASIC>>
+//Doomslinger
+ItemDisplay[UNIQUE("Doomslinger") !ETH ID rxb]: %GOLD%%NAME% {%PURPLE%Upgrade: %WHITE%Ral %SAGE%+ %LIGHT_GRAY%Sol %SAGE%+ %GREEN%PEmerald}<<BASIC>>
+
+//Bonesnap
+ItemDisplay[UNIQUE("Bonesnap") !ETH ID mau SOCK=0]: %NAME% {%PURPLE%Upgrade: %WHITE%Ral %SAGE%+ %LIGHT_GRAY%Sol %SAGE%+ %GREEN%PEmerald}<<BASIC>>
+ItemDisplay[UNIQUE("Bonesnap") !ETH ID mau]: %NAME% %GREEN%[%SOCKETS%]{%PURPLE%Upgrade: %WHITE%Ral %SAGE%+ %LIGHT_GRAY%Sol %SAGE%+ %GREEN%PEmerald}<<BASIC>>
+ItemDisplay[UNIQUE("Bonesnap") !ETH ID 9m9 SOCK=0]: %NAME% {%PURPLE%Upgrade: %ORANGE%Lum %SAGE%+ %RED%Pul %SAGE%+ %GREEN%PEmerald}<<BASIC>>
+ItemDisplay[UNIQUE("Bonesnap") !ETH ID 9m9]: %NAME% %GREEN%[%SOCKETS%]{%PURPLE%Upgrade: %ORANGE%Lum %SAGE%+ %RED%Pul %SAGE%+ %GREEN%PEmerald}<<BASIC>>
+//Hexfire
+ItemDisplay[UNI ETH !ID 9sb]: %ORANGE%Yahtzees Hexfire %WHITE%(%RED%Extra Hydra%WHITE%)%NL%%ORANGE%ETH %GOLD%%NAME% <:GG: NotificationPriority = MEDIUM>
+ItemDisplay[UNIQUE("Hexfire") !ETH UNI ID SOCK=0]: %GOLD%%BASENAME%%NL%%ORANGE%Yahtzees %WHITE%(%RED%Extra Hydra%WHITE%)%NL%%GOLD%%ITEMNAME% <:GG: NotificationPriority = MEDIUM>
+ItemDisplay[UNIQUE("Hexfire") ETH UNI ID SOCK=0]: %ORANGE%ETH %GOLD%%BASENAME%%NL%%ORANGE%Yahtzees %WHITE%(%RED%Extra Hydra%WHITE%)%NL%%GOLD%%ITEMNAME% <:GG: NotificationPriority = MEDIUM>
+ItemDisplay[UNIQUE("Hexfire") !ETH UNI ID SOCK>0]: %GOLD%%BASENAME%%NL%%ORANGE%Yahtzees %WHITE%(%RED%Extra Hydra%WHITE%)%NL%%GOLD%%ITEMNAME% %GREEN%[%SOCKETS%] <:GG: NotificationPriority = MEDIUM>
+ItemDisplay[UNIQUE("Hexfire") ETH UNI ID SOCK>0]:  %ORANGE%ETH %GOLD%%BASENAME%%NL%%ORANGE%Yahtzees %WHITE%(%RED%Extra Hydra%WHITE%)%NL%%GOLD%%ITEMNAME% %GREEN%[%SOCKETS%] <:GG: NotificationPriority = MEDIUM>
+
+//Bing Sz Wang
+ItemDisplay[UNI !ETH UNIQUE("Bing Sz Wang") ID 9cm SOCK=0]: %BASENAME%%NL%%ORANGE% Bans Big Size Wang %NL%%GOLD%%ITEMNAME%{%PURPLE%Upgrade: %WHITE%Lum %SAGE%+ %LIGHT_GRAY%Pul %SAGE%+ %GREEN%PEmerald}<<GG>>
+ItemDisplay[UNI !ETH UNIQUE("Bing Sz Wang") ID 9cm]: %BASENAME%%NL%%ORANGE% Bans Big Size Wang %NL%%GOLD%%ITEMNAME% %ORANGE%[%SOCKETS%]{%PURPLE%Upgrade: %WHITE%Lum %SAGE%+ %LIGHT_GRAY%Pul %SAGE%+ %GREEN%PEmerald}<<GG>>
+ItemDisplay[UNI !ETH UNIQUE("Bing Sz Wang") ID SOCK=0]: %BASENAME%%NL%%ORANGE% Bans Big Size Wang %NL%%GOLD%%ITEMNAME%<<GG>>
+ItemDisplay[UNI !ETH UNIQUE("Bing Sz Wang") ID]: %BASENAME%%NL%%ORANGE% Bans Big Size Wang %NL%%GOLD%%ITEMNAME% %ORANGE%[%SOCKETS%]<<GG>>
+
+//Warlord's Trust
+ItemDisplay[!ETH UNI ID UNIQUE("Warlord's Trust") 9la SOCK=0]: %NAME%{%PURPLE%Upgrade: %WHITE%Lum %SAGE%+ %LIGHT_GRAY%Pul %SAGE%+ %GREEN%PEmerald}<<GG>>
 
 
 //-----------------------------------------------------------------------------------
@@ -1845,439 +2119,12 @@ ItemDisplay[7cr NMAG SOCK=0]: %WHITE%PB <<BASIC>>
 //
 
 
-//Uniques 
-//Helms
-//Griffon's Eye
-ItemDisplay[!ETH UNI !ID ci3]: %ORANGE%Griffons%NL%       %GOLD%%NAME%       %NL%%!STARS2!%<<GG>>
-ItemDisplay[!ETH UNI ID ci3 SOCK=0]: %ORANGE%+%YELLOW%%STAT(330,0)%Light%WHITE%)%NL%%GOLD%%NAME%%CONTINUE%
-ItemDisplay[!ETH UNI ID ci3 SOCK=0]: %WHITE%(%ORANGE%-%YELLOW%%STAT(334,0)%Light%WHITE% ,%GOLD%%NAME%<<GG>>
-ItemDisplay[!ETH UNI ID ci3 SOCK>0]: %ORANGE%+%YELLOW%%STAT(330,0)%Light%WHITE%)%NL%%GOLD%%NAME%%CONTINUE%
-ItemDisplay[!ETH UNI ID ci3 SOCK>0]: %WHITE%(%ORANGE%-%YELLOW%%STAT(334,0)%Light%WHITE% ,%GOLD%%NAME% %GREEN%[%SOCKETS%] <<GG>>
-ItemDisplay[ETH UNI !ID ci3]: %ORANGE%ETH %GOLD%%NAME% %PURPLE%¤<<BASIC>>
-//Shako
-ItemDisplay[!ETH UNI !ID uap]: %ORANGE%Metas Shako%NL%       %GOLD%%NAME%       %NL%%!STARS2!%<<GG>>
-ItemDisplay[!ETH UNI ID uap SOCK=0]: %BASENAME%%NL%%ORANGE% Metadopas Shako %NL%%GOLD%%ITEMNAME%<<GG>>
-ItemDisplay[!ETH UNI ID uap]: %BASENAME%%NL%%ORANGE% Metadopas Shako %NL%%GOLD%%ITEMNAME% %ORANGE%[%SOCKETS%]<<GG>>
-ItemDisplay[ETH UNI !ID uap]: %ORANGE%ETH %GOLD%%NAME% <<BASIC>>
-//Crown of Ages
-ItemDisplay[!ETH UNI !ID urn]: %ORANGE% Crown of Hail%NL%       %GOLD%%NAME%       %NL%%!STARS2!%<<GG>>
-ItemDisplay[!ETH UNI ID urn]: %BASENAME%%NL%%ORANGE%Crown of Hail %WHITE%(%PURPLE%%STAT(36,0)% PDR%WHITE%)%NL%%GOLD%%ITEMNAME% %ORANGE%[%SOCKETS%]<<GG>>
-ItemDisplay[ETH UNI !ID urn]: %ORANGE%ETH %GOLD%%NAME% <<BASIC>>
-//Andariel's Visage
-ItemDisplay[!ETH UNI !ID usk]: %ORANGE%Andys%NL%       %GOLD%%NAME%       %NL%%!STARS2!%<<GG>>
-ItemDisplay[ETH UNI !ID usk]: %ORANGE%ETH %GOLD%%NAME% <<BASIC>>
-//Vampire Gaze
-ItemDisplay[!ETH UNI !ID xh9]: %ORANGE%Vamp Gaze%NL%       %GOLD%%NAME%       %NL%%!STARS2!%<<GG>>
-ItemDisplay[!ETH UNIQUE("Vampire Gaze") ID xh9 SOCK=0]: %WHITE%(%CORAL%Up before slam%WHITE%)%NL%%GOLD%%NAME%  {%PURPLE%Upgrade: %ORANGE%Ko %SAGE%+ %RED%Lem %SAGE%+ %WHITE%PDiamond}<<GG>>
-ItemDisplay[!ETH UNIQUE("Vampire Gaze") ID xh9 SOCK>0]: %WHITE%(%CORAL%Idiot slamed before up%WHITE%)%NL%%GOLD%%NAME% %GREEN%[%SOCKETS%]<<GG>>
-ItemDisplay[ETH UNI !ID xh9]: %ORANGE%ETH %GOLD%%NAME% <<BASIC>>
-//Arreat's Face
-ItemDisplay[!ETH UNI !ID baa]: %ORANGE%Rokes Arreat%NL%       %GOLD%%NAME%       %NL%%!STARS2!%<<GG>>
-ItemDisplay[!ETH UNI ID baa SOCK=0]: %BASENAME%%NL%%ORANGE% Rokes Arreat's Face %NL%%GOLD%%ITEMNAME%<<GG>>
-ItemDisplay[!ETH UNI ID baa]: %BASENAME%%NL%%ORANGE% Rokes Arreat's Face %NL%%GOLD%%ITEMNAME% %ORANGE%[%SOCKETS%]<<GG>>
-ItemDisplay[ETH UNI !ID baa]: %ORANGE%ETH %GOLD%%NAME% <<BASIC>>
-//Jalal's Mane
-ItemDisplay[!ETH UNI !ID dra]: %ORANGE%Jalals%NL%       %GOLD%%NAME%       %NL%%!STARS2!%<<GG>>
-ItemDisplay[ETH UNI !ID dra]: %ORANGE%ETH %GOLD%%NAME% <<BASIC>>
-//Ravenlore
-ItemDisplay[!ETH UNI !ID dre]: %ORANGE%Ravenlore%NL%       %GOLD%%NAME%       %GOLD%%NOTIFY(ITEM)%<<GG>>
-ItemDisplay[ETH UNI !ID dre]: %ORANGE%ETH %GOLD%%NAME% <<BASIC>>
-//Steelshade
-ItemDisplay[!ETH UNI !ID ulm]: %ORANGE%Steelshade%NL%       %GOLD%%NAME%       %NL%%!STARS2!%<<GG>>
-ItemDisplay[ETH UNI !ID ulm]: %ORANGE%ETH %GOLD%%NAME% <<BASIC>>
-//G Face
-ItemDisplay[SET !ID xhm FILTERLVL<3]: %ORANGE%G face%NL%%GREEN%%NAME%<<GG>>
-//Nightwings Veil of steel 
-ItemDisplay[!ETH UNI !ID uhm]: %ORANGE%Nightwing \ Veil%NL%       %GOLD%%NAME%       %GOLD%<<GG>>
-ItemDisplay[!ETH UNIQUE("Nightwing's Veil") ID SOCK=0]: %WHITE%(%ORANGE%+%BLUE%%STAT(331,0)%Cold%WHITE%)%NL%%GOLD%%NAME%<<GG>>
-ItemDisplay[!ETH UNIQUE("Nightwing's Veil") ID]: %WHITE%(%ORANGE%+%BLUE%%STAT(331,0)%Cold%WHITE%)%NL%%GOLD%%NAME% %GREEN%[%SOCKETS%] <<GG>>
-//Valkyrie Wing
-ItemDisplay[!ETH UNI !ID xhm FILTERLVL<3]: %ORANGE%Valk Wing%NL%       %GOLD%%NAME%       %GOLD%<<GG>>
-//Wolfhowl
-ItemDisplay[!ETH UNI !ID bac]: %ORANGE%Wolfhowl%NL%       %GOLD%%NAME%       %GOLD%<<GG>>
-//Kiras
-ItemDisplay[!ETH UNI !ID ci2]: %ORANGE%Kira's%NL%       %GOLD%%NAME%       %GOLD%<<GG>>
-//Armor
-//Duriel's Shell
-ItemDisplay[!ETH UNI !ID xrs FILTERLVL<3]: %ORANGE%Duriels%NL%%GOLD%%NAME%<:GG: NotificationPriority = LOW>
-ItemDisplay[ETH UNI !ID xrs]: %ORANGE%ETH %GOLD%%NAME%%ORANGE% Duriels<<BASIC>>
-//Shaftstop 
-ItemDisplay[UNI !ETH !ID xhn]: %ORANGE%Shaftstop%NL%       %GOLD%%NAME%       %NL%%!STARS2!%<<GG>>
-ItemDisplay[UNIQUE("Shaftstop") !ETH ID xhn SOCK=0]: %WHITE%(%CORAL%Up before slam%WHITE%)%NL%%GOLD%%NAME%{%PURPLE%Upgrade: %ORANGE%Ko %SAGE%+ %RED%Lem %SAGE%+ %WHITE%PDiamond}<<GG>>
-ItemDisplay[UNIQUE("Shaftstop") !ETH ID uhn SOCK=0]: %NAME%<<GG>>
-ItemDisplay[UNIQUE("Shaftstop") !ETH ID uhn]: %NAME% %GREEN%[%SOCKETS%]<<GG>>
-ItemDisplay[UNI ETH !ID xhn]: %ORANGE%ETH %GOLD%%NAME% %ORANGE%Shaftstop<<BASIC>>
-//Tyrael's Might
-ItemDisplay[UNI !ETH !ID uar ILVL<87]: %ORANGE%Templars%NL%%GOLD%%NAME%%WHITE% [ILVL%ILVL%]%NL%%!STARS2!%<<GG>>
-ItemDisplay[UNI !ETH !ID uar]:  %ORANGE%Tyriels \ Templars%NL%       %GOLD%%NAME%%WHITE% [ILVL%ILVL%]       %NL%%!STARS2!%<<GG>>
-//Guardian Angel
-ItemDisplay[!ETH UNI !ID xlt FILTERLVL<3]: %ORANGE%Guardian Angel%NL%%GOLD%%NAME%<<GG>>
-ItemDisplay[!ETH UNIQUE("Guardian Angel") ID xlt SOCK=0]: %NAME%{%PURPLE%Upgrade (196str): %ORANGE%Ko %SAGE%+ %RED%Lem %SAGE%+ %WHITE%PDiamond}<<GG>>
-ItemDisplay[ETH UNI !ID xlt]: %ORANGE%ETH %GOLD%%NAME% <<BASIC>>
-//Ormus
-ItemDisplay[!ETH UNI !ID uui]: %ORANGE%Ormus%NL%       %GOLD%%NAME%       %GOLD%<<GG>>
-ItemDisplay[!ETH UNIQUE("Ormus' Robes") ID uui SK44>1]: %BLUE%FROST NOVA %CONTINUE% %MAPICON(88,21)%
-ItemDisplay[!ETH UNIQUE("Ormus' Robes") ID uui SK48>1]: %YELLOW%NOVA %CONTINUE% %MAPICON(93,21)%
-ItemDisplay[!ETH UNIQUE("Ormus' Robes") ID uui SK46>1]: %RED%IMMOLATE %CONTINUE% %MAPICON(91,21)%
-ItemDisplay[!ETH UNIQUE("Ormus' Robes") ID uui SK52>1]: %RED%ENFLAME %CONTINUE% %MAPICON(91,21)%
-ItemDisplay[!ETH UNIQUE("Ormus' Robes") ID uui SK53>1]: %YELLOW%TELEPORT %CONTINUE% %MAPICON(93,21)%
-ItemDisplay[!ETH UNIQUE("Ormus' Robes") ID uui SK59>1]: %BLUE%BLIZZARD %CONTINUE% %MAPICON(88,21)%
-ItemDisplay[!ETH UNIQUE("Ormus' Robes") ID uui SK56>1]: %RED%METEOR %CONTINUE% %MAPICON(91,21)%
-ItemDisplay[!ETH UNIQUE("Ormus' Robes") ID uui SK40>1]: %BLUE%FRIGERATE %CONTINUE% %MAPICON(88,21)%
-ItemDisplay[!ETH UNIQUE("Ormus' Robes") ID uui SK38>1]: %YELLOW%CHARGED BOLT %CONTINUE% %MAPICON(93,21)%
-ItemDisplay[!ETH UNIQUE("Ormus' Robes") ID uui SK57>1]: %YELLOW%DISCHARGE %CONTINUE% %MAPICON(93,21)%
-ItemDisplay[!ETH UNIQUE("Ormus' Robes") ID uui SK54>1]: %YELLOW%CHAIN LIGHTNING %CONTINUE% %MAPICON(93,21)%
-ItemDisplay[!ETH UNIQUE("Ormus' Robes") ID uui SK49>1]: %YELLOW%LIGHTNING SURGE %CONTINUE% %MAPICON(93,21)%
-ItemDisplay[!ETH UNIQUE("Ormus' Robes") ID uui SK58>1]: %YELLOW%ENERGY SHIELD %CONTINUE% %MAPICON(93,21)%
-ItemDisplay[!ETH UNIQUE("Ormus' Robes") ID uui SK60>1]: %BLUE%CHILLING ARMOR %CONTINUE% %MAPICON(88,21)%
-ItemDisplay[!ETH UNIQUE("Ormus' Robes") ID uui SK50>1]: %BLUE%SHIVER ARMOR %CONTINUE% %MAPICON(88,21)%
-ItemDisplay[!ETH UNIQUE("Ormus' Robes") ID uui SK55>1]: %BLUE%GLACIAL SPIKE %CONTINUE% %MAPICON(88,21)%
-ItemDisplay[!ETH UNIQUE("Ormus' Robes") ID uui SK51>1]: %RED%FIRE WALL %CONTINUE% %MAPICON(91,21)%
-ItemDisplay[!ETH UNIQUE("Ormus' Robes") ID uui SK47>1]: %RED%FIRE BALL %CONTINUE% %MAPICON(91,21)%
-ItemDisplay[!ETH UNIQUE("Ormus' Robes") ID uui SK45>1]: %BLUE%ICE BLAST %CONTINUE% %MAPICON(88,21)%
-ItemDisplay[!ETH UNIQUE("Ormus' Robes") ID uui SK43>1]: %YELLOW%TELEKINESIS %CONTINUE% %MAPICON(93,21)%
-ItemDisplay[!ETH UNIQUE("Ormus' Robes") ID uui SK42>1]: %YELLOW%STATIC FIELD %CONTINUE% %MAPICON(93,21)%
-ItemDisplay[!ETH UNIQUE("Ormus' Robes") ID uui SK41>1]: %RED%BLAZE %CONTINUE% %MAPICON(91,21)%
-ItemDisplay[!ETH UNIQUE("Ormus' Robes") ID uui SK39>1]: %BLUE%ICE BOLT %CONTINUE% %MAPICON(88,21)%
-ItemDisplay[!ETH UNIQUE("Ormus' Robes") ID uui SK37>1]: %RED%WARMTH %CONTINUE% %MAPICON(91,21)%
-ItemDisplay[!ETH UNIQUE("Ormus' Robes") ID uui SK36>1]: %RED%FIRE BOLT %CONTINUE% %MAPICON(91,21)%
-ItemDisplay[!ETH UNIQUE("Ormus' Robes") ID uui SOCK=0]: %BASENAME%%NL%%NAME%%NL% %GOLD%%ITEMNAME% %CONTINUE%
-ItemDisplay[!ETH UNIQUE("Ormus' Robes") ID uui SOCK>0]: %BASENAME%%NL%%NAME%%NL% %GOLD%%ITEMNAME% %GREEN%[%SOCKETS%] %CONTINUE%
-ItemDisplay[!ETH UNIQUE("Ormus' Robes") ID uui]: %NAME% <<GG>>
-//Viper Magi
-ItemDisplay[!ETH UNI !ID xea]: %ORANGE%Viper Magi%NL%       %GOLD%%NAME%       %NL%%!STARS2!%<<GG>>
-ItemDisplay[!ETH UNIQUE("Skin of the Vipermagi") ID FCR>39 SOCK=0]: %WHITE%(%ORANGE%40 FCR%WHITE% , %PURPLE%%STAT(39,0)% Res%WHITE%)%NL%%GOLD%%NAME%  {%ORANGE%40 FCR}<<GG>>
-ItemDisplay[!ETH UNIQUE("Skin of the Vipermagi") ID FCR>39 SOCK>0]: %WHITE%(%ORANGE%40 FCR%WHITE% , %PURPLE%%STAT(39,0)% Res%WHITE%)%NL%%GOLD%%NAME% %GREEN%[%SOCKETS%]{%ORANGE%40 FCR}<<GG>>
-ItemDisplay[!ETH UNIQUE("Skin of the Vipermagi") ID SOCK>0]: %WHITE%(%PURPLE%%STAT(39,0)% Res%WHITE%)%NL%%GOLD%%NAME% %GREEN%[%SOCKETS%]<<GG>>
-ItemDisplay[!ETH UNIQUE("Skin of the Vipermagi") ID xea SOCK=0]: %WHITE%(%PURPLE%%STAT(39,0)% Res%WHITE% , %CORAL%Up before slam%WHITE%)%NL%%GOLD%%NAME%  {%PURPLE%Upgrade: %ORANGE%Ko %SAGE%+ %RED%Lem %SAGE%+ %WHITE%PDiamond}<<GG>>
-ItemDisplay[!ETH UNIQUE("Skin of the Vipermagi") ID xea SOCK>0]: %WHITE%(%PURPLE%%STAT(39,0)% Res%WHITE% , %CORAL%Idiot slamed before up%WHITE%)%NL%%GOLD%%NAME% %GREEN%[%SOCKETS%]<<GG>>
-ItemDisplay[!ETH UNIQUE("Skin of the Vipermagi") ID uea SOCK=0]: %WHITE%(%PURPLE%%STAT(39,0)% Res%WHITE%)%NL%%GOLD%%NAME% <<GG>>
-//Skullders
-ItemDisplay[!ETH UNI !ID xpl]: %ORANGE%Skullder's %RED%MF%NL%       %GOLD%%NAME%       %GOLD%<<GG>>
-ItemDisplay[ETH UNI !ID xpl]: %ORANGE%ETH %GOLD%%NAME% %ORANGE%Skullders %RED%MF<<GG>>
-//Que-hegan
-ItemDisplay[!ETH UNI !ID xtp FILTERLVL<3]: %ORANGE%Que-Hegan%NL%%GOLD%%NAME% <<GG>>
-ItemDisplay[!ETH UNIQUE("Que-Hegan's Wisdom") ID FCR>29 SOCK=0]: %NAME% {%ORANGE%30 FCR%WHITE%}  <:GG: NotificationPriority = MEDIUM>
-ItemDisplay[!ETH UNIQUE("Que-Hegan's Wisdom") ID FCR>29 SOCK>0]: %NAME% {%ORANGE%30 FCR%WHITE%} %GREEN%[%SOCKETS%]<:GG: NotificationPriority = MEDIUM>
-ItemDisplay[!ETH UNIQUE("Que-Hegan's Wisdom") ID xtp SOCK=0]: %NAME% {%PURPLE%Upgrade: %ORANGE%Ko %SAGE%+ %RED%Lem %SAGE%+ %WHITE%PDiamond}<:GG: NotificationPriority = MEDIUM>
-ItemDisplay[!ETH UNIQUE("Que-Hegan's Wisdom") ID SOCK>0]: %NAME% %GREEN%[%SOCKETS%]<:GG: NotificationPriority = MEDIUM>
-//Arkaines valor
-ItemDisplay[!ETH UNI !ID upl]: %ORANGE%Arkaine's Valor%NL%       %GOLD%%NAME%       %GOLD%<<GG>>
-ItemDisplay[!ETH UNIQUE("Arkaine's Valor") ID SOCK=0]:  %WHITE%(%ORANGE%+%PURPLE%%STAT(127,0)% Skills%WHITE%)%NL%%GOLD%Balrog Skin%NL%%GOLD%Arkaine's Valor  <<GG>>
-ItemDisplay[!ETH UNIQUE("Arkaine's Valor") ID SOCK>0]:  %WHITE%(%ORANGE%+%PURPLE%%STAT(127,0)% Skills%WHITE%)%NL%%GOLD%Balrog Skin%NL%%GOLD%Arkaine's Valor %GREEN%[%SOCKETS%]<<GG>>
-//Leviathan
-ItemDisplay[!ETH UNI !ID uld FILTERLVL<3]: %ORANGE%Leviathan%NL%%GOLD%%NAME%<:GG: NotificationPriority = MEDIUM>
-//Gbane
-ItemDisplay[!ETH UNI !ID utu]: %ORANGE%G Bane%NL%       %GOLD%%NAME%       %GOLD%<<GG>>
-//
-//Gloves
-//Dracul's Grasp
-ItemDisplay[!ETH UNI !ID uvg]: %ORANGE%Draculs Grasp%NL%%GOLD%%NAME%<<GG>>
-//Steelrend
-ItemDisplay[!ETH UNI !ID uhg]: %ORANGE%Steelrend%NL%%GOLD%%NAME%<<GG>>
-//Bloodfist
-ItemDisplay[!ETH UNI !ID vgl FILTERLVL<3]: %ORANGE%Bloodfist%NL%%GOLD%%NAME%<<GG>>
-//Chancies
-ItemDisplay[!ETH UNI !ID mgl FILTERLVL<3]: %ORANGE%Chancies%NL%%GOLD%%NAME%<<GG>>
-//Magefist
-ItemDisplay[!ETH UNI !ID tgl]: %ORANGE%Magefist%NL%%GOLD%%NAME%<<GG>>
-//Frosties
-ItemDisplay[!ETH UNI !ID hgl FILTERLVL<3]: %ORANGE%Frostburns%NL%%GOLD%%NAME% <:GG: NotificationPriority = MEDIUM>
-//Laying of Hands
-ItemDisplay[SET !ID ulg]: %ORANGE%Laying of Hands%NL%       %GREEN%%NAME%       %GOLD%<:GG: NotificationColor = GREEN>
-ItemDisplay[SET ID ulg STAT68>29]: %NAME% {%ORANGE%30 IAS%WHITE%}<:GG: NotificationPriority = MEDIUM, NotificationColor = GREEN>
-//Soul Drainers
-ItemDisplay[!ETH UNI !ID umg FILTERLVL<3]: %ORANGE%Soul Drainers%NL%%GOLD%%NAME% <:GG: NotificationPriority = MEDIUM>
-//Ghoulhide
-ItemDisplay[!ETH UNI !ID xmg FILTERLVL<3]: %ORANGE%Ghoulhide%NL%%GOLD%%NAME% <:GG: NotificationPriority = MEDIUM>
-//Belts
-//Arachnid Mesh
-ItemDisplay[!ETH UNI !ID ulc]: %ORANGE%Arachs%NL%       %GOLD%%NAME%       %NL%%!STARS2!%<<GG>> 
-//Verdungo's Hearty Cord
-ItemDisplay[!ETH UNI !ID umc]: %ORANGE%Verdungo%NL%       %GOLD%%NAME%       %GOLD%<<GG>>
-//String of Ears
-ItemDisplay[!ETH UNI !ID zlb FILTERLVL<3]: %ORANGE%Strings%NL%%GOLD%%NAME%<<GG>>
-//Razortail
-ItemDisplay[!ETH UNI !ID zvb]: %ORANGE%Razortail%NL%%GOLD%%NAME%<<GG>>
-ItemDisplay[!ETH UNIQUE("Razortail") ID STAT156=41]: %BASENAME%%NL%%ORANGE%41 %LIGHT_GRAY%Pierce%NL%%GOLD%%ITEMNAME% {%ORANGE%41 %LIGHT_GRAY%Pierce}<<GG>>
-//Thundergod's Vigor 
-ItemDisplay[!ETH UNI !ID zhb]: %ORANGE%Thundergods%NL%       %GOLD%%NAME%       %GOLD%<<GG>>
-ItemDisplay[UNIQUE("Thundergod's Vigor") STAT42=12]: %NAME% {%ORANGE%12 %YELLOW%Max Light Res}<<GG>>
-ItemDisplay[UNIQUE("Thundergod's Vigor") STAT156=8]: %BASENAME%%NL%%ORANGE%8 %LIGHT_GRAY%Pierce%NL%%GOLD%%ITEMNAME% {%ORANGE%8 %LIGHT_GRAY%Pierce}<<GG>>
-//Goldwrap
-ItemDisplay[!ETH UNI !ID tbl FILTERLVL<3]: %ORANGE%Goldwrap %RED%MF%NL%%GOLD%%NAME%<:GG: NotificationPriority = MEDIUM>
-ItemDisplay[!ETH UNI ID tbl]: %NAME% {%PURPLE%Upgrade: %WHITE%Tal %SAGE%+ %LIGHT_GRAY%Shael %SAGE%+ %WHITE%PDiamond}<<GG>>
-//Boots
-//War Traveler
-ItemDisplay[!ETH UNI !ID xtb]: %ORANGE%Boa War Travs%NL%       %GOLD%%NAME%        %GOLD%<<GG>>
-ItemDisplay[!ETH UNIQUE("War Traveler") ID]: %GOLD%%BASENAME%%NL%%ORANGE%Boa Travs %WHITE%(%BLUE%%STAT(80,0)% MF%WHITE%)%NL%%GOLD%%ITEMNAME% <<GG>>
-//Sandstorm Trek
-ItemDisplay[UNI !ETH !ID uvb FILTERLVL<3]: %ORANGE%Sand Treks%NL%%GOLD%%NAME% <<GG>>
-ItemDisplay[UNI ETH !ID uvb FILTERLVL<3]: %ORANGE%ETH %GOLD%%NAME% %ORANGE%Sand Treks <<BASICHIGH>>
-//Marrowwalk
-ItemDisplay[UNI !ETH !ID umb FILTERLVL<3]: %ORANGE%Marrowwalk%NL%%GOLD%%NAME% <:GG: NotificationPriority = MEDIUM>
-//Infernostrides
-ItemDisplay[UNI !ETH !ID xlb FILTERLVL<3 CLVL<85]: %ORANGE%Infernostride%NL%%GOLD%%NAME% <:GG: NotificationPriority = MEDIUM>
-//Waterwalk
-ItemDisplay[UNI !ETH !ID xvb FILTERLVL<3]: %ORANGE%Waterwalk%NL%%GOLD%%NAME% <:GG: NotificationPriority = MEDIUM>
-//Silkweave
-ItemDisplay[UNI !ETH !ID xmb]: %ORANGE%Silkweave%NL%       %GOLD%%NAME%       %GOLD%<<GG>>
-//Gore Rider
-ItemDisplay[UNI !ETH !ID xhb]: %ORANGE%Gore Rider%NL%       %GOLD%%NAME%       %GOLD%<<GG>>
-//Shadow Dancer
-ItemDisplay[UNI !ETH !ID uhb]: %ORANGE%Shadow Dancer%NL%%GOLD%%NAME% <:GG: NotificationPriority = MEDIUM>
-//Tearhaunch
-ItemDisplay[UNI !ETH !ID hbt FILTERLVL<3 CLVL<85]: %ORANGE%Tearhaunch%NL%%GOLD%%NAME% <<BASIC>>
-//Aldur's
-ItemDisplay[!ETH SET !ID xtb]: %ORANGE%Aldurs Boots%NL%%GREEN%%NAME%%NL%%!STARS2!% <:GG: NotificationColor = GREEN>
-//Natalya's
-ItemDisplay[!ETH SET !ID xh9]: %ORANGE%Nats Helm%NL%%GREEN%%NAME% <:GG: NotificationPriority = MEDIUM, NotificationColor = GREEN>
-ItemDisplay[!ETH SET ID SET("Natalya's Totem") SOCK=0]: %WHITE%(%CORAL%Up before slam%WHITE%)%NL%%GREEN%%NAME% {%PURPLE%Upgrade: %ORANGE%Hel %SAGE%+ %ORANGE%Io %SAGE%+ %YELLOW%PTopaz}<:GG: NotificationPriority = MEDIUM, NotificationColor = GREEN>
-ItemDisplay[!ETH SET !ID 7qr]: %ORANGE%Nats Claw%NL%       %GREEN%%NAME%       %GOLD%<:GG: NotificationPriority = MEDIUM, NotificationColor = GREEN>
-ItemDisplay[!ETH SET !ID xmb]: %ORANGE%Nats Boots%NL%%GREEN%%NAME% <:GG: NotificationPriority = MEDIUM, NotificationColor = GREEN>
-ItemDisplay[!ETH SET !ID ucl]: %ORANGE%Nats Armor%NL%%GREEN%%NAME% <:GG: NotificationPriority = MEDIUM, NotificationColor = GREEN>
-//Tal Rasha 
-ItemDisplay[!ETH SET !ID uth]: %ORANGE%Corp Tal Russia Armor%NL%%GREEN%%NAME%%NL%%!STARS2!% <:GG: NotificationColor = GREEN>
-ItemDisplay[!ETH SET ID uth SOCK>0]: %BASENAME%%NL%%ORANGE% Corp Tal Russia Armor %NL%%GREEN%%ITEMNAME% %ORANGE%[%SOCKETS%]<:GG: NotificationColor = GREEN>
-ItemDisplay[!ETH SET ID uth SOCK=0]: %BASENAME%%NL%%ORANGE% Corp Tal Russia Armor %NL%%GREEN%%ITEMNAME% <:GG: NotificationColor = GREEN>
-ItemDisplay[!ETH SET !ID oba FILTERLVL<3]: %ORANGE%Tal Weap%NL%%NAME% <:GG: NotificationPriority = LOW, NotificationColor = GREEN>
-ItemDisplay[!ETH SET !ID zmb FILTERLVL<3]: %ORANGE%Tal Belt%NL%%NAME% <:GG: NotificationPriority = LOW, NotificationColor = GREEN>
-ItemDisplay[!ETH SET !ID xsk ]: %ORANGE%KG Rasha Helm%NL%%GREEN%%NAME% <:GG: NotificationPriority = MEDIUM, NotificationColor = GREEN>
-ItemDisplay[!ETH SET("Tal Rasha's Horadric Crest") ID xsk SOCK>0]: %BASENAME% %NL%%ORANGE% KG Rasha Helm %NL% %GREEN%%ITEMNAME% %ORANGE%[%SOCKETS%]<:GG: NotificationPriority = MEDIUM, NotificationColor = GREEN>
-ItemDisplay[!ETH SET("Tal Rasha's Horadric Crest") ID xsk SOCK=0]: %BASENAME% %NL%%ORANGE% KG Rasha Helm %NL% %GREEN%%ITEMNAME% <:GG: NotificationPriority = MEDIUM, NotificationColor = GREEN>
-//Immortal King
-ItemDisplay[!ETH SET !ID uar FILTERLVL<3]: %ORANGE%IK Armor%NL%%GREEN%%NAME%<:GG: NotificationPriority = LOW, NotificationColor = GREEN>
-ItemDisplay[!ETH SET !ID xhb FILTERLVL<3]: %ORANGE%IK Boots%NL%%GREEN%%NAME%<:GG: NotificationPriority = LOW, NotificationColor = GREEN>
-ItemDisplay[!ETH SET !ID 7m7 FILTERLVL<3]: %ORANGE%IK Weapon%NL%%GREEN%%NAME%<:GG: NotificationPriority = LOW, NotificationColor = GREEN>
-ItemDisplay[!ETH SET !ID xhg FILTERLVL<3]: %ORANGE%IK Gloves%NL%%GREEN%%NAME%<:GG: NotificationPriority = LOW, NotificationColor = GREEN>
-ItemDisplay[!ETH SET !ID zhb FILTERLVL<3]: %ORANGE%IK Belt%NL%%GREEN%%NAME%<:GG: NotificationPriority = LOW, NotificationColor = GREEN>
-ItemDisplay[!ETH SET !ID ba5 FILTERLVL<3]: %ORANGE%IK Helm%NL%%GREEN%%NAME%<:GG: NotificationPriority = LOW, NotificationColor = GREEN>
-//Trang-Oul's
-ItemDisplay[!ETH SET !ID xul FILTERLVL<3]: %ORANGE% Trang Armor%NL%%GREEN%%NAME% <:GG: NotificationPriority = MEDIUM, NotificationColor = GREEN>
-ItemDisplay[!ETH SET !ID xmg]: %ORANGE%Trang Gloves%NL%%GREEN%%NAME% <:GG: NotificationPriority = MEDIUM, NotificationColor = GREEN>
-ItemDisplay[!ETH SET !ID ne9]: %ORANGE%Trang Shield%NL%%GREEN%%NAME% <:GG: NotificationPriority = MEDIUM, NotificationColor = GREEN>
-ItemDisplay[!ETH SET !ID utc]: %ORANGE%Trang Belt%NL%%GREEN%%NAME% <:GG: NotificationPriority = MEDIUM, NotificationColor = GREEN>
-ItemDisplay[!ETH SET !ID uh9]: %ORANGE%Trang Helm%NL%%GREEN%%NAME% <:GG: NotificationPriority = MEDIUM, NotificationColor = GREEN>
-//M'avinas
-ItemDisplay[!ETH SET !ID zvb]: %ORANGE%Mav Belt%NL%%GREEN%%NAME% <:GG: NotificationPriority = LOW, NotificationColor = GREEN>
-//Ondals Almighty
-ItemDisplay[!ETH SET !ID uhm FILTERLVL<3]: %ORANGE%Ondal Almighty%NL%%GREEN%%NAME% <:GG: NotificationPriority = LOW, NotificationColor = GREEN>
-//Naj's Set
-ItemDisplay[SET !ETH !ID ult]: %ORANGE%Macks Naj Armor%NL%%GREEN%%NAME% <:GG: NotificationPriority = MEDIUM, NotificationColor = GREEN>
-ItemDisplay[SET !ETH ID ult SOCK=0]: %GREEN%%BASENAME%%NL%%ORANGE%Mack Armor%NL%%GREEN%%ITEMNAME%<:GG: NotificationPriority = MEDIUM, NotificationColor = GREEN>
-ItemDisplay[SET !ETH ID ult]: %GREEN%%BASENAME%%NL%%ORANGE%Mack Armor%NL%%GREEN%%ITEMNAME% %ORANGE%[%SOCKETS%]<:GG: NotificationPriority = MEDIUM, NotificationColor = GREEN>
-ItemDisplay[SET !ETH !ID 6cs FILTERLVL<3]: %ORANGE%Najs Weap %WHITE%(%GREEN%Telecharges%WHITE%)%NL%%GREEN%%NAME%<:GG: NotificationPriority = MEDIUM, NotificationColor = GREEN>
-//
-//Unique Weapons
-//Ondals
-ItemDisplay[!ETH UNI !ID 6cs]: %ORANGE%Ondals%NL%       %GOLD%%NAME%       %NL%%!STARS2!%<<GG>>
-ItemDisplay[ETH UNI !ID 6cs]: %ORANGE%ETH %GOLD%%NAME% %ORANGE% Ondals %NOTIFY(ITEM)%<<GG>>
-ItemDisplay[!ETH UNI ID UNIQUE("Ondal's Wisdom") SOCK=0]: %GOLD%%BASENAME%%NL%%WHITE%(%ORANGE%+%PURPLE%%STAT(127,0)%Skills%WHITE%)%NL%%GOLD%%ITEMNAME% <<GG>>
-ItemDisplay[!ETH UNI ID UNIQUE("Ondal's Wisdom")]: %GOLD%%BASENAME%%NL%%WHITE%(%ORANGE%+%PURPLE%%STAT(127,0)%Skills%WHITE%)%NL%%GOLD%%ITEMNAME% %GREEN%[%SOCKETS%]<<GG>>
-ItemDisplay[ETH UNI ID UNIQUE("Ondal's Wisdom") SOCK=0]: %ORANGE%ETH %GOLD%%BASENAME%%NL%%WHITE%(%ORANGE%+%PURPLE%%STAT(127,0)%Skills%WHITE%)%NL%%GOLD%%ITEMNAME% <<GG>>
-ItemDisplay[ETH UNI ID UNIQUE("Ondal's Wisdom")]: %ORANGE%ETH %GOLD%%BASENAME%%NL%%WHITE%(%ORANGE%+%PURPLE%%STAT(127,0)%Skills%WHITE%)%NL%%GOLD%%ITEMNAME% %GREEN%[%SOCKETS%]<<GG>>
-//Death Fathom
-ItemDisplay[!ETH UNI !ID obf]: %ORANGE%Deaths Fathom%NL%       %GOLD%%NAME%       %NL%%!STARS2!%<<GG>>
-ItemDisplay[ETH UNI !ID obf]: %ORANGE%ETH %GOLD%%NAME% %ORANGE% Deaths Fathom <<GG>>
-ItemDisplay[!ETH UNI ID UNIQUE("Death's Fathom") SOCK=0]: %WHITE%(%ORANGE%+%BLUE%%STAT(331,0)%Cold%WHITE%)%NL%%GOLD%%NAME% <<GG>>
-ItemDisplay[ETH UNI ID UNIQUE("Death's Fathom") SOCK=0]: %WHITE%(%ORANGE%+%BLUE%%STAT(331,0)%Cold%WHITE%)%NL%%ORANGE%ETH %GOLD%%NAME% <<GG>>
-ItemDisplay[!ETH UNI ID UNIQUE("Death's Fathom")]: %WHITE%(%ORANGE%+%BLUE%%STAT(331,0)%Cold%WHITE%)%NL%%GOLD%%NAME%  %GREEN%[%SOCKETS%]<<GG>>
-ItemDisplay[ETH UNI ID UNIQUE("Death's Fathom")]: %WHITE%(%ORANGE%+%BLUE%%STAT(331,0)%Cold%WHITE%)%NL%%ORANGE%ETH %GOLD%%NAME%  %GREEN%[%SOCKETS%]<<GG>>
-//Death's Web dweb
-ItemDisplay[!ETH UNI !ID 7gw]: %ORANGE%Deaths Web%NL%       %GOLD%%NAME%       %NL%%!STARS2!%<<GG>>
-ItemDisplay[ETH UNI !ID 7gw]: %ORANGE%ETH %GOLD%%NAME% %ORANGE% Deaths Web <<GG>>
-ItemDisplay[!ETH UNI ID UNIQUE("Death's Web") SOCK=0]: %BASENAME%%NL%%WHITE%(%ORANGE%-%GREEN%%STAT(336,0)%Psn%WHITE%)%NL%%GOLD%%ITEMNAME%<<GG>>
-ItemDisplay[ETH UNI ID UNIQUE("Death's Web") SOCK=0]: %ORANGE%ETH %GOLD%%BASENAME%%NL%%WHITE%(%ORANGE%-%GREEN%%STAT(336,0)%Psn%WHITE%)%NL%%GOLD%%ITEMNAME%<<GG>>
-ItemDisplay[!ETH UNI ID UNIQUE("Death's Web")]: %BASENAME%%NL%%WHITE%(%ORANGE%-%GREEN%%STAT(336,0)%Psn%WHITE%)%NL%%GOLD%%ITEMNAME% %GREEN%[%SOCKETS%]%NL%%GOLD%<<GG>>
-ItemDisplay[ETH UNI ID UNIQUE("Death's Web")]: %GOLD%%ORANGE%ETH %BASENAME%%NL%%WHITE%(%ORANGE%-%GREEN%%STAT(336,0)%Psn%WHITE%)%NL%%GOLD%%ITEMNAME% %GREEN%[%SOCKETS%]<<GG>>
-//Eschuta's
-ItemDisplay[!ETH UNI !ID obc]:  %ORANGE%Eschutas%NL%       %GOLD%%NAME%       %NL%%!STARS2!%<<GG>>
-ItemDisplay[ETH UNI !ID obc]: %ORANGE%Eschutas%NL%%ORANGE%ETH %GOLD%%NAME% <<BASICHIGH>>
-ItemDisplay[UNI ID obc]: %ORANGE%+%YELLOW%%STAT(330,0)% Light%WHITE%) %CONTINUE%
-ItemDisplay[UNI ID obc]: %WHITE% , %ORANGE%+%RED%%STAT(329,0)% Fire%WHITE% , %GOLD%%NAME% %CONTINUE%
-ItemDisplay[UNI ID obc CLSK1=1]: %WHITE%(%ORANGE%+1 Skill%GOLD%%NAME% %CONTINUE%
-ItemDisplay[UNI ID obc CLSK1=2]: %WHITE%(%ORANGE%+2 Skill%GOLD%%NAME% %CONTINUE%
-ItemDisplay[UNI ID obc CLSK1=3]: %WHITE%(%ORANGE%+3 Skill%GOLD%%NAME% %CONTINUE%
-ItemDisplay[!ETH UNI ID obc SOCK=0]: %BASENAME%%NL%%NAME%%NL% %GOLD%%ITEMNAME% %CONTINUE% 
-ItemDisplay[!ETH UNI ID obc SOCK>0]: %BASENAME%%NL%%NAME%%NL% %GOLD%%ITEMNAME% %GREEN%[%SOCKETS%] %CONTINUE% 
-ItemDisplay[ETH UNI ID obc SOCK=0]: %ORANGE%ETH %BASENAME%%NL%%NAME%%NL% %GOLD%%ITEMNAME% %CONTINUE% 
-ItemDisplay[ETH UNI ID obc SOCK>0]: %ORANGE%ETH %BASENAME%%NL%%NAME%%NL% %GOLD%%ITEMNAME% %GREEN%[%SOCKETS%] %CONTINUE% 
-ItemDisplay[UNI ID obc]: %NAME% <<GG>>
-//Occy
-ItemDisplay[!ETH UNI !ID oba]: %ORANGE%Occy%NL%       %GOLD%%NAME%       %NL%%!STARS2!%<<GG>>
-ItemDisplay[ETH UNI !ID oba]: %ORANGE%ETH %GOLD%%NAME% %ORANGE%Occy <<GG>>
-//Windforce
-ItemDisplay[UNI !ID 6lw]: %ORANGE%Windforce%NL%       %GOLD%%NAME%       %NL%%!STARS2!%<<GG>>
-ItemDisplay[UNI ID UNIQUE("Windforce") SOCK=0]: %GOLD%%NAME% <<GG>>
-ItemDisplay[UNI ID UNIQUE("Windforce") SOCK>0]: %GOLD%%NAME% %GREEN%[%SOCKETS%] <<GG>>
-//Reaper's Toll
-ItemDisplay[!ETH UNI !ID 7s8]: %ORANGE%Reapers Toll%NL%%GOLD%%NAME%<<GG>>
-ItemDisplay[ETH UNI !ID 7s8]: %ORANGE%Reapers Toll%NL%%ORANGE%ETH %GOLD%%NAME% %ORANGE%Reapers Toll<<GG>>
-//Lacerator
-ItemDisplay[!ETH UNI !ID 7b8 FILTERLVL<3]: %ORANGE%Lacerator%NL%%GOLD%%NAME% <:GG: NotificationPriority = LOW>
-ItemDisplay[ETH UNI !ID 7b8 FILTERLVL<3]: %ORANGE%Lacerator%NL%%ORANGE%ETH %GOLD%%NAME% <:GG: NotificationPriority = LOW>
-//Azurewrath  Azure\Lightsabre
-ItemDisplay[!ETH UNI !ID 7cr]: %ORANGE%Azure\Lightsabre%NL%       %GOLD%%NAME%       %NL%%!STARS2!%<<GG>>
-//Tombreaver
-ItemDisplay[!ETH UNI !ID 7pa]: %ORANGE%Tombreaver%NL%%GOLD%%NAME% <:GG: NotificationPriority = MEDIUM>
-ItemDisplay[ETH UNI !ID 7pa]: %ORANGE%Tombreaver%NL%       %ORANGE%ETH %GOLD%%NAME%       %GOLD%<<GG>>
-//Titan's Revenge
-ItemDisplay[!ETH UNI !ID ama]: %ORANGE%Titan's Revenge%NL%       %GOLD%%NAME%       %NL%%!STARS2!%<<GG>>
-ItemDisplay[ETH UNI !ID ama]: %ORANGE%Titan's%NL%%ORANGE%ETH %GOLD%%NAME% <<GG>>
-ItemDisplay[ETH UNIQUE("Titan's Revenge") ID]: %GOLD%%BASENAME%%NL%%ORANGE%ETH %GOLD%%ITEMNAME% <:GG: NotificationPriority = MEDIUM>
-ItemDisplay[!ETH UNIQUE("Titan's Revenge") ID]: %GOLD%%BASENAME%%NL%%GOLD%%ITEMNAME% <:GG: NotificationPriority = MEDIUM>
-ItemDisplay[UNIQUE("Titan's Revenge") ID IAS>9]: %GOLD%%BASENAME%%NL%%WHITE%(%ORANGE%+%STAT(68,0)% IAS%WHITE%)%NL%%GOLD%%ITEMNAME% {%ORANGE%+%STAT(68,0)% IAS%WHITE%}<<GG>>
-//Thunderstroke
-ItemDisplay[!ETH UNI !ID amf]: %ORANGE%Tstroke%NL%%GOLD%%NAME% <<GG>>
-ItemDisplay[ETH UNI !ID amf]: %ORANGE%Tstroke%NL%%ORANGE%ETH %GOLD%%NAME% <<BASIC>>
-ItemDisplay[!ETH UNI ID UNIQUE("Thunderstroke") TABSK2=4]: %GOLD%%BASENAME%%NL%%YELLOW%+4 Skills%NL%%GOLD%%ITEMNAME%<:GG: NotificationPriority = MEDIUM>
-ItemDisplay[ETH UNI ID UNIQUE("Thunderstroke") TABSK2=4]: %GOLD%%BASENAME%%NL%%YELLOW%+4 Skills%NL%%ORANGE%ETH %GOLD%%ITEMNAME%<<BASIC>>
-//Doomslinger
-ItemDisplay[UNI !ETH !ID rxb]: %ORANGE%Doomslinger%NL%%GOLD%%NAME% <:GG: NotificationPriority = LOW>
-ItemDisplay[UNIQUE("Doomslinger") !ETH ID rxb]: %GOLD%%NAME% {%PURPLE%Upgrade: %WHITE%Ral %SAGE%+ %LIGHT_GRAY%Sol %SAGE%+ %GREEN%PEmerald}<<BASIC>>
-//Gull
-ItemDisplay[UNI !ETH !ID dgr FILTERLVL<3]: %ORANGE%Gull %RED%MF%NL%%GOLD%%NAME% <:GG: NotificationPriority = MEDIUM>
-ItemDisplay[UNI ETH dgr SOCK=0]: %ORANGE%ETH %CORAL%SCplebs %GOLD%Gull {%BLUE%+1 to All Skills}<<GG>>
-ItemDisplay[UNI ETH dgr SOCK>0]: %ORANGE%ETH %CORAL%SCplebs %GOLD%Gull %GREEN%[%SOCKETS%] {%BLUE%+1 to All Skills}<<GG>>
-//Alibaba
-ItemDisplay[UNI !ETH !ID 9fc FILTERLVL<3]: %ORANGE%Alibaba %RED%MF%NL%%GOLD%%NAME% <:GG: NotificationPriority = MEDIUM>
-//Death Cleaver
-ItemDisplay[UNI !ETH !ID 7wa]: %ORANGE%Death Cleaver%NL%       %GOLD%%NAME%       %NL%%!STARS2!%<<GG>>
-ItemDisplay[UNIQUE("Death Cleaver") !ETH ID 7wa SOCK=0]: %GOLD%%BASENAME%%NL%%ORANGE%Death Cleaver%NL%%GOLD%%ITEMNAME%<<GG>>
-ItemDisplay[UNIQUE("Death Cleaver") !ETH ID 7wa SOCK>0]: %GOLD%%BASENAME%%NL%%ORANGE%Death Cleaver%NL%%GOLD%%ITEMNAME% %GREEN%[%SOCKETS%]<<GG>>
-//Demon Limb
-ItemDisplay[UNI !ETH !ID 7sp FILTERLVL<3]: %ORANGE%Demon Limb%NL%%GOLD%%NAME% <<GG>>
-//Bonesnap
-ItemDisplay[UNI !ETH !ID mau CLVL<85 FILTERLVL<3]: %ORANGE%Bonesnap%NL%%GOLD%%NAME% <:GG: NotificationPriority = LOW>
-ItemDisplay[UNIQUE("Bonesnap") !ETH ID mau SOCK=0]: %NAME% {%PURPLE%Upgrade: %WHITE%Ral %SAGE%+ %LIGHT_GRAY%Sol %SAGE%+ %GREEN%PEmerald}<<BASIC>>
-ItemDisplay[UNIQUE("Bonesnap") !ETH ID mau]: %NAME% %GREEN%[%SOCKETS%]{%PURPLE%Upgrade: %WHITE%Ral %SAGE%+ %LIGHT_GRAY%Sol %SAGE%+ %GREEN%PEmerald}<<BASIC>>
-ItemDisplay[UNIQUE("Bonesnap") !ETH ID 9m9 SOCK=0]: %NAME% {%PURPLE%Upgrade: %ORANGE%Lum %SAGE%+ %RED%Pul %SAGE%+ %GREEN%PEmerald}<<BASIC>>
-ItemDisplay[UNIQUE("Bonesnap") !ETH ID 9m9]: %NAME% %GREEN%[%SOCKETS%]{%PURPLE%Upgrade: %ORANGE%Lum %SAGE%+ %RED%Pul %SAGE%+ %GREEN%PEmerald}<<BASIC>>
-//Bloodtree Stump
-ItemDisplay[UNI !ETH !ID 9m9 CLVL<85 FILTERLVL<3]: %ORANGE%Bloodtree Stump%NL%%GOLD%%NAME% <:GG: NotificationPriority = LOW>
-//Hexfire
-ItemDisplay[UNI !ETH !ID 9sb]: %ORANGE%Yahtzees Hexfire %WHITE%(%RED%Extra Hydra%WHITE%)%NL%%GOLD%%NAME% <:GG: NotificationPriority = MEDIUM>
-ItemDisplay[UNI ETH !ID 9sb]: %ORANGE%Yahtzees Hexfire %WHITE%(%RED%Extra Hydra%WHITE%)%NL%%ORANGE%ETH %GOLD%%NAME% <:GG: NotificationPriority = MEDIUM>
-ItemDisplay[UNIQUE("Hexfire") !ETH UNI ID SOCK=0]: %GOLD%%BASENAME%%NL%%ORANGE%Yahtzees %WHITE%(%RED%Extra Hydra%WHITE%)%NL%%GOLD%%ITEMNAME% <:GG: NotificationPriority = MEDIUM>
-ItemDisplay[UNIQUE("Hexfire") ETH UNI ID SOCK=0]: %ORANGE%ETH %GOLD%%BASENAME%%NL%%ORANGE%Yahtzees %WHITE%(%RED%Extra Hydra%WHITE%)%NL%%GOLD%%ITEMNAME% <:GG: NotificationPriority = MEDIUM>
-ItemDisplay[UNIQUE("Hexfire") !ETH UNI ID SOCK>0]: %GOLD%%BASENAME%%NL%%ORANGE%Yahtzees %WHITE%(%RED%Extra Hydra%WHITE%)%NL%%GOLD%%ITEMNAME% %GREEN%[%SOCKETS%] <:GG: NotificationPriority = MEDIUM>
-ItemDisplay[UNIQUE("Hexfire") ETH UNI ID SOCK>0]:  %ORANGE%ETH %GOLD%%BASENAME%%NL%%ORANGE%Yahtzees %WHITE%(%RED%Extra Hydra%WHITE%)%NL%%GOLD%%ITEMNAME% %GREEN%[%SOCKETS%] <:GG: NotificationPriority = MEDIUM>
-//Warshrike
-ItemDisplay[UNI !ETH !ID 7bk]: %ORANGE%Warshrikes%NL%       %GOLD%%NAME%       %GOLD%<<GG>>
-ItemDisplay[ETH UNI !ID 7bk]: %ORANGE%Warshrikes%NL%       %ORANGE%ETH %GOLD%%NAME%       %GOLD%<<GG>>
-//Fleshripper
-ItemDisplay[UNI !ETH !ID 7kr]: %ORANGE%Fleshripper%NL%%GOLD%%NAME% <:GG: NotificationPriority = MEDIUM>
-//Plague bearer
-ItemDisplay[UNI !ETH !ID 9ls FILTERLVL<3 CLVL<85]: %ORANGE%Plague Bearer%NL%%GOLD%%NAME% <<GG>>
-//Blackhand Key
-ItemDisplay[UNI !ETH !ID 9gw FILTERLVL<3]: %ORANGE%Blackhand Key%NL%%GOLD%%NAME% <:GG: NotificationPriority = LOW>
-//Headstriker
-ItemDisplay[UNI !ETH !ID 9bs]: %ORANGE%Headstriker%NL%       %GOLD%%NAME%       %GOLD%<<GG>>
-ItemDisplay[UNI ETH !ID 9bs]: %ORANGE%ETH %GOLD%%NAME% %ORANGE%Headstriker<<GG>>
-//Bing Sz Wang
-ItemDisplay[UNI !ETH !ID 9cm]: %ORANGE%Bans Big Size Wang%NL%       %GOLD%%NAME%       %NL%%!STARS2!%<<GG>>
-ItemDisplay[UNI !ETH UNIQUE("Bing Sz Wang") ID 9cm SOCK=0]: %BASENAME%%NL%%ORANGE% Bans Big Size Wang %NL%%GOLD%%ITEMNAME%{%PURPLE%Upgrade: %WHITE%Lum %SAGE%+ %LIGHT_GRAY%Pul %SAGE%+ %GREEN%PEmerald}<<GG>>
-ItemDisplay[UNI !ETH UNIQUE("Bing Sz Wang") ID 9cm]: %BASENAME%%NL%%ORANGE% Bans Big Size Wang %NL%%GOLD%%ITEMNAME% %ORANGE%[%SOCKETS%]{%PURPLE%Upgrade: %WHITE%Lum %SAGE%+ %LIGHT_GRAY%Pul %SAGE%+ %GREEN%PEmerald}<<GG>>
-ItemDisplay[UNI !ETH UNIQUE("Bing Sz Wang") ID SOCK=0]: %BASENAME%%NL%%ORANGE% Bans Big Size Wang %NL%%GOLD%%ITEMNAME%<<GG>>
-ItemDisplay[UNI !ETH UNIQUE("Bing Sz Wang") ID]: %BASENAME%%NL%%ORANGE% Bans Big Size Wang %NL%%GOLD%%ITEMNAME% %ORANGE%[%SOCKETS%]<<GG>>
-//Mang songs
-ItemDisplay[UNI !ETH !ID 6ws]: %ORANGE%Mang Song's%NL%       %GOLD%%NAME%        %GOLD%<<GG>>
-ItemDisplay[UNI ETH !ID 6ws]: %ORANGE%Mang Song's%NL%       %ORANGE%ETH %GOLD%%NAME%       %GOLD%<<GG>>
-ItemDisplay[UNIQUE("Mang Song's Lesson") !ETH ID SOCK=0]: %GOLD%%NAME% <<GG>>
-ItemDisplay[UNIQUE("Mang Song's Lesson") ETH ID SOCK=0]: %ORANGE%ETH %GOLD%%NAME% <<GG>>
-ItemDisplay[UNIQUE("Mang Song's Lesson") !ETH ID SOCK>0]: %GOLD%%NAME% %GREEN%[%SOCKETS%]<<GG>>
-ItemDisplay[UNIQUE("Mang Song's Lesson") ETH ID SOCK>0]: %ORANGE%ETH %GOLD%%NAME% %GREEN%[%SOCKETS%]<<GG>>
-//Hand of blessed light
-ItemDisplay[UNI !ETH !ID 9ws FILTERLVL<3]: %ORANGE%Hand of Blessed Light%NL%%GOLD%%NAME% <:GG: NotificationPriority = LOW>
-//Fleshrender
-ItemDisplay[UNI !ETH !ID 9sp FILTERLVL<3]: %ORANGE%Fleshrender%NL%%GOLD%%NAME% <:GG: NotificationPriority = LOW>
-//Executioners Justice
-ItemDisplay[UNI !ETH !ID 7gi]: %ORANGE%Executioners Justice%NL%       %GOLD%%NAME%       %GOLD%<<GG>>
-//Cranium basher
-ItemDisplay[UNI !ETH !ID 7gm]: %ORANGE%Cranium Basher \ Earth Shifter%NL%       %GOLD%%NAME%       %GOLD%<<GG>>
-//Astreons
-ItemDisplay[UNI !ETH !ID 7ws]: %ORANGE%Tverts Astreon%NL%       %GOLD%%NAME%       %GOLD%<<GG>>
-ItemDisplay[UNI ETH !ID 7ws]: %ORANGE%Tverts Astreon%NL%       %ORANGE%ETH %GOLD%%NAME%       %GOLD%<<GG>>
-ItemDisplay[UNIQUE("Astreon's Iron Ward") !ETH ID SOCK=0]: %GOLD%%BASENAME%%NL%%ORANGE%Tverts Astreons%NL%%GOLD%%ITEMNAME% <<GG>>
-ItemDisplay[UNIQUE("Astreon's Iron Ward") ETH ID SOCK=0]: %ORANGE%ETH %GOLD%%BASENAME%%NL%%ORANGE%Tverts Astreon%NL%%GOLD%%ITEMNAME% <<GG>>
-ItemDisplay[UNIQUE("Astreon's Iron Ward") !ETH ID SOCK>0]: %GOLD%%BASENAME%%NL%%ORANGE%Tverts Astreons%NL%%GOLD%%ITEMNAME% %GREEN%[%SOCKETS%] <<GG>>
-ItemDisplay[UNIQUE("Astreon's Iron Ward") ETH ID SOCK>0]: %ORANGE%ETH %GOLD%%BASENAME%%NL%%ORANGE%Tverts Astreon%NL%%GOLD%%ITEMNAME% %GREEN%[%SOCKETS%] <<GG>>
-//Cranebeak   
-ItemDisplay[UNI !ETH !ID 7mp FILTERLVL<3]: %ORANGE%Cranebeak %RED%MF%NL%%GOLD%%NAME%<:GG: NotificationPriority = LOW>
-ItemDisplay[UNIQUE("Cranebeak") !ETH ID SOCK=0]: %BASENAME%%NL%%WHITE%(%BLUE%%STAT(80,0)% MF%WHITE%)%NL%%ITEMBASE% <:GG: NotificationPriority = LOW>
-ItemDisplay[UNIQUE("Cranebeak") !ETH ID SOCK>0]: %BASENAME%%NL%%WHITE%(%BLUE%%STAT(80,0)% MF%WHITE%)%NL%%ITEMBASE% %GREEN%[%SOCKETS%]<:GG: NotificationPriority = LOW>
-//Wizard Spike
-ItemDisplay[UNI !ETH !ID 7dg]: %ORANGE%Khiars Wiz Spike%NL%%GOLD%%NAME%<:GG: NotificationPriority = MEDIUM>
-ItemDisplay[UNI ETH !ID 7dg]: %ORANGE%Khiars Wiz Spike%NL%%ORANGE%ETH %GOLD%%NAME% <:GG: NotificationPriority = MEDIUM>
-ItemDisplay[UNIQUE("Wizardspike") !ETH ID 7dg SOCK=0]: %GOLD%%BASENAME%%NL%%ORANGE%Khiars Wiz Spike%NL%%GOLD%%ITEMNAME% <:GG: NotificationPriority = MEDIUM>
-ItemDisplay[UNIQUE("Wizardspike") !ETH ID 7dg SOCK>0]: %GOLD%%BASENAME%%NL%%ORANGE%Khiars Wiz Spike%NL%%GOLD%%ITEMNAME% %GREEN%[%SOCKETS%]<:GG: NotificationPriority = MEDIUM>
-ItemDisplay[UNIQUE("Wizardspike") ETH ID 7dg SOCK=0]: %ORANGE%ETH %GOLD%%BASENAME%%NL%%ORANGE%Khiars Wiz Spike%NL%%GOLD%%ITEMNAME% <:GG: NotificationPriority = MEDIUM>
-ItemDisplay[UNIQUE("Wizardspike") ETH ID 7dg SOCK>0]: %ORANGE%ETH %GOLD%%BASENAME%%NL%%ORANGE%Khiars Wiz Spike%NL%%GOLD%%ITEMNAME% %GREEN%[%SOCKETS%]<:GG: NotificationPriority = MEDIUM>
-//Suicide Branch
-ItemDisplay[UNI !ETH !ID 9wn FILTERLVL<3]: %ORANGE%Suicide Branch%NL%%GOLD%%NAME% <:GG: NotificationPriority = LOW>
-ItemDisplay[UNI ETH !ID 9wn FILTERLVL<3]: %ORANGE%ETH %ORANGE%%NAME% <:GG: NotificationPriority = LOW>
-//Grandfather
-ItemDisplay[UNI !ETH !ID 7gd]: %ORANGE%Grandfather%NL%       %GOLD%%NAME%       %GOLD%<<GG>>
-//BK set
-ItemDisplay[SET !ETH !ID 7gd]: %ORANGE%BK CB SWORD%NL%%GREEN%%NAME% <<GG>>
-ItemDisplay[SET !ETH !ID 7wd]: %ORANGE%BK MYTH SWORD%NL%%GREEN%%NAME% <<GG>>
-//Hone Sundan
-ItemDisplay[UNI !ETH !ID 9st ]: %ORANGE%Retro Sundan%GOLD%%NAME% <:GG: NotificationPriority = LOW>
-ItemDisplay[UNI ETH !ID 9st]: %ORANGE%Retro Sundan%NL%%ORANGE%ETH %GOLD%%NAME% <<GG>>
-ItemDisplay[UNIQUE("Hone Sundan") !ETH ID]: %GOLD%%BASENAME%%NL%%ORANGE%Retros Hone Sundan%NL%%GOLD%%ITEMNAME% %GREEN%[%SOCKETS%]<:GG: NotificationPriority = LOW>
-ItemDisplay[UNIQUE("Hone Sundan") ETH ID]: %ORANGE%ETH %GOLD%%BASENAME%%NL%%ORANGE%Retros Hone Sundan%NL%%GOLD%%ITEMNAME% %GREEN%[%SOCKETS%]<<GG>>
-//Buriza
-ItemDisplay[UNI !ID 8hx]: %ORANGE% Buriza%NL%%GOLD%%NAME% <:GG: NotificationPriority = MEDIUM>
-ItemDisplay[UNIQUE("Buriza-Do Kyanon") ID 8hx SOCK=0]: %NAME% {%PURPLE%Upgrade: %WHITE%Lum %SAGE%+ %LIGHT_GRAY%Pul %SAGE%+ %GREEN%PEmerald}<:GG: NotificationPriority = MEDIUM>
-ItemDisplay[UNIQUE("Buriza-Do Kyanon") ID 6hx SOCK=0]: %NAME% <:GG: NotificationPriority = MEDIUM>
-ItemDisplay[UNIQUE("Buriza-Do Kyanon") ID 8hx SOCK>0]: %NAME% %GREEN%[%SOCKETS%]{%PURPLE%Upgrade: %WHITE%Lum %SAGE%+ %LIGHT_GRAY%Pul %SAGE%+ %GREEN%PEmerald}<:GG: NotificationPriority = MEDIUM>
-ItemDisplay[UNIQUE("Buriza-Do Kyanon") ID 6hx SOCK>0]: %NAME% %GREEN%[%SOCKETS%]<:GG: NotificationPriority = MEDIUM>
-//Stormlash/horizons tornado
-ItemDisplay[UNI !ETH !ID 7fl]: %ORANGE%Stormlash\Horizon's Tornado%NL%%GOLD%%NAME% <<GG>>
-ItemDisplay[UNIQUE("Stormlash") !ETH ID SOCK=0]: %NAME% <<GG>>
-ItemDisplay[UNIQUE("Stormlash") !ETH ID SOCK>0]: %NAME% %GREEN%[%SOCKETS%]<<GG>>
-//Ribcracker
-ItemDisplay[UNI !ETH !ID 8ls]: %ORANGE%Kamanjis Ribcracker%NL%%GOLD%%NAME% <:GG: NotificationPriority = LOW>
-ItemDisplay[UNI ETH !ID 8ls]: %ORANGE%Kamanjis Ribcracker%NL%%ORANGE%ETH %GOLD%%NAME%<:GG: NotificationPriority = LOW>
-ItemDisplay[UNIQUE("Ribcracker") !ETH ID 8ls SOCK=0]: %GOLD%%BASENAME%%NL%%ORANGE%Kamanjis Ribcracker%NL%%GOLD%%ITEMNAME%{%PURPLE%Upgrade: %WHITE%Lum %SAGE%+ %LIGHT_GRAY%Pul %SAGE%+ %GREEN%PEmerald}<:GG: NotificationPriority = LOW>
-ItemDisplay[UNIQUE("Ribcracker") ETH ID 8ls SOCK=0]: %ORANGE%ETH %GOLD%%BASENAME%%NL%%ORANGE%Kamanjis Ribcracker%NL%%GOLD%%ITEMNAME%{%PURPLE%Upgrade: %WHITE%Lum %SAGE%+ %LIGHT_GRAY%Pul %SAGE%+ %GREEN%PEmerald}<:GG: NotificationPriority = LOW>
-ItemDisplay[UNIQUE("Ribcracker") !ETH ID 8ls]: %GOLD%%BASENAME%%NL%%ORANGE%Kamanjis Ribcracker%NL%%GOLD%%ITEMNAME%{%PURPLE%Upgrade: %WHITE%Lum %SAGE%+ %LIGHT_GRAY%Pul %SAGE%+ %GREEN%PEmerald}<:GG: NotificationPriority = LOW>
-ItemDisplay[UNIQUE("Ribcracker") ETH ID 8ls]: %ORANGE%ETH %GOLD%%BASENAME%%NL%%ORANGE%Kamanjis Ribcracker%NL%%GOLD%%ITEMNAME% %GREEN%[%SOCKETS%]<:GG: NotificationPriority = LOW>
-ItemDisplay[UNIQUE("Ribcracker") !ETH ID SOCK=0]: %GOLD%%BASENAME%%NL%%ORANGE%Kamanjis Ribcracker%NL%%GOLD%%ITEMNAME%<:GG: NotificationPriority = LOW>
-ItemDisplay[UNIQUE("Ribcracker") ETH ID SOCK=0]: %ORANGE%ETH %GOLD%%BASENAME%%NL%%ORANGE%Kamanjis Ribcracker%NL%%GOLD%%ITEMNAME%<:GG: NotificationPriority = LOW>
-ItemDisplay[UNIQUE("Ribcracker") !ETH ID]: %GOLD%%BASENAME%%NL%%ORANGE%Kamanjis Ribcracker%NL%%GOLD%%ITEMNAME%<:GG: NotificationPriority = LOW>
-ItemDisplay[UNIQUE("Ribcracker") ETH ID]: %ORANGE%ETH %GOLD%%BASENAME%%NL%%ORANGE%Kamanjis Ribcracker%NL%%GOLD%%ITEMNAME% %GREEN%[%SOCKETS%]<:GG: NotificationPriority = LOW>
-//Warlord's Trust
-ItemDisplay[!ETH UNI !ID 9la]: %RED%NEW %ORANGE%Warlord's Trust%NL%%GOLD%%NAME%<<GG>>
-ItemDisplay[!ETH UNI ID UNIQUE("Warlord's Trust") 9la SOCK=0]: %GOLD%%BASENAME%%NL%%RED%NEW%NL%%GOLD%%ITEMNAME%{%PURPLE%Upgrade: %WHITE%Lum %SAGE%+ %LIGHT_GRAY%Pul %SAGE%+ %GREEN%PEmerald}<<GG>>
-ItemDisplay[!ETH UNI ID UNIQUE("Warlord's Trust") 9la SOCK>0]: %GOLD%%BASENAME%%NL%%RED%NEW%NL%%GOLD%%ITEMNAME% %GREEN%[%SOCKETS%]{%PURPLE%Upgrade: %WHITE%Lum %SAGE%+ %LIGHT_GRAY%Pul %SAGE%+ %GREEN%PEmerald}<<GG>>
-ItemDisplay[!ETH UNI ID UNIQUE("Warlord's Trust") 7la SOCK=0]: %GOLD%%BASENAME%%NL%%RED%NEW%NL%%GOLD%%ITEMNAME%<<GG>>
-ItemDisplay[!ETH UNI ID UNIQUE("Warlord's Trust") 7la SOCK>0]: %GOLD%%BASENAME%%NL%%RED%NEW%NL%%GOLD%%ITEMNAME% %GREEN%[%SOCKETS%]<<GG>>
-//
-//Shields
-//Griswolds
-ItemDisplay[SET !ID paf FILTERLVL<3]: %ORANGE%Gris shield%NL%%GREEN%%NAME% <<GG>>
-ItemDisplay[SET ID paf]: %NAME% %ORANGE%[%SOCKETS%] <<GG>>
-//Stormshield 
-ItemDisplay[UNI !ID uit]: %ORANGE%Stormshield%NL%       %GOLD%%NAME%       %NL%%!STARS2!%<<GG>>
-//Homunculus
-ItemDisplay[!ETH UNI !ID nea]: %ORANGE%Homunculus%NL%       %GOLD%%NAME%       %GOLD%<<GG>>
-//Herald of Zakarum
-ItemDisplay[!ETH UNI !ID pa9]: %ORANGE%Herald of Zakarum%NL%       %GOLD%%NAME%       %GOLD%<<GG>>
-//Darkforce Spawn
-ItemDisplay[!ETH UNI !ID nef]: %ORANGE%Darkforce Spawn%NL%       %GOLD%%NAME%       %GOLD%<<GG>>
-//Medusa's Gaze
-ItemDisplay[!ETH UNI !ID uow]: %ORANGE%Medusas%NL%       %GOLD%%NAME%        %GOLD%<<GG>>
-ItemDisplay[ETH UNI !ID uow]: %ORANGE%ETH %GOLD%%NAME% %ORANGE%Medusas<<GG>>
-//Alma Negra
-ItemDisplay[!ETH UNI !ID pac FILTERLVL<3]: %ORANGE%Alma Negra%NL%%GOLD%%NAME% <:GG: NotificationPriority = LOW>
-//Lidless Wall
-ItemDisplay[!ETH UNI !ID xsh FILTERLVL<3]: %ORANGE%Lidless%NL%%GOLD%%NAME% <:GG: NotificationPriority = LOW>
-//Radament's Sphere
-ItemDisplay[!ETH UNI !ID xts FILTERLVL<3]: %ORANGE%Radament%NL%%GOLD%%NAME% <<GG>>
-ItemDisplay[ETH UNI !ID xts]: %ORANGE%ETH %GOLD%%NAME% %ORANGE%Rada<<GG>>
+
+
 //Unique arrows NEW
 ItemDisplay[UNI !ID (aq2 OR cq2)]:
+
+
 // ITG ignore target defence magic early game
 ItemDisplay[MAG ID (WP13 OR WP12) STAT115>0 CLVL<50]: %NAME% %PURPLE%* %ORANGE%ITD %PURPLE%* <<BASIC>>
 ItemDisplay[NMAG !RW WP13 !SK117>0 CLVL<60 SOCK=4]: %NAME% %DGREEN%[%SOCKETS%] %RED%HolyThunder base{%WHITE%Eth %SAGE%+ %LIGHT_GRAY%Ral %SAGE%+ %WHITE%Ort %SAGE%+ %LIGHT_GRAY%Tal}<<BASICMED>>
