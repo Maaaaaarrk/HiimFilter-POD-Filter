@@ -1,7 +1,7 @@
 ﻿//Attributes
 Attribute[Author]: Maark Backed by Macks Filter
 Attribute[Name]: HiimFilter
-Attribute[Version]: 0.19  BETA
+Attribute[Version]: 0.20  BETA
 Attribute[Date]: March 14 2024
 Option[IgnoreMissingSounds]: True
 
@@ -59,7 +59,7 @@ ItemStyle[BASICMED]: NotificationPriority = MEDIUM, NotificationColor = ITEM, Bo
 ItemStyle[BASICHIGH1]: MapIcon = 3, MapIconColor = 0, NotificationColor = ITEM, NotificationPriority = HIGH, BorderColor = 4, BorderSize = 2, BackgroundColor = 15
 ItemStyle[MAGHIGH]: MapIcon = 11, MapIconColor = 0, NotificationColor = ITEM, NotificationPriority = HIGH, BorderColor = 4, BorderSize = 0, BackgroundColor = 15
 ItemStyle[RAREHIGH]: MapIcon = 5, MapIconColor = 0, NotificationColor = ITEM, NotificationPriority = HIGH, BorderColor = 4, BorderSize = 0, BackgroundColor = 15, NotificationSoundPriority = LOW, NotificationSound = "@global\sfx\monster\moo\attack2"
-ItemStyle[LOWRUNE]: NotificationPriority = LOW, NotificationColor = ITEM, BorderColor = 4, BorderSize = 2, BackgroundColor = 15, NotificationSoundPriority = LOW, NotificationSound = "@global\sfx\monster\moo\attack6"
+ItemStyle[LOWRUNE]: NotificationPriority = LOW, NotificationColor = ITEM, BorderColor = 4, BorderSize = 2, BackgroundColor = 15, NotificationSoundPriority = LOW, NotificationSound = "@global\sfx\item\rune"
 ItemStyle[SKULL]: MapIcon = 93, MapIconColor = 3, BorderColor = 4, BorderSize = 2, BackgroundColor = 15, NotificationPriority = HIGH, NotificationColor = ITEM, NotificationSoundPriority = LOW, NotificationSound = "@global\sfx\item\skull"
 ItemStyle[MIDRUNE]: MapIcon = 3, MapIconColor = 3, BorderColor = 4, BorderSize = 2, BackgroundColor = 15, NotificationPriority = HIGH, NotificationColor = ITEM, NotificationSoundPriority = LOW, NotificationSound = "@global\sfx\monster\moo\neutral1"
 ItemStyle[HR]: MapIcon = 2, MapIconColor = 0, BorderColor = 32, BorderSize = 2, BackgroundColor = 138, NotificationPriority = HIGH, NotificationColor = ITEM, NotificationSoundPriority = LOW, NotificationSound = "@global\sfx\monster\moo\neutral2"
