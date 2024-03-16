@@ -47,7 +47,7 @@ ItemStyle[UNIQUEETH]: MapIcon = 26, MapIconColor = 0, BorderColor = 0, BorderSiz
 
 ItemStyle[UNIQUE]: MapIcon = 26, MapIconColor = 0, BorderColor = 0, BorderSize = 10, BackgroundColor = 0, NotificationPriority = HIGH, NotificationColor = ITEM, NotificationSoundPriority = LOW, NotificationSound = "@global\sfx\monster\moo\death4"
 ItemStyle[SET]: MapIcon = 22, MapIconColor = 0, BorderColor = 0, BorderSize = 10, BackgroundColor = 0, NotificationPriority = HIGH, NotificationColor = ITEM, NotificationSoundPriority = LOW, NotificationSound = "@global\sfx\monster\moo\death4"
-ItemStyle[SETLOW]: MapIcon = 22, MapIconColor = 0, BorderColor = 0, BorderSize = 10, BackgroundColor = 0, NotificationPriority = HIGH, NotificationColor = ITEM, NotificationSoundPriority = LOW, NotificationSound = "@global\sfx\monster\moo\death4"
+ItemStyle[SETLOW]: MapIcon = 22, MapIconColor = 0, BorderColor = 0, BorderSize = 10, BackgroundColor = 0, NotificationPriority = HIGH, NotificationColor = ITEM
 
 ItemStyle[MAP]: MapIcon = 13, BorderColor = 98, BorderSize = 2, NotificationColor = ITEM, BackgroundColor = 41, NotificationPriority = HIGH, NotificationSoundPriority = LOW, NotificationSound = "@global\sfx\monster\moo\attack1"
 
