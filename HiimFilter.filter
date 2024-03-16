@@ -1,7 +1,7 @@
 ﻿//Attributes
 Attribute[Author]: Maark Backed by Macks Filter
 Attribute[Name]: HiimFilter
-Attribute[Version]: 0.22  BETA
+Attribute[Version]: 0.23  BETA
 Attribute[Date]: March 16 2024
 Option[IgnoreMissingSounds]: True
 
@@ -2160,7 +2160,8 @@ ItemDisplay[MAG !ID jew]: %GREEN%% %BLUE%%NAME% %GREEN%%<<BASIC>>
 ItemDisplay[UNI ETH !ID FILTERLVL=3]:
 ItemDisplay[UNI ETH]: %NAME%<<UNIQUEETH>>
 ItemDisplay[UNI (EQ1 OR EQ2 OR EQ3 OR EQ7 OR WP1 OR WP2 OR WP3 OR WP4 OR WP7 OR WP8 OR WP9 OR WP10 OR WP11 OR WP12 OR WP13) (!jav OR !9ja OR !7ja OR !pil OR !9pi OR !7pi OR !ssp OR !9s9 OR !7s7 OR !glv OR !9gl OR !7gl OR !tsp OR !9ts OR !7ts OR !am5 OR !ama OR !amf) SOCK=0]: %NAME% <<BASIC>> 
-ItemDisplay[SET (EQ1 OR EQ2 OR EQ3 OR EQ7 OR WP1 OR WP2 OR WP3 OR WP4 OR WP7 OR WP8 OR WP9 OR WP10 OR WP11 OR WP12 OR WP13) (!jav OR !9ja OR !7ja OR !pil OR !9pi OR !7pi OR !ssp OR !9s9 OR !7s7 OR !glv OR !9gl OR !7gl OR !tsp OR !9ts OR !7ts OR !am5 OR !ama OR !amf) SOCK=0]: %NAME% <<BASIC>>
+ItemDisplay[SET (EQ1 OR EQ2 OR EQ3 OR EQ7 OR WP1 OR WP2 OR WP3 OR WP4 OR WP7 OR WP8 OR WP9 OR WP10 OR WP11 OR WP12 OR WP13) (!jav OR !9ja OR !7ja OR !pil OR !9pi OR !7pi OR !ssp OR !9s9 OR !7s7 OR !glv OR !9gl OR !7gl OR !tsp OR !9ts OR !7ts OR !am5 OR !ama OR !amf) SOCK=0]: %NAME% <<SETLOW>>
+ItemDisplay[SET !cm1 !cm2 !cm3 !ID]: %NAME%<<SETLOW>>
 ItemDisplay[UNI !cm1 !cm2 !cm3]: %NAME%<<UNIQUE>>
 ItemDisplay[SET !cm1 !cm2 !cm3]: %NAME%<<SET>>
 //Remove shield/armor/helm with shit sockets
