@@ -1,7 +1,7 @@
 ﻿//Attributes
 Attribute[Author]: Maark Backed by Macks Filter
 Attribute[Name]: HiimFilter
-Attribute[Version]: 0.27 BETA
+Attribute[Version]: 0.28 BETA
 Attribute[Date]: March 16 2024
 Option[IgnoreMissingSounds]: True
 
@@ -626,7 +626,7 @@ ItemDisplay[(rin OR amu) ID]:%NAME%{%NAME%}
 //-----------------------------------------------------------------------------------
 // Jewels, Rings, Amulets - UNID
 //-----------------------------------------------------------------------------------
-ItemDisplay[MAG (rin OR amu) !ID FILTERLVL>2]:
+//ItemDisplay[MAG (rin OR amu) !ID FILTERLVL>2]:
 ItemDisplay[MAG rin !ID FILTERLVL>1]:
 ItemDisplay[MAG (rin OR amu) !ID]: %YELLOW%X%BLUE%     %NAME%     %YELLOW%X<<BASICMED>>
 ItemDisplay[MAG (jew) !ID FILTERLVL>2]: %YELLOW%XX%BLUE% %NAME% %YELLOW%XX<<BASICMED>>
