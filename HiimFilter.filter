@@ -1,7 +1,7 @@
 ﻿//Attributes
 Attribute[Author]: Maark Backed by Macks Filter
 Attribute[Name]: HiimFilter
-Attribute[Version]: 0.30 BETA
+Attribute[Version]: 0.31 BETA
 Attribute[Date]: March 17 2024
 Option[IgnoreMissingSounds]: True
 
@@ -1927,10 +1927,11 @@ ItemDisplay[SET !ID rin FILTERLVL=3]:
 ItemDisplay[SET !ID amu]: %!GREENS!%   %NAME%   %!GREENS!%<:SETLOW: NotificationSound = "@global\sfx\item\ring">
 ItemDisplay[SET !ID rin]: %GREEN%* %NAME% *<:SETLOW: NotificationSound = "@global\sfx\item\ring">
 
-ItemDisplay[!ID UNI]: %NAME%<<BASEUNIQUE>>%CONTINUE%
 
 //low level remove on  filterlevel=3 (mapping)
 ItemDisplay[!ID UNI (dir OR kri OR mst OR mac OR clb OR fla OR hax OR axe OR 2ax OR scy OR scp OR brn OR tri OR scm OR flc OR ssd OR sbr OR ywn OR stu OR scl OR mbl OR vbt OR mbt OR skp OR fhl OR lrg OR kit OR spk OR tow OR bsh OR (!ETH lbl) OR (!ETH qui) OR (!ETH lbt) OR (!ETH lgl) OR (!ETH cap) OR (!ETH buc)) FILTERLVL=3]:
+
+ItemDisplay[!ID UNI]: %NAME%<<BASEUNIQUE>>%CONTINUE%
 
 //-----------------------------------------------------------------------------------
 
