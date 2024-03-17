@@ -1,7 +1,7 @@
 ﻿//Attributes
 Attribute[Author]: Maark Backed by Macks Filter
 Attribute[Name]: HiimFilter
-Attribute[Version]: 0.24  BETA
+Attribute[Version]: 0.25 BETA
 Attribute[Date]: March 16 2024
 Option[IgnoreMissingSounds]: True
 
@@ -116,6 +116,8 @@ ItemDisplay[tbk]: %BLUE%+%WHITE%TP Tome
 // Juvs
 ItemDisplay[rvl FILTERLVL<3]: %NL%%PURPLE%*  %WHITE%Rejuv %TAN%70%  %PURPLE%*%NL%%SPACE%
 ItemDisplay[rvs FILTERLVL<3]: %PURPLE%*%WHITE%Rejuv %TAN%35%%WHITE%
+ItemDisplay[rvl FILTERLVL=3]: %PURPLE%%NL%* Rejuv 70%%PURPLE% *%NL%%SPACE%
+ItemDisplay[rvs FILTERLVL=3]: %PURPLE%* R 35% %PURPLE%*
 ItemDisplay[rvl]: %PURPLE%*       %WHITE%Rejuv %TAN%70%%PURPLE%       *
 ItemDisplay[rvs]: %PURPLE%* %WHITE%Rejuv %TAN%35% %PURPLE%*
 
@@ -131,10 +133,11 @@ ItemDisplay[(mp3 OR mp4) (DIFFICULTY>1 OR CLVL>79)]:
 
 // Show HP Pots
 ItemDisplay[hp1 DIFFICULTY<1 CLVL<80]: %RED%+ %WHITE%HP1 %RED%+
-ItemDisplay[hp2 DIFFICULTY<1 CLVL<80]: %RED%+ %WHITE%HP2 %RED%+
+ItemDisplay[hp2 DIFFICULTY<1 CLVL<80]: %RED%+ %WHITE%HP2 %RED%+ 
 ItemDisplay[hp3 DIFFICULTY<2 CLVL<80]: %RED%+ %WHITE%HP3 %RED%+
 ItemDisplay[hp4 DIFFICULTY<2 CLVL<80]: %RED%+ %WHITE%HP4 %RED%+
 ItemDisplay[hp5 FILTERLVL<2]: %RED%+ %WHITE%HP5 %RED%+
+ItemDisplay[hp5 FILTERLVL=3]: %RED%HP
 ItemDisplay[hp5]: %RED%+%WHITE%HP5
 
 // Show MP Pots
@@ -143,6 +146,7 @@ ItemDisplay[mp2 DIFFICULTY<1 CLVL<80]: %BLUE%+ %WHITE%MP2 %BLUE%+
 ItemDisplay[mp3 DIFFICULTY<2 CLVL<80]: %BLUE%+ %WHITE%MP3 %BLUE%+
 ItemDisplay[mp4 DIFFICULTY<2 CLVL<80]: %BLUE%+ %WHITE%MP4 %BLUE%+
 ItemDisplay[mp5 FILTERLVL<2]: %BLUE%+ %WHITE%MP5 %BLUE%+
+ItemDisplay[mp5 FILTERLVL=3]: %BLUE%MP
 ItemDisplay[mp5]: %BLUE%+%WHITE%MP5
 
 // Other Potion Tooltips
@@ -263,13 +267,13 @@ ItemDisplay[skz]: %GRAY%*  %TAN%P. %WHITE% Skull  %GRAY%*%CONTINUE%
 
 
 //Gems flawless
-ItemDisplay[gzv FILTERLVL=3]: %ORANGE%[%PURPLE%@%ORANGE%]<<BASIC>>
-ItemDisplay[glw FILTERLVL=3]: %ORANGE%[%WHITE%@%ORANGE%]<<BASIC>>
-ItemDisplay[glg FILTERLVL=3]: %ORANGE%[%GREEN%@%ORANGE%]<<BASIC>>
-ItemDisplay[glr FILTERLVL=3]: %ORANGE%[%RED%@%ORANGE%]<<BASIC>>
-ItemDisplay[glb FILTERLVL=3]: %ORANGE%[%BLUE%@%ORANGE%]<<BASIC>>
-ItemDisplay[gly FILTERLVL=3]: %ORANGE%[%YELLOW%@%ORANGE%]<<BASIC>>
-ItemDisplay[skl FILTERLVL=3]: %NAME%%ORANGE%[%LIGHT_GRAY%@%ORANGE%]%NL%%SPACE%<<SKULL>>
+ItemDisplay[gzv FILTERLVL=3]: %PURPLE%[ @ ]<<BASIC>>
+ItemDisplay[glw FILTERLVL=3]: %WHITE%[ @ ]<<BASIC>>
+ItemDisplay[glg FILTERLVL=3]: %GREEN%[ @ ]<<BASIC>>
+ItemDisplay[glr FILTERLVL=3]: %RED%[ @ ]<<BASIC>>
+ItemDisplay[glb FILTERLVL=3]: %BLUE%[ @ ]<<BASIC>>
+ItemDisplay[gly FILTERLVL=3]: %YELLOW%[ @ ]<<BASIC>>
+ItemDisplay[skl FILTERLVL=3]: %NAME%%ORANGE%%NL%* * * [%LIGHT_GRAY%@ @ @%ORANGE%] * * *%NL%%NAME%<<SKULL>>
 ItemDisplay[(gzv OR glw OR glg OR glr OR glb OR gly)]: %NAME%<<BASIC>>
 ItemDisplay[skl]: %NL%%ORANGE%F. Skull %ORANGE%[%LIGHT_GRAY%@%ORANGE%]%NL%%SPACE%<<SKULL>>
 //Gems Perfect
@@ -2159,6 +2163,7 @@ ItemDisplay[MAG !ID jew]: %GREEN%% %BLUE%%NAME% %GREEN%%<<BASIC>>
 //UNIQUE&SET Eth/Socket Catchall
 ItemDisplay[UNI ETH !ID FILTERLVL=3]:
 ItemDisplay[UNI ETH]: %NAME%<<UNIQUEETH>>
+ItemDisplay[SET !cm1 !cm2 !cm3 !ID FILTERLVL=3]:
 ItemDisplay[UNI (EQ1 OR EQ2 OR EQ3 OR EQ7 OR WP1 OR WP2 OR WP3 OR WP4 OR WP7 OR WP8 OR WP9 OR WP10 OR WP11 OR WP12 OR WP13) (!jav OR !9ja OR !7ja OR !pil OR !9pi OR !7pi OR !ssp OR !9s9 OR !7s7 OR !glv OR !9gl OR !7gl OR !tsp OR !9ts OR !7ts OR !am5 OR !ama OR !amf) SOCK=0]: %NAME% <<BASIC>> 
 ItemDisplay[SET (EQ1 OR EQ2 OR EQ3 OR EQ7 OR WP1 OR WP2 OR WP3 OR WP4 OR WP7 OR WP8 OR WP9 OR WP10 OR WP11 OR WP12 OR WP13) (!jav OR !9ja OR !7ja OR !pil OR !9pi OR !7pi OR !ssp OR !9s9 OR !7s7 OR !glv OR !9gl OR !7gl OR !tsp OR !9ts OR !7ts OR !am5 OR !ama OR !amf) SOCK=0]: %NAME% <<SETLOW>>
 ItemDisplay[SET !cm1 !cm2 !cm3 !ID]: %NAME%<<SETLOW>>
