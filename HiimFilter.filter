@@ -1,7 +1,7 @@
 ﻿//Attributes
 Attribute[Author]: Maark Backed by Macks Filter
 Attribute[Name]: HiimFilter
-Attribute[Version]: 0.25 BETA
+Attribute[Version]: 0.256 BETA
 Attribute[Date]: March 16 2024
 Option[IgnoreMissingSounds]: True
 
@@ -1822,8 +1822,10 @@ ItemDisplay[ETH UNI !ID (xrs OR vgl OR umg OR xmg OR umb OR xvb OR hbt OR 7pa OR
 //Ondals Almighty uhm
 //Naj's Set ult
 //Naj's Set 6cs
-ItemDisplay[SET !ID (amu OR rin OR xhm OR ulg OR paf OR 7gd OR 7wd OR xtb OR xh9 OR 7qr OR xmb OR ucl OR uth OR oba OR zmb OR xsk OR uar OR xhb OR 7m7 OR xhg OR zhb OR ba5 OR xul OR xmg OR ne9 OR utc OR uh9 OR zvb OR uhm OR ult OR 6cs)]: %!GREENS!%   %NAME%   %!GREENS!%<<SET>>
-
+ItemDisplay[SET !ID (xhm OR ulg OR paf OR 7gd OR 7wd OR xtb OR xh9 OR 7qr OR xmb OR ucl OR uth OR oba OR zmb OR xsk OR uar OR xhb OR 7m7 OR xhg OR zhb OR ba5 OR xul OR xmg OR ne9 OR utc OR uh9 OR zvb OR uhm OR ult OR 6cs)]: %!GREENS!%   %NAME%   %!GREENS!%<<SET>>
+ItemDisplay[SET !ID rin FILTERLVL=3]:
+ItemDisplay[SET !ID amu]: %!GREENS!%   %NAME%   %!GREENS!%<:SETLOW: NotificationSound = "@global\sfx\item\ring">
+ItemDisplay[SET !ID rin]: %GREEN%* %NAME% *<:SETLOW: NotificationSound = "@global\sfx\item\ring">
 
 ItemDisplay[!ID UNI]: %NAME%<<BASEUNIQUE>>%CONTINUE%
 
@@ -2154,8 +2156,6 @@ ItemDisplay[SET ID rin STAT96>8]: %NAME% {%ORANGE%FRW%WHITE%}<:GG: NotificationP
 ItemDisplay[UNI ID amu ALLSK>2]: %NAME% {%ORANGE%3 ALLSKILL%WHITE%}<<GG>>
 ItemDisplay[UNI ID amu ALLSK>1 IAS>19]: %NAME% {%ORANGE%2 ALLSKILL%WHITE%}<<GG>>
 ItemDisplay[UNI ID amu ALLSK>0 IAS>19 STAT96>19]:  %NAME% {%ORANGE%1 ALLSKILL%WHITE%}<<GG>>
-ItemDisplay[SET !ID amu]: %ORANGE% % %GREEN%%NAME% %ORANGE% %<<SETLOW>>
-ItemDisplay[SET !ID rin]: %ORANGE% % %GREEN%%NAME% %ORANGE% %<<SETLOW>>
 ItemDisplay[SET ID rin]: %ORANGE% % %GREEN%%NAME% %ORANGE% %<:GG: NotificationPriority = LOW, NotificationColor = GREEN>
 ItemDisplay[UNI !ID jew]: %NL%       %GREEN% %%%%%% %PURPLE%%NAME% %GREEN% %%%%%%        %NL%%GOLD%<<GG>>
 ItemDisplay[UNI !ID cm3]: %NL%       %RED% %%% %GOLD%%NAME% %RED% %%%        %NL%%GOLD%<<GG>>
