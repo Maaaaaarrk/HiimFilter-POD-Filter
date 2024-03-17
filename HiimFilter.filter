@@ -1,7 +1,7 @@
 ﻿//Attributes
 Attribute[Author]: Maark Backed by Macks Filter
 Attribute[Name]: HiimFilter
-Attribute[Version]: 0.26 BETA
+Attribute[Version]: 0.27 BETA
 Attribute[Date]: March 16 2024
 Option[IgnoreMissingSounds]: True
 
@@ -187,21 +187,37 @@ ItemDisplay[cx7]: %PURPLE%##%ORANGE%  %NAME%  %PURPLE%##<<BASICHIGH1>>
 ItemDisplay[cx8]: %PURPLE%Orb %ORANGE%of %PURPLE%Enchantment<<BASICNOT>>
 //TODO
 
-ItemDisplay[(ma10 OR ma5)]: %WHITE%%NAME% %WHITE%[T1]%CONTINUE% //Icy Cavern or Pleasant Pastures + Frigid Plateau
-ItemDisplay[(ma9 OR ma4 OR ma8)]: %YELLOW%%NAME% %WHITE%[T2]%CONTINUE% //Dim Cellar + Musty Crypt + Desecrated Temple
-ItemDisplay[(ma2 OR ma6 OR ma7)]: %RED%%NAME% %WHITE%[T3]%CONTINUE% //Forgotten Desert + Ruined Citadel + Burnt Forest
+//ItemDisplay[(ma10 OR ma5)]: %WHITE%%NAME% %WHITE%[T1]%CONTINUE% //Icy Cavern or Pleasant Pastures + Frigid Plateau
+//ItemDisplay[(ma9 OR ma4 OR ma8)]: %YELLOW%%NAME% %WHITE%[T2]%CONTINUE% //Dim Cellar + Musty Crypt + Desecrated Temple
+//ItemDisplay[(ma2 OR ma6 OR ma7)]: %RED%%NAME% %WHITE%[T3]%CONTINUE% //Forgotten Desert + Ruined Citadel + Burnt Forest
 // TODO Resistances
+ItemDisplay[(ma11) ID]:%NAME%{%GREEN%O      %RED%Co%ORANGE%w %GREEN%Re%PURPLE%lic      %GREEN%O%NL%%NAME%}%CONTINUE%
+ItemDisplay[ma1 ID]:%NAME%{%PURPLE%[%GOLD%Immunes:%RED%1,%YELLOW%2,%WHITE%1,%GREEN%1 %RED%Fire %CORAL%120 %YELLOW%Lightning %ORANGE%100~120 %WHITE%Phys %LIGHT_GRAY%100 %GREEN%Poison %SAGE%120%PURPLE%%NL%%NAME%}%CONTINUE%
+ItemDisplay[ma4 ID]:%NAME%{%PURPLE%[%GOLD%Immunes:%BLUE%1,%RED%1,%YELLOW%5,%GREEN%2 %RED%Fire %CORAL%120~140 %BLUE%Cold %TEAL%145~190 %YELLOW%Lightning %ORANGE%100 %GREEN%Poison %SAGE%120%PURPLE%]%NL%%NAME%}%CONTINUE%
+ItemDisplay[ma5 ID]:%NAME%{%PURPLE%[%GOLD%Immunes:%BLUE%3,%RED%3,%YELLOW%2,%GREEN%1 %RED%Fire %CORAL%140 %BLUE%Cold %TEAL%150 %YELLOW%Lightning %ORANGE%100 %WHITE%Phys %LIGHT_GRAY%100 %GREEN%Poison %SAGE%120~140%PURPLE%]%NL%%NAME%}%CONTINUE%
+ItemDisplay[ma8 ID]:%NAME%{%PURPLE%[%GOLD%Immunes:%BLUE%3,%RED%3,%YELLOW%4,%WHITE%1,%GREEN%1 %RED%Fire %CORAL%110~120 %BLUE%Cold %TEAL%130~190 %YELLOW%Lightning %ORANGE%100~120 %WHITE%Phys %LIGHT_GRAY%100 %GREEN%Poison %SAGE%100%PURPLE%]%NL%%NAME%}%CONTINUE%
+ItemDisplay[ma9 ID]:%NAME%{%PURPLE%[%GOLD%Immunes:%BLUE%2,%RED%2,%YELLOW%1,%GREEN%1 %RED%Fire %CORAL%115~120 %BLUE%Cold %TEAL%130~150 %YELLOW%Lightning %ORANGE%100 %WHITE%Phys %LIGHT_GRAY%75 %GREEN%Poison %SAGE%120%PURPLE%]%NL%%NAME%}%CONTINUE%
+ItemDisplay[ma2 ID]:%NAME%{%PURPLE%[%GOLD%Immunes:%BLUE%1,%RED%3,%YELLOW%2,%WHITE%1,%GREEN%4 %RED%Fire %CORAL%110~130 %BLUE%Cold %TEAL%160 %YELLOW%Lightning %ORANGE%100 %WHITE%Phys %LIGHT_GRAY%100 %GREEN%Poison %SAGE%120~1000(Tower)%PURPLE%]%NL%%NAME%}%CONTINUE%
+ItemDisplay[ma6 ID]:%NAME%{%PURPLE%[%GOLD%Immunes:%BLUE%3,%YELLOW%3,%WHITE%1,%GREEN%3 %RED%Fire %CORAL%66 %BLUE%Cold %TEAL%120~160 %YELLOW%Lightning %ORANGE%100~120 %WHITE%Phys %LIGHT_GRAY%100 %GREEN%Poison %SAGE%120%PURPLE%]%NL%%NAME%}%CONTINUE%
+ItemDisplay[ma7 ID]:%NAME%{%PURPLE%[%GOLD%Immunes:%BLUE%2,%RED%1,%YELLOW%5,%ORANGE%1,%GREEN%1 %RED%Fire %CORAL%145 %BLUE%Cold %TEAL%110~140 %YELLOW%Lightning %ORANGE%100~120 %ORANGE%Magic %YELLOW%100 %WHITE%Phys %LIGHT_GRAY%55 %GREEN%Poison %SAGE%140%PURPLE%]%NL%%NAME%}%CONTINUE%
+ItemDisplay[ma10 ID]:%NAME%{%PURPLE%[%GOLD%Immunes:%RED%Fire %CORAL%50 %BLUE%Cold %TEAL%50 %YELLOW%Lightning %ORANGE%50 %ORANGE%Magic %YELLOW%33 %WHITE%Phys %LIGHT_GRAY%50 %GREEN%Poison %SAGE%33%PURPLE%]%NL%%NAME%}%CONTINUE%
+ItemDisplay[ma11 ID]:%NAME%{%PURPLE%[%GOLD%Immunes:%RED%Fire %CORAL%50 %BLUE%Cold %TEAL%50 %YELLOW%Lightning %ORANGE%50 %ORANGE%Magic %YELLOW%33 %WHITE%Phys %LIGHT_GRAY%50 %GREEN%Poison %SAGE%33%PURPLE%]%NL%%NAME%}%CONTINUE%
+
+
+ItemDisplay[MAP MAPTIER=1]: %WHITE%%NAME% %WHITE%[T1]%CONTINUE%{%NAME%} //Icy Cavern or Pleasant Pastures + Frigid Plateau
+ItemDisplay[MAP MAPTIER=2]: %YELLOW%%NAME% %WHITE%[T2]%CONTINUE%{%NAME%} //Dim Cellar + Musty Crypt + Desecrated Temple
+ItemDisplay[MAP MAPTIER=3]: %RED%%NAME% %WHITE%[T3]%CONTINUE%{%NAME%} //Forgotten Desert + Ruined Citadel + Burnt Forest
 
 //ItemDisplay[MAP NMAG]: %WHITE%%NAME%%CONTINUE%
 //ItemDisplay[MAP MAG]: %BLUE%%NAME%%CONTINUE%
 //ItemDisplay[MAP RARE]: %YELLOW%%NAME%%CONTINUE%
 
-ItemDisplay[MAP !ID]: %NL%%!REDS!% %NAME% %!REDS!%%NL%%SPACE%%CONTINUE%
+ItemDisplay[MAP !ID]: %NL%%!REDS!% %NAME% %!REDS!%%NL%%SPACE%%CONTINUE%{%NAME%}
 
-ItemDisplay[MAP]: %NAME%<<MAP>>
+ItemDisplay[MAP]: %NAME%{%NAME%}<<MAP>>
 
 // fall back
-ItemDisplay[(maz OR ma1 OR ma2 OR ma3 OR ma4 OR ma5 OR ma6 OR ma7 OR ma8 OR ma9 OR ma10 OR ma11)]: %NAME% %!REDS!%%!MAP!%<<MAP>>
+ItemDisplay[(maz OR ma1 OR ma2 OR ma3 OR ma4 OR ma5 OR ma6 OR ma7 OR ma8 OR ma9 OR ma10 OR ma11)]: %NAME% %!REDS!%%!MAP!%{%NAME%}<<MAP>>
 
 //-----------------------------------------------------------------------------------
 
