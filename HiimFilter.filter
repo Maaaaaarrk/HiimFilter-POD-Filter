@@ -1,7 +1,7 @@
 ﻿//Attributes
 Attribute[Author]: Maark Backed by Macks Filter
 Attribute[Name]: HiimFilter
-Attribute[Version]: 0.31 BETA
+Attribute[Version]: 0.32 BETA
 Attribute[Date]: March 17 2024
 Option[IgnoreMissingSounds]: True
 
@@ -1961,6 +1961,9 @@ ItemDisplay[(ob5 OR oba OR obf) !RW NMAG (SK62>2 OR SK59>2 OR SK58>2 OR SK57>2 O
 ItemDisplay[WP13 !RW NMAG SK121>2 (SOCK=0 OR SOCK=3)]: %NL%%WHITE%%NAME% %ORANGE%[Plague Base]{%NAME%}%CONTINUE%
 ItemDisplay[WP13 !RW NMAG SK121>2 (SOCK=0 OR SOCK=3)]: %GREEN%+3 FOH %NAME%{%NAME%}%CONTINUE%
 ItemDisplay[WP13 !RW NMAG SK121>2 (SOCK=0 OR SOCK=3)]: %NL%%NAME%{%NAME%}%NL%<<BASICHIGH1>>
+
+// CTA
+ItemDisplay[(wsp OR 9ws OR 7ws) NMAG (SOCK=0 OR SOCK=5) (SK117>0)]: %NL%%!CARROTSL!% %WHITE%%NAME% %YELLOW%[%SOCKETS%] (CTA Base) %!CARROTSR!%%NL%%SPACE%<<BASICHIGH1>>
 //-----------------------------------------------------------------------------------
 
 
