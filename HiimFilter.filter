@@ -1,8 +1,8 @@
 ﻿//Attributes
 Attribute[Author]: Maark Backed by Macks Filter
 Attribute[Name]: HiimFilter
-Attribute[Version]: 0.32 BETA
-Attribute[Date]: March 17 2024
+Attribute[Version]: 0.33 BETA
+Attribute[Date]: March 18 2024
 Option[IgnoreMissingSounds]: True
 
 //Filter levels
@@ -29,7 +29,7 @@ ItemStyle[UBERL]: MapIcon = 47, BorderColor = 132, BorderSize = 2, NotificationC
 ItemStyle[KEYS]: MapIcon = 47, BorderColor = 132, BorderSize = 2, NotificationColor = ITEM, BackgroundColor = 59, NotificationPriority = HIGH
 ItemStyle[BASEUNIQUE]: MapIcon = 26, BorderColor = 155, BorderSize = 2, NotificationColor = ITEM, BackgroundColor = 35, NotificationPriority = HIGH
 ItemStyle[GG]: MapIcon = 26, BorderColor = 155, BorderSize = 2, NotificationColor = ITEM, BackgroundColor = 35, NotificationPriority = HIGH, NotificationSoundPriority = LOW, NotificationSound = "@global\sfx\monster\moo\death4"
-ItemStyle[SYNTH]: MapIcon = 23, BorderColor = 155, BorderSize = 15, NotificationColor = ITEM, BackgroundColor = 35, NotificationPriority = HIGH, NotificationSoundPriority = HIGH, NotificationSound = "@global\sfx\monster\diablo\lazer"
+ItemStyle[SYNTH]: MapIcon = 23, BorderColor = 155, BorderSize = 15, NotificationColor = ITEM, BackgroundColor = 35, NotificationPriority = HIGH, NotificationSoundPriority = HIGH, NotificationSound = "@global\sfx\item\evilhole"
 
 
 /////////////////////////////////////////////////////////////////////////////////////////////////
@@ -54,10 +54,12 @@ ItemStyle[MAP]: MapIcon = 13, BorderColor = 98, BorderSize = 2, NotificationColo
 ItemStyle[OOC]: MapIcon = 36, BorderColor = 132, BorderSize = 2, NotificationColor = ITEM, BackgroundColor = 59, NotificationPriority = HIGH, NotificationSoundPriority = LOW, NotificationSound = "@global\sfx\monster\moo\attack1"
 ItemStyle[QUEST]: MapIcon = 4, MapIconColor = 0, BorderColor = 0, BorderSize = 10, BackgroundColor = 0, NotificationPriority = HIGH, NotificationColor = ITEM
 ItemStyle[BOSS]: MapIcon = 3, BorderColor = 132, BorderSize = 2, NotificationColor = ITEM, BackgroundColor = 59, NotificationPriority = HIGH, NotificationSoundPriority = LOW, NotificationSound = "@global\sfx\monster\moo\attack5"
+ItemStyle[MISCITEMSFX]: MapIcon = 3, BorderColor = 132, BorderSize = 2, NotificationColor = ITEM, BackgroundColor = 59, NotificationPriority = HIGH, NotificationSoundPriority = LOW, NotificationSound = "@global\sfx\item\flippy"
 
 ItemStyle[BASICLOW]: NotificationPriority = LOW, NotificationColor = ITEM, BorderColor = 4, BorderSize = 2, BackgroundColor = 15
 ItemStyle[BASICMED]: NotificationPriority = MEDIUM, NotificationColor = ITEM, BorderColor = 4, BorderSize = 2, BackgroundColor = 15
 ItemStyle[BASICHIGH1]: MapIcon = 3, MapIconColor = 0, NotificationColor = ITEM, NotificationPriority = HIGH, BorderColor = 4, BorderSize = 2, BackgroundColor = 15
+ItemStyle[GGMAGIC]: MapIcon = 3, MapIconColor = 0, NotificationColor = ITEM, NotificationPriority = HIGH, BorderColor = 4, BorderSize = 2, BackgroundColor = 15, NotificationSoundPriority = HIGH, NotificationSound = "@global\sfx\item\ring"
 ItemStyle[MAGHIGH]: MapIcon = 11, MapIconColor = 0, NotificationColor = ITEM, NotificationPriority = HIGH, BorderColor = 4, BorderSize = 0, BackgroundColor = 15
 ItemStyle[RAREHIGH]: MapIcon = 5, MapIconColor = 0, NotificationColor = ITEM, NotificationPriority = HIGH, BorderColor = 4, BorderSize = 0, BackgroundColor = 15, NotificationSoundPriority = LOW, NotificationSound = "@global\sfx\item\ring"
 ItemStyle[LOWRUNE]: NotificationPriority = LOW, NotificationColor = ITEM, BorderColor = 4, BorderSize = 2, BackgroundColor = 15, NotificationSoundPriority = LOW, NotificationSound = "@global\sfx\item\rune"
@@ -175,16 +177,13 @@ ItemDisplay[toa]: %NAME%<<BOSS>>
 ItemDisplay[tes OR ceh OR bet OR fed]: %NL%%!CARROTSL!% %NAME%%!CARROTSR!%%NL%%SPACE%<<BOSS>>
 //-----------------------------------------------------------------------------------
 
-
 //-----------------------------------------------------------------------------------
 // PoD Items
 //-----------------------------------------------------------------------------------
 ItemDisplay[cx5]: %NL%%!ORANGES!% %PURPLE%Orb of Corruption %!ORANGES!%%NL%%SPACE%<<OOC>>
 
 // TODO
-ItemDisplay[cx6]: %PURPLE%##%ORANGE%  %NAME%  %PURPLE%##<<BASICHIGH1>>
-ItemDisplay[cx7]: %PURPLE%##%ORANGE%  %NAME%  %PURPLE%##<<BASICHIGH1>>
-ItemDisplay[cx8]: %PURPLE%Orb %ORANGE%of %PURPLE%Enchantment<<BASICNOT>>
+ItemDisplay[(cx6 OR cx7 OR cx8)]: %!PURPLESSMALL!%%ORANGE%  %NAME%  %!PURPLESSMALL!%<<MISCITEMSFX>>
 //TODO
 
 //ItemDisplay[(ma10 OR ma5)]: %WHITE%%NAME% %WHITE%[T1]%CONTINUE% //Icy Cavern or Pleasant Pastures + Frigid Plateau
@@ -208,9 +207,13 @@ ItemDisplay[MAP MAPTIER=1]: %WHITE%%NAME% %WHITE%[T1]%CONTINUE%{%NAME%} //Icy Ca
 ItemDisplay[MAP MAPTIER=2]: %YELLOW%%NAME% %WHITE%[T2]%CONTINUE%{%NAME%} //Dim Cellar + Musty Crypt + Desecrated Temple
 ItemDisplay[MAP MAPTIER=3]: %RED%%NAME% %WHITE%[T3]%CONTINUE%{%NAME%} //Forgotten Desert + Ruined Citadel + Burnt Forest
 
-//ItemDisplay[MAP NMAG]: %WHITE%%NAME%%CONTINUE%
-//ItemDisplay[MAP MAG]: %BLUE%%NAME%%CONTINUE%
+ItemDisplay[MAP NMAG]: %NAME%{%NL%%PURPLE%NON MAGIC MAP%NL%%NL%%NAME%}%CONTINUE%
+ItemDisplay[MAP MAG]: %NAME%{%NL%%PURPLE%MAGIC MAP%NL%%NL%%NAME%}%CONTINUE%
 //ItemDisplay[MAP RARE]: %YELLOW%%NAME%%CONTINUE%
+
+
+// ItemDisplay[MAP STAT("RANGE_SKILLONGETHIT")>0]: %NAME%{%PURPLE%WARNING: RANGE_SKILLONGETHIT%NL%%NL%%NAME%}%CONTINUE%
+// ItemDisplay[MAP STAT("ITEM_SKILLONDEATH")>0]: %NAME%{%PURPLE%WARNING: ITEM_SKILLONDEATH%NL%%NL%%NAME%}%CONTINUE%
 
 ItemDisplay[MAP !ID]: %NL%%!REDS!% %NAME% %!REDS!%%NL%%SPACE%%CONTINUE%{%NAME%}
 
@@ -789,27 +792,27 @@ ItemDisplay[(cm1 OR cm2 OR cm3) !UNI LRES>0 !(RES>0)]: %YELLOW%%STAT(41,0)%%Ligh
 ItemDisplay[(cm1 OR cm2 OR cm3) !UNI PRES>0 !(RES>0)]: %GREEN%%STAT(45,0)%%Psn RES %NAME%%CONTINUE%
 
 // Skills
-ItemDisplay[cm3 !UNI TABSK0>0]: %PURPLE%Bow and Crossbow %TAN%Skiller %NAME%%CONTINUE%
-ItemDisplay[cm3 !UNI TABSK2>0]: %PURPLE%Javelin and Spear %TAN%Skiller %NAME%%CONTINUE%
-ItemDisplay[cm3 !UNI TABSK1>0]: %PURPLE%Passive and Magic %TAN%Skiller %NAME%%CONTINUE%
-ItemDisplay[cm3 !UNI TABSK8>0]: %PURPLE%Fire Spells %TAN%Skiller %NAME%%CONTINUE%
-ItemDisplay[cm3 !UNI TABSK9>0]: %PURPLE%Lightning Spells %TAN%Skiller %NAME%%CONTINUE%
-ItemDisplay[cm3 !UNI TABSK10>0]: %PURPLE%Cold Spells %TAN%Skiller %NAME%%CONTINUE%
-ItemDisplay[cm3 !UNI TABSK16>0]: %PURPLE%Curses %TAN%Skiller %NAME%%CONTINUE%
-ItemDisplay[cm3 !UNI TABSK17>0]: %PURPLE%Poison & Bone Spells %TAN%Skiller %NAME%%CONTINUE%
-ItemDisplay[cm3 !UNI TABSK18>0]: %PURPLE%Nec Summoning Spells %TAN%Skiller %NAME%%CONTINUE%
-ItemDisplay[cm3 !UNI TABSK24>0]: %PURPLE%Pal Combat %TAN%Skiller %NAME%%CONTINUE%
-ItemDisplay[cm3 !UNI TABSK25>0]: %PURPLE%Offensive Auras %TAN%Skiller %NAME%%CONTINUE%
-ItemDisplay[cm3 !UNI TABSK26>0]: %PURPLE%Defensive Auras %TAN%Skiller %NAME%%CONTINUE%
-ItemDisplay[cm3 !UNI TABSK32>0]: %PURPLE%Barb Combat %TAN%Skiller %NAME%%CONTINUE%
-ItemDisplay[cm3 !UNI TABSK33>0]: %PURPLE%Barb Masteries %TAN%Skiller %NAME%%CONTINUE%
-ItemDisplay[cm3 !UNI TABSK34>0]: %PURPLE%Warcries %TAN%Skiller %NAME%%CONTINUE%
-ItemDisplay[cm3 !UNI TABSK40>0]: %PURPLE%Dru Summoning %TAN%Skiller %NAME%%CONTINUE%
-ItemDisplay[cm3 !UNI TABSK41>0]: %PURPLE%Shape Shifting %TAN%Skiller %NAME%%CONTINUE%
-ItemDisplay[cm3 !UNI TABSK42>0]: %PURPLE%Elemental %TAN%Skiller %NAME%%CONTINUE%
-ItemDisplay[cm3 !UNI TABSK48>0]: %PURPLE%Traps %TAN%Skiller %NAME%%CONTINUE%
-ItemDisplay[cm3 !UNI TABSK49>0]: %PURPLE%Shadow Disciplines %TAN%Skiller %NAME%%CONTINUE%
-ItemDisplay[cm3 !UNI TABSK50>0]: %PURPLE%Martial Arts %TAN%Skiller %NAME%%CONTINUE%
+ItemDisplay[cm3 !UNI TABSK0>0]: %PURPLE%Bow and Crossbow %TAN%Skiller %NAME%%CONTINUE%<<GGMAGIC>>
+ItemDisplay[cm3 !UNI TABSK2>0]: %PURPLE%Javelin and Spear %TAN%Skiller %NAME%%CONTINUE%<<GGMAGIC>>
+ItemDisplay[cm3 !UNI TABSK1>0]: %PURPLE%Passive and Magic %TAN%Skiller %NAME%%CONTINUE%<<GGMAGIC>>
+ItemDisplay[cm3 !UNI TABSK8>0]: %PURPLE%Fire Spells %TAN%Skiller %NAME%%CONTINUE%<<GGMAGIC>>
+ItemDisplay[cm3 !UNI TABSK9>0]: %PURPLE%Lightning Spells %TAN%Skiller %NAME%%CONTINUE%<<GGMAGIC>>
+ItemDisplay[cm3 !UNI TABSK10>0]: %PURPLE%Cold Spells %TAN%Skiller %NAME%%CONTINUE%<<GGMAGIC>>
+ItemDisplay[cm3 !UNI TABSK16>0]: %PURPLE%Curses %TAN%Skiller %NAME%%CONTINUE%<<GGMAGIC>>
+ItemDisplay[cm3 !UNI TABSK17>0]: %PURPLE%Poison & Bone Spells %TAN%Skiller %NAME%%CONTINUE%<<GGMAGIC>>
+ItemDisplay[cm3 !UNI TABSK18>0]: %PURPLE%Nec Summoning Spells %TAN%Skiller %NAME%%CONTINUE%<<GGMAGIC>>
+ItemDisplay[cm3 !UNI TABSK24>0]: %PURPLE%Pal Combat %TAN%Skiller %NAME%%CONTINUE%<<GGMAGIC>>
+ItemDisplay[cm3 !UNI TABSK25>0]: %PURPLE%Offensive Auras %TAN%Skiller %NAME%%CONTINUE%<<GGMAGIC>>
+ItemDisplay[cm3 !UNI TABSK26>0]: %PURPLE%Defensive Auras %TAN%Skiller %NAME%%CONTINUE%<<GGMAGIC>>
+ItemDisplay[cm3 !UNI TABSK32>0]: %PURPLE%Barb Combat %TAN%Skiller %NAME%%CONTINUE%<<GGMAGIC>>
+ItemDisplay[cm3 !UNI TABSK33>0]: %PURPLE%Barb Masteries %TAN%Skiller %NAME%%CONTINUE%<<GGMAGIC>>
+ItemDisplay[cm3 !UNI TABSK34>0]: %PURPLE%Warcries %TAN%Skiller %NAME%%CONTINUE%<<GGMAGIC>>
+ItemDisplay[cm3 !UNI TABSK40>0]: %PURPLE%Dru Summoning %TAN%Skiller %NAME%%CONTINUE%<<GGMAGIC>>
+ItemDisplay[cm3 !UNI TABSK41>0]: %PURPLE%Shape Shifting %TAN%Skiller %NAME%%CONTINUE%<<GGMAGIC>>
+ItemDisplay[cm3 !UNI TABSK42>0]: %PURPLE%Elemental %TAN%Skiller %NAME%%CONTINUE%<<GGMAGIC>>
+ItemDisplay[cm3 !UNI TABSK48>0]: %PURPLE%Traps %TAN%Skiller %NAME%%CONTINUE%<<GGMAGIC>>
+ItemDisplay[cm3 !UNI TABSK49>0]: %PURPLE%Shadow Disciplines %TAN%Skiller %NAME%%CONTINUE%<<GGMAGIC>>
+ItemDisplay[cm3 !UNI TABSK50>0]: %PURPLE%Martial Arts %TAN%Skiller %NAME%%CONTINUE%<<GGMAGIC>>
 
 // Charm Stat Tags - Unique Charms Values
 // Vit
@@ -865,6 +868,9 @@ ItemDisplay[EQ7 RARE !ID]: %NL%X X X X X %NAME% X X X X X%NL%%SPACE%<<RAREHIGH>>
 // Weapon Rares
 ItemDisplay[FILTERLVL<2 (7cr OR 9cr OR crs OR 7gl OR 9gl OR glv OR 7p7 OR 9p9 OR pik OR 7gm OR 9gm OR gma OR 7wa OR 9wa OR wax OR 7m7 OR 9m9 OR mau OR 7gd OR 9gd OR gsd OR 7fb OR 9fb OR flb OR 7gi OR 9gi OR gix OR 7wh OR 9wh OR whm OR 7pi OR 9pi OR pil OR 7s7 OR 9s9 OR ssp OR 7ts OR 9ts OR tsp) RARE (ILVL>84) !ID]: * * %NAME% * *<<BASIC>>
 
+// Nec heads
+ItemDisplay[CL4 RARE !ETH !ID]: X X %NAME% X X<<BASICHIGH1>>
+
 // High Ilvl Rares
 ItemDisplay[RARE !WEAPON (ILVL>91) !ID FILTERLVL<2]: * %NAME% *<<BASIC>>
 ItemDisplay[(GLOVES OR BOOTS OR BELT) RARE (ILVL>84) !ID FILTERLVL<2]: %NAME%<<BASIC>>
@@ -884,6 +890,10 @@ ItemDisplay[RARE !ID FILTERLVL=1]: %NAME%<<BASIC>>
 ItemDisplay[EQ7 MAG !ETH !ID FILTERLVL<2]: %NL%X X X %NAME% X X X%NL%%SPACE%<<MAGHIGH>>
 ItemDisplay[EQ7 MAG !ETH !ID FILTERLVL<3]: %NL%X X %NAME% X X%NL%%SPACE%<<BASICHIGH>>
 ItemDisplay[EQ7 MAG !ETH !ID FILTERLVL=3]: %NAME%<<BASICLOW>>
+
+
+// Nec heads
+ItemDisplay[CL4 MAG !ETH !ID]: %NL%X X %NAME% X X%NL%%SPACE%<<BASICHIGH1>>
 
 // Crafting is sad in POD
 ItemDisplay[MAG !ID FILTERLVL>1]:
@@ -2113,8 +2123,8 @@ ItemDisplay[MAG !ETH WP11 CHSK53>0]: %WHITE%(%PURPLE%TELE %ORANGE%Charges%WHITE%
 ItemDisplay[MAG !ETH !WP11 CHSK91>0]: %WHITE%(%PURPLE%LOWER%YELLOW% RES %ORANGE%Charges%WHITE%) %WHITE%[%YELLOW%%PRICE% %GOLD%$%WHITE%]%NL% %BLUE%%NAME% <<BASICHIGH>>
 ItemDisplay[MAG !ETH !WP11 CHSK82>0]: %WHITE%(%PURPLE%LIFE%YELLOW% TAP %ORANGE%Charges%WHITE%) %WHITE%[%YELLOW%%PRICE% %GOLD%$%WHITE%]%NL% %BLUE%%NAME% <<BASICHIGH>>
 //hemo
-ItemDisplay[WP12 MAG TABSK16>2 SK477>2]: %NAME% %WHITE%(%RED%6 Hemo%WHITE%) %WHITE%[%YELLOW%%PRICE% %GOLD%$%WHITE%] %!REDS!%<<SYNTH>>
-ItemDisplay[WP12 (MAG OR RARE) (((TABSK16>1 OR CLSK2>1) SK477>2) OR (TABSK16>2 SK477>1))]: %NAME% %WHITE%(%RED%5 Hemo%WHITE%) %WHITE%[%YELLOW%%PRICE% %GOLD%$%WHITE%] %!REDS!%<<SYNTH>>
+ItemDisplay[WP12 MAG TABSK16>2 SK477>2]: %NAME% %WHITE%(%RED%6 Hemo%WHITE%) %WHITE%[%YELLOW%%PRICE% %GOLD%$%WHITE%] %!REDS!%<<GGMAGIC>>
+ItemDisplay[WP12 (MAG OR RARE) (((TABSK16>1 OR CLSK2>1) SK477>2) OR (TABSK16>2 SK477>1))]: %NAME% %WHITE%(%RED%5 Hemo%WHITE%) %WHITE%[%YELLOW%%PRICE% %GOLD%$%WHITE%] %!REDS!%<<GGMAGIC>>
 //WANDS
 ItemDisplay[WP12 (MAG OR RARE) CLVL<40 SK67>0 FCR>9]: %NAME% %WHITE%(%RED%%SKILL(67)% TEETH + %ORANGE%%STAT(105,0)%FCR%WHITE%) %WHITE%[%YELLOW%%PRICE% %GOLD%$%WHITE%]<<BASICHIGH>>
 ItemDisplay[WP12 (MAG OR RARE) CLVL<40 SK67>0]: %NAME% %WHITE%(%RED%%SKILL(67)% TEETH%WHITE%) %WHITE%[%YELLOW%%PRICE% %GOLD%$%WHITE%]<<BASICHIGH>>
