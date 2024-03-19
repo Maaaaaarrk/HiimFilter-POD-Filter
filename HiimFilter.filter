@@ -1,7 +1,7 @@
 ﻿//Attributes
 Attribute[Author]: Maark Backed by Macks Filter
 Attribute[Name]: HiimFilter
-Attribute[Version]: 0.37 BETA
+Attribute[Version]: 0.38 BETA
 Attribute[Date]: March 18 2024
 Option[IgnoreMissingSounds]: True
 
