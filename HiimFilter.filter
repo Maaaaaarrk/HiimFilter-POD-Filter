@@ -1,7 +1,7 @@
 ﻿//Attributes
 Attribute[Author]: Maark Backed by Macks Filter
 Attribute[Name]: HiimFilter
-Attribute[Version]: 0.40 BETA
+Attribute[Version]: 0.41 BETA
 Attribute[Date]: March 22 2024
 Option[IgnoreMissingSounds]: True
 
@@ -721,7 +721,7 @@ ItemDisplay[CIRC !UNI !SET (CLSK0=3 OR CLSK1=3 OR CLSK2=3 OR CLSK3=3 OR CLSK4=3 
 //ItemDisplay[MAG (rin OR amu) !ID FILTERLVL>2]:
 ItemDisplay[MAG rin !ID FILTERLVL>1]:
 ItemDisplay[MAG (rin OR amu) !ID]: %YELLOW%X%BLUE%     %NAME%     %YELLOW%X<<BASICMED>>
-ItemDisplay[MAG (jew) !ID]: %YELLOW%XX%BLUE%     %NAME%     %YELLOW%XX<<NOTIMAGIC>>
+ItemDisplay[MAG (jew) !ID]: %YELLOW%XX%BLUE%     %NAME%     %YELLOW%XX<<BASICHIGH1>>
 ItemDisplay[RARE (jew OR rin OR amu) !ID FILTERLVL<3]: %NL%%ORANGE%X X%YELLOW%     %NAME%     %ORANGE%X X%NL%%SPACE%<<RAREHIGH>>
 ItemDisplay[RARE (jew OR rin OR amu) !ID]: %NL%%ORANGE%X X%YELLOW% %NAME% %ORANGE%X X<<RAREHIGH>>
 //-----------------------------------------------------------------------------------
@@ -733,8 +733,9 @@ ItemDisplay[RARE (jew OR rin OR amu) !ID]: %NL%%ORANGE%X X%YELLOW% %NAME% %ORANG
 // Charms - UNID
 ItemDisplay[MAG cm3 (ILVL>90 OR (ILVL<61 ILVL>49)) !ID]: %YELLOW%[REROLL]%BLUE%%NAME%%CONTINUE%
 ItemDisplay[MAG cm2 !ID FILTERLVL<2]: %BLUE%X %NAME% X<<BASICLOW>>
-ItemDisplay[MAG (cm1 OR cm3) !ID FILTERLVL>2]: %NL%%YELLOW%X%BLUE% %NAME% %YELLOW%X%NL%%SPACE%<<NOTIMAGIC>>
-ItemDisplay[MAG (cm1 OR cm3) !ID]: %NL%%YELLOW%XX%BLUE%     %NAME%     %YELLOW%XX%NL%%SPACE%<<NOTIMAGIC>>
+ItemDisplay[MAG cm3 !ID FILTERLVL>2]: %NL%%YELLOW%X%BLUE% %NAME% %YELLOW%X%NL%%SPACE%<<NOTIMAGIC>>
+ItemDisplay[MAG cm1 !ID FILTERLVL>2]: %NL%%YELLOW%X%BLUE% %NAME% %YELLOW%X%NL%%SPACE%<<BASICHIGH1>>
+ItemDisplay[MAG (cm1 OR cm3) !ID]: %NL%%YELLOW%XX%BLUE%     %NAME%     %YELLOW%XX%NL%%SPACE%<<BASICHIGH1>>
 
 // Unique Charms - UNID
 ItemDisplay[cm2 UNI !ID]: UNID Hellfire Torch%CONTINUE%
