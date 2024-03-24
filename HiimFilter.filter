@@ -1,8 +1,8 @@
 ﻿//Attributes
 Attribute[Author]: Maark Backed by Macks Filter
 Attribute[Name]: HiimFilter
-Attribute[Version]: 0.41 BETA
-Attribute[Date]: March 22 2024
+Attribute[Version]: 0.42 BETA
+Attribute[Date]: March 24 2024
 Option[IgnoreMissingSounds]: True
 
 //Filter levels
@@ -60,8 +60,8 @@ ItemStyle[MISCITEMSFX]: MapIcon = 3, BorderColor = 132, BorderSize = 2, Notifica
 ItemStyle[BASICLOW]: NotificationPriority = LOW, NotificationColor = ITEM, BorderColor = 4, BorderSize = 2, BackgroundColor = 15
 ItemStyle[BASICMED]: NotificationPriority = MEDIUM, NotificationColor = ITEM, BorderColor = 4, BorderSize = 2, BackgroundColor = 15
 ItemStyle[BASICHIGH1]: MapIcon = 3, MapIconColor = 0, NotificationColor = ITEM, NotificationPriority = HIGH, BorderColor = 4, BorderSize = 2, BackgroundColor = 15
-ItemStyle[NOTIMAGIC]: MapIcon = 11, MapIconColor = 0, NotificationColor = ITEM, NotificationPriority = HIGH, BorderColor = 32, BorderSize = 5, BackgroundColor = 30
-ItemStyle[GGMAGIC]: MapIcon = 3, MapIconColor = 91, NotificationColor = ITEM, NotificationPriority = HIGH, BorderColor = 32, BorderSize = 5, BackgroundColor = 30, NotificationSoundPriority = HIGH, NotificationSound = "@global\sfx\item\ring"
+ItemStyle[NOTIMAGIC]: MapIcon = 11, MapIconColor = 0, NotificationColor = ITEM, NotificationPriority = HIGH, BorderColor = 32, BorderSize = 5, BackgroundColor = 140
+ItemStyle[GGMAGIC]: MapIcon = 3, MapIconColor = 91, NotificationColor = ITEM, NotificationPriority = HIGH, BorderColor = 32, BorderSize = 5, BackgroundColor = 140, NotificationSoundPriority = HIGH, NotificationSound = "@global\sfx\item\ring"
 ItemStyle[MAGHIGH]: MapIcon = 11, MapIconColor = 0, NotificationColor = ITEM, NotificationPriority = HIGH, BorderColor = 4, BorderSize = 0, BackgroundColor = 15
 ItemStyle[RAREHIGH]: MapIcon = 5, MapIconColor = 0, NotificationColor = ITEM, NotificationPriority = HIGH, BorderColor = 4, BorderSize = 0, BackgroundColor = 15, NotificationSoundPriority = LOW, NotificationSound = "@global\sfx\item\ring"
 ItemStyle[LOWRUNE]: NotificationPriority = LOW, NotificationColor = ITEM, BorderColor = 4, BorderSize = 2, BackgroundColor = 15, NotificationSoundPriority = LOW, NotificationSound = "@global\sfx\item\rune"
