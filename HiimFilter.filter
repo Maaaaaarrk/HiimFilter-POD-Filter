@@ -1,8 +1,8 @@
 ﻿//Attributes
-Attribute[Author]: Maark Backed by Macks Filter
+Attribute[Author]: Maark
 Attribute[Name]: HiimFilter
-Attribute[Version]: 0.42 BETA
-Attribute[Date]: March 24 2024
+Attribute[Version]: 0.43 BETA
+Attribute[Date]: Nov 16 2024
 Option[IgnoreMissingSounds]: True
 
 //Filter levels
@@ -874,7 +874,7 @@ ItemDisplay[EQ7 RARE !ID]: %NL%X X X X X %NAME% X X X X X%NL%%SPACE%<<RAREHIGH>>
 ItemDisplay[FILTERLVL<2 (7cr OR 9cr OR crs OR 7gl OR 9gl OR glv OR 7p7 OR 9p9 OR pik OR 7gm OR 9gm OR gma OR 7wa OR 9wa OR wax OR 7m7 OR 9m9 OR mau OR 7gd OR 9gd OR gsd OR 7fb OR 9fb OR flb OR 7gi OR 9gi OR gix OR 7wh OR 9wh OR whm OR 7pi OR 9pi OR pil OR 7s7 OR 9s9 OR ssp OR 7ts OR 9ts OR tsp) RARE (ILVL>84) !ID]: * * %NAME% * *<<BASIC>>
 
 // Nec heads
-ItemDisplay[CL4 RARE !ETH !ID FILTERLVL<2]: X X %NAME% X X
+//ItemDisplay[CL4 RARE !ETH !ID FILTERLVL<2]: X X %NAME% X X
 
 // High Ilvl Rares
 ItemDisplay[RARE !WEAPON (ILVL>91) !ID FILTERLVL<2]: * %NAME% *<<BASIC>>
@@ -897,7 +897,7 @@ ItemDisplay[EQ7 MAG !ETH !ID]: %NL%X X %NAME% X X%NL%%SPACE%<<MAGHIGH>>
 
 
 // Nec heads
-ItemDisplay[CL4 MAG !ETH !ID]: %NL%X X %NAME% X X%NL%%SPACE%<<NOTIMAGIC>>
+//ItemDisplay[CL4 MAG !ETH !ID]: %NL%X X %NAME% X X%NL%%SPACE%<<NOTIMAGIC>>
 
 // Crafting is sad in POD
 ItemDisplay[MAG !ID FILTERLVL>1]:
@@ -1901,9 +1901,10 @@ ItemDisplay[ETH UNI !ID (dre OR xhm OR ci2 OR xpl OR xtp OR upl OR uld OR utu OR
 //Suicide Branch 9wn
 //Buriza 8hx
 //Stormlash/horizons tornado 7fl
+//War spear 8bs
 
-ItemDisplay[!ETH UNI !ID (xrs OR vgl OR umg OR xmg OR umb OR xvb OR hbt OR 7pa OR rxb OR dgr OR 9fc OR 7sp OR mau OR 9m9 OR 9sp OR 7gi OR 7mp OR 7dg OR 9wn OR 8hx OR 7fl)]: %!ORANGEDOT!% %NAME% %!ORANGEDOT!%<<UNIQUE>>
-ItemDisplay[ETH UNI !ID (xrs OR vgl OR umg OR xmg OR umb OR xvb OR hbt OR 7pa OR rxb OR dgr OR 9fc OR 7sp OR mau OR 9m9 OR 9sp OR 7gi OR 7mp OR 7dg OR 9wn OR 8hx OR 7fl)]: %!ORANGEDOT!% %NAME% %!ORANGEDOT!%<<UNIQUEETH>>
+ItemDisplay[!ETH UNI !ID (xrs OR vgl OR umg OR xmg OR umb OR xvb OR hbt OR 7pa OR rxb OR dgr OR 9fc OR 7sp OR mau OR 9m9 OR 9sp OR 7gi OR 7mp OR 7dg OR 9wn OR 8hx OR 7fl OR 8bs)]: %!ORANGEDOT!% %NAME% %!ORANGEDOT!%<<UNIQUE>>
+ItemDisplay[ETH UNI !ID (xrs OR vgl OR umg OR xmg OR umb OR xvb OR hbt OR 7pa OR rxb OR dgr OR 9fc OR 7sp OR mau OR 9m9 OR 9sp OR 7gi OR 7mp OR 7dg OR 9wn OR 8hx OR 7fl OR 8bs)]: %!ORANGEDOT!% %NAME% %!ORANGEDOT!%<<UNIQUEETH>>
 
 
 // SET
