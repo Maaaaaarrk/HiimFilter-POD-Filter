@@ -1,8 +1,8 @@
 ﻿//Attributes
 Attribute[Author]: Maark
 Attribute[Name]: HiimFilter
-Attribute[Version]: 0.43 BETA
-Attribute[Date]: Nov 16 2024
+Attribute[Version]: 0.44 BETA
+Attribute[Date]: Nov 19 2024
 Option[IgnoreMissingSounds]: True
 
 //Filter levels
@@ -185,6 +185,7 @@ ItemDisplay[tes OR ceh OR bet OR fed]: %NL%%!CARROTSL!% %NAME%%!CARROTSR!%%NL%%S
 // PoD Items
 //-----------------------------------------------------------------------------------
 ItemDisplay[cx5]: %NL%%!ORANGES!% %PURPLE%Orb of Corruption %!ORANGES!%%NL%%SPACE%<<OOC>>
+ItemDisplay[cx9]: %NL%%!ORANGES!% %PURPLE%Orb of Alterations %!ORANGES!%%NL%%SPACE%<<OOC>>
 
 // TODO
 ItemDisplay[(cx6 OR cx7 OR cx8)]: %!PURPLESSMALL!%%ORANGE%  %NAME%  %!PURPLESSMALL!%<<MISCITEMSFX>>
